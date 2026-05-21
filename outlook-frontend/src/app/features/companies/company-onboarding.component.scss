@@ -1,0 +1,192 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.onboarding-container {
+    background-color: var(--outlook-bg);
+}
+
+.toolbar {
+    background: #ffffff;
+    border-bottom: 1px solid var(--outlook-border);
+    padding: 16px 32px;
+    z-index: 10;
+
+    h4 {
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--outlook-text-primary);
+    }
+}
+
+.stepper {
+    margin: 32px 0 40px 0;
+    position: relative;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .stepper-line {
+        position: absolute;
+        top: 18px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: #edebe9;
+        z-index: 0;
+
+        .line-active {
+            height: 100%;
+            background-color: var(--bs-primary);
+            transition: width 0.3s ease;
+        }
+    }
+}
+
+.step-item {
+    z-index: 1;
+    background: transparent;
+    cursor: default;
+
+    .step-circle {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        border: 2px solid #edebe9;
+        color: #616161;
+        font-size: 14px;
+        font-weight: 600;
+        transition: all 0.2s ease;
+
+        &.active {
+            background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
+            color: #ffffff;
+        }
+
+        &.completed {
+            background-color: #107c10;
+            border-color: #107c10;
+            color: #ffffff;
+        }
+    }
+
+    .step-label {
+        font-size: 12px;
+        font-weight: 600;
+        margin-top: 8px;
+        color: var(--outlook-text-secondary);
+
+        &.active {
+            color: var(--bs-primary);
+        }
+    }
+}
+
+.form-card {
+    background: #ffffff;
+    border: 1px solid var(--outlook-border);
+    box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132);
+    border-radius: 4px;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.form-step {
+    animation: slideInRight 0.3s cubic-bezier(0.1, 0.9, 0.2, 1);
+
+    h5 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 24px;
+        color: var(--outlook-text-primary);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        i {
+            color: var(--bs-primary);
+        }
+    }
+}
+
+.fluent-group {
+    margin-bottom: 24px;
+
+    label {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: var(--outlook-text-primary);
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        border: 1px solid #8a8886;
+        border-bottom: 2px solid #8a8886;
+        border-radius: 4px;
+        padding: 8px 12px;
+        font-size: 14px;
+        transition: all 0.1s;
+
+        &:hover {
+            border-color: #323130;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: var(--bs-primary);
+            border-bottom-color: var(--bs-primary);
+        }
+    }
+}
+
+.upload-area {
+    border: 2px dashed #edebe9;
+    padding: 32px;
+    border-radius: 4px;
+    background: #fafaf9;
+    transition: all 0.2s;
+    text-align: center;
+
+    &:hover {
+        border-color: var(--bs-primary);
+        background: #f0f7ff;
+    }
+}
+
+.actions-footer {
+    padding-top: 32px;
+    margin-top: 40px;
+    border-top: 1px solid var(--outlook-border);
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-fluent {
+    padding: 6px 24px;
+    font-size: 14px;
+    border-radius: 2px;
+    font-weight: 400;
+}

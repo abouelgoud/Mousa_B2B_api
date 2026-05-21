@@ -1,0 +1,157 @@
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+:root {
+    --primary-color: #0078d4;
+    --secondary-color: #2b88d8;
+    --accent-color: #fabd14;
+    --text-color: #323130;
+    --bg-color: #ffffff;
+    --sidebar-bg: #f3f2f1;
+    --header-bg: #ffffff;
+}
+
+/* 6 Predefined Themes */
+[data-theme='outlook-blue'] {
+    --primary-color: #0078d4;
+    --secondary-color: #2b88d8;
+    --bg-color: #ffffff;
+}
+
+[data-theme='outlook-dark'] {
+    --primary-color: #201f1e;
+    --secondary-color: #323130;
+    --bg-color: #11100f;
+    --text-color: #ffffff;
+    --sidebar-bg: #252423;
+    --header-bg: #201f1e;
+}
+
+[data-theme='forest-green'] {
+    --primary-color: #107c10;
+    --secondary-color: #1aeb1a;
+    --bg-color: #ffffff;
+}
+
+[data-theme='sunset-orange'] {
+    --primary-color: #d83b01;
+    --secondary-color: #ea4300;
+    --bg-color: #ffffff;
+}
+
+[data-theme='royal-purple'] {
+    --primary-color: #5c2d91;
+    --secondary-color: #b4a0ff;
+    --bg-color: #ffffff;
+}
+
+[data-theme='midnight-black'] {
+    --primary-color: #000000;
+    --secondary-color: #201f1e;
+    --bg-color: #ffffff;
+}
+
+[data-theme='midnight-aurora'] {
+    --primary-color: #00d2ff;
+    --secondary-color: #9d50bb;
+    --bg-color: #0f0c29;
+    --text-color: #ffffff;
+    --sidebar-bg: #1a1a2e;
+    --header-bg: #0f0c29;
+    --accent-color: #ff00c1;
+}
+
+[data-theme='desert-sunset'] {
+    --primary-color: #f46b45;
+    --secondary-color: #eea849;
+    --bg-color: #fff9f0;
+    --text-color: #2c3e50;
+    --sidebar-bg: #fdf2e9;
+    --header-bg: #ffffff;
+    --accent-color: #e67e22;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+/* Premium UI Enhancements */
+.glass-card {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(12px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.125) !important;
+    border-radius: 16px !important;
+}
+
+[data-theme='midnight-aurora'] .glass-card {
+    background: rgba(26, 26, 46, 0.6) !important;
+    border-color: rgba(0, 210, 255, 0.1) !important;
+}
+
+.animate-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.btn {
+    transition: all 0.2s ease;
+
+    &.btn-primary {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+        border: none !important;
+        color: white !important;
+        box-shadow: 0 4px 15px rgba(0, 120, 212, 0.2);
+
+        &:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(0, 120, 212, 0.3);
+            filter: brightness(1.1);
+        }
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+[data-theme*='dark'] ::-webkit-scrollbar-thumb,
+[data-theme='midnight-aurora'] ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+// Global Dropdown z-index override to ensure it stays on top of everything
+.dropdown-menu {
+    z-index: 9999 !important;
+}
+
+// Prevent table containers from clipping dropdown menus
+.table-container {
+    overflow: visible !important;
+}

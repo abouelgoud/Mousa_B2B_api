@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top shadow-sm">
+    <div class="container-fluid px-4">
+        <!-- Logo -->
+        <a class="navbar-brand fw-bold text-primary d-flex align-items-center gap-2" routerLink="/">
+            <i class="bi bi-activity"></i>
+            <span>B2B Health</span>
+        </a>
+
+        <!-- Right Side -->
+        <div class="d-flex align-items-center gap-3 ms-auto">
+            <!-- Theme Toggle -->
+            <button class="btn btn-link text-muted p-0" (click)="onThemeChange('default')">
+                <i class="bi bi-sun"></i>
+            </button>
+
+            <!-- User Profile -->
+            <div class="dropdown">
+                <a class="d-flex align-items-center text-decoration-none dropdown-toggle gap-2" href="#" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="avatar bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                        style="width: 32px; height: 32px;">
+                        P
+                    </div>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm glass-card">
+                    <li>
+                        <h6 class="dropdown-header">Provider User</h6>
+                    </li>
+                    <li><a class="dropdown-item small" href="#">Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item text-danger small" style="cursor: pointer" (click)="logout()">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

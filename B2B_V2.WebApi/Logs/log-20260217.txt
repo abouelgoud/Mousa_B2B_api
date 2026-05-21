@@ -1,0 +1,1119 @@
+2026-02-17 00:14:20.772 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/dashboard - null null
+2026-02-17 00:14:20.772 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - null null
+2026-02-17 00:14:20.878 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - null null
+2026-02-17 00:14:20.981 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - null null
+2026-02-17 00:14:21.012 +03:00 [INF] CORS policy execution successful.
+2026-02-17 00:14:21.012 +03:00 [INF] CORS policy execution successful.
+2026-02-17 00:14:21.012 +03:00 [INF] CORS policy execution successful.
+2026-02-17 00:14:21.012 +03:00 [INF] CORS policy execution successful.
+2026-02-17 00:14:21.023 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - 204 null null 254.4957ms
+2026-02-17 00:14:21.023 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - 204 null null 40.9849ms
+2026-02-17 00:14:21.024 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/dashboard - 204 null null 257.0093ms
+2026-02-17 00:14:21.026 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - 204 null null 147.8222ms
+2026-02-17 00:14:21.043 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/Notification - null null
+2026-02-17 00:14:21.053 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/dashboard - null null
+2026-02-17 00:14:21.068 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - null null
+2026-02-17 00:14:21.104 +03:00 [INF] CORS policy execution successful.
+2026-02-17 00:14:21.104 +03:00 [INF] CORS policy execution successful.
+2026-02-17 00:14:21.112 +03:00 [INF] CORS policy execution successful.
+2026-02-17 00:14:21.250 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 9:14:21 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 00:14:21.250 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 9:14:21 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 00:14:21.250 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 9:14:21 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 00:14:21.411 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 9:14:21 PM'.
+2026-02-17 00:14:21.411 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 9:14:21 PM'.
+2026-02-17 00:14:21.415 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 9:14:21 PM'.
+2026-02-17 00:14:21.456 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 00:14:21.461 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 00:14:21.461 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 00:14:21.508 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 00:14:21.508 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 00:14:21.508 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 00:14:21.517 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - 401 0 null 449.306ms
+2026-02-17 00:14:21.535 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/Notification - 401 0 null 492.3431ms
+2026-02-17 00:14:21.540 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/dashboard - 401 0 null 487.4796ms
+2026-02-17 00:14:21.567 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/Notification - null null
+2026-02-17 00:14:21.589 +03:00 [INF] CORS policy execution successful.
+2026-02-17 00:14:21.595 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 9:14:21 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 00:14:21.606 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 9:14:21 PM'.
+2026-02-17 00:14:21.611 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 00:14:21.616 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 00:14:21.621 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/Notification - 401 0 null 53.5034ms
+2026-02-17 02:55:16.724 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - null null
+2026-02-17 02:55:16.774 +03:00 [INF] CORS policy execution successful.
+2026-02-17 02:55:16.789 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - 204 null null 64.5777ms
+2026-02-17 02:55:16.877 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/Notification - null null
+2026-02-17 02:55:16.936 +03:00 [INF] CORS policy execution successful.
+2026-02-17 02:55:16.983 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:55:16 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 02:55:17.050 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:55:16 PM'.
+2026-02-17 02:55:17.099 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 02:55:17.127 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 02:55:17.153 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/Notification - 401 0 null 275.4816ms
+2026-02-17 02:55:19.512 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - null null
+2026-02-17 02:55:19.754 +03:00 [INF] CORS policy execution successful.
+2026-02-17 02:55:19.811 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - 204 null null 299.6773ms
+2026-02-17 02:55:20.130 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - null null
+2026-02-17 02:55:20.307 +03:00 [INF] CORS policy execution successful.
+2026-02-17 02:55:20.511 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:55:20 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 02:55:20.730 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:55:20 PM'.
+2026-02-17 02:55:20.846 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 02:55:20.892 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 02:55:20.952 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - 401 0 null 821.223ms
+2026-02-17 02:55:27.500 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - null null
+2026-02-17 02:55:27.553 +03:00 [INF] CORS policy execution successful.
+2026-02-17 02:55:27.569 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - 204 null null 68.7177ms
+2026-02-17 02:55:27.640 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/Notification - null null
+2026-02-17 02:55:27.610 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/dashboard - null null
+2026-02-17 02:55:27.674 +03:00 [INF] CORS policy execution successful.
+2026-02-17 02:55:27.807 +03:00 [INF] CORS policy execution successful.
+2026-02-17 02:55:27.819 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:55:27 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 02:55:27.846 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/dashboard - 204 null null 235.5382ms
+2026-02-17 02:55:27.904 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:55:27 PM'.
+2026-02-17 02:55:27.946 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/dashboard - null null
+2026-02-17 02:55:27.961 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 02:55:28.011 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 02:55:28.004 +03:00 [INF] CORS policy execution successful.
+2026-02-17 02:55:28.037 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/Notification - 401 0 null 397.0345ms
+2026-02-17 02:55:28.051 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:55:28 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 02:55:28.211 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:55:28 PM'.
+2026-02-17 02:55:28.223 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 02:55:28.258 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 02:55:28.270 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/dashboard - 401 0 null 324.2037ms
+2026-02-17 02:56:30.107 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - null null
+2026-02-17 02:56:30.110 +03:00 [INF] CORS policy execution successful.
+2026-02-17 02:56:30.110 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - 204 null null 3.3857ms
+2026-02-17 02:56:30.113 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/Notification - null null
+2026-02-17 02:56:30.116 +03:00 [INF] CORS policy execution successful.
+2026-02-17 02:56:30.117 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:56:30 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 02:56:30.117 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/dashboard - null null
+2026-02-17 02:56:30.120 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:56:30 PM'.
+2026-02-17 02:56:30.121 +03:00 [INF] CORS policy execution successful.
+2026-02-17 02:56:30.122 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 02:56:30.123 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/dashboard - 204 null null 6.1613ms
+2026-02-17 02:56:30.124 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 02:56:30.127 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/dashboard - null null
+2026-02-17 02:56:30.128 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/Notification - 401 0 null 14.9535ms
+2026-02-17 02:56:30.131 +03:00 [INF] CORS policy execution successful.
+2026-02-17 02:56:30.135 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:56:30 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 02:56:30.137 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:56:30 PM'.
+2026-02-17 02:56:30.138 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 02:56:30.139 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 02:56:30.140 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/dashboard - 401 0 null 13.1335ms
+2026-02-17 02:56:30.203 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/Notification - null null
+2026-02-17 02:56:30.206 +03:00 [INF] CORS policy execution successful.
+2026-02-17 02:56:30.208 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:56:30 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 02:56:30.212 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:56:30 PM'.
+2026-02-17 02:56:30.213 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 02:56:30.214 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 02:56:30.215 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/Notification - 401 0 null 11.7632ms
+2026-02-17 02:56:30.221 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - null null
+2026-02-17 02:56:30.223 +03:00 [INF] CORS policy execution successful.
+2026-02-17 02:56:30.224 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - 204 null null 3.0616ms
+2026-02-17 02:56:30.227 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - null null
+2026-02-17 02:56:30.229 +03:00 [INF] CORS policy execution successful.
+2026-02-17 02:56:30.229 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:56:30 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 02:56:30.232 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:56:30 PM'.
+2026-02-17 02:56:30.233 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 02:56:30.234 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 02:56:30.235 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - 401 0 null 7.8664ms
+2026-02-17 02:56:31.762 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/Notification - null null
+2026-02-17 02:56:31.766 +03:00 [INF] CORS policy execution successful.
+2026-02-17 02:56:31.768 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:56:31 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 02:56:31.772 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:56:31 PM'.
+2026-02-17 02:56:31.773 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 02:56:31.775 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 02:56:31.777 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/Notification - 401 0 null 15.3016ms
+2026-02-17 02:56:31.778 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/dashboard - null null
+2026-02-17 02:56:31.782 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/Notification - null null
+2026-02-17 02:56:31.786 +03:00 [INF] CORS policy execution successful.
+2026-02-17 02:56:31.789 +03:00 [INF] CORS policy execution successful.
+2026-02-17 02:56:31.791 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:56:31 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 02:56:31.792 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - null null
+2026-02-17 02:56:31.792 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:56:31 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 02:56:31.796 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:56:31 PM'.
+2026-02-17 02:56:31.800 +03:00 [INF] CORS policy execution successful.
+2026-02-17 02:56:31.803 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:56:31 PM'.
+2026-02-17 02:56:31.805 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 02:56:31.806 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:56:31 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 02:56:31.807 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 02:56:31.809 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 02:56:31.812 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '16/02/2026 11:56:31 PM'.
+2026-02-17 02:56:31.814 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 02:56:31.815 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/dashboard - 401 0 null 37.6627ms
+2026-02-17 02:56:31.818 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 02:56:31.819 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/Notification - 401 0 null 37.3061ms
+2026-02-17 02:56:31.826 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 02:56:31.842 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - 401 0 null 49.9654ms
+2026-02-17 08:12:57.879 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - null null
+2026-02-17 08:12:57.912 +03:00 [INF] CORS policy execution successful.
+2026-02-17 08:12:57.922 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - 204 null null 43.1525ms
+2026-02-17 08:12:57.946 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/Notification - null null
+2026-02-17 08:12:57.966 +03:00 [INF] CORS policy execution successful.
+2026-02-17 08:12:57.972 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '17/02/2026 5:12:57 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 08:12:58.001 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '17/02/2026 5:12:57 AM'.
+2026-02-17 08:12:58.014 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 08:12:58.019 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 08:12:58.024 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/Notification - 401 0 null 78.121ms
+2026-02-17 08:12:58.157 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - null null
+2026-02-17 08:12:58.191 +03:00 [INF] CORS policy execution successful.
+2026-02-17 08:12:58.203 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - 204 null null 46.6681ms
+2026-02-17 08:12:58.229 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - null null
+2026-02-17 08:12:58.260 +03:00 [INF] CORS policy execution successful.
+2026-02-17 08:12:58.289 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '17/02/2026 5:12:58 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 08:12:58.315 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '17/02/2026 5:12:58 AM'.
+2026-02-17 08:12:58.333 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 08:12:58.341 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 08:12:58.353 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - 401 0 null 123.9175ms
+2026-02-17 08:13:01.243 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/Notification - null null
+2026-02-17 08:13:01.312 +03:00 [INF] CORS policy execution successful.
+2026-02-17 08:13:01.335 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '17/02/2026 5:13:01 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 08:13:01.401 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '17/02/2026 5:13:01 AM'.
+2026-02-17 08:13:01.439 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 08:13:01.507 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 08:13:01.611 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/Notification - 401 0 null 367.4916ms
+2026-02-17 08:13:17.319 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - null null
+2026-02-17 08:13:17.473 +03:00 [INF] CORS policy execution successful.
+2026-02-17 08:13:17.518 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - 204 null null 199.1152ms
+2026-02-17 08:13:17.793 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - null null
+2026-02-17 08:13:17.913 +03:00 [INF] CORS policy execution successful.
+2026-02-17 08:13:17.947 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '17/02/2026 5:13:17 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 08:13:18.009 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '17/02/2026 5:13:17 AM'.
+2026-02-17 08:13:18.017 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 08:13:18.049 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 08:13:18.072 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - 401 0 null 279.8257ms
+2026-02-17 08:13:31.045 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - null null
+2026-02-17 08:13:31.140 +03:00 [INF] CORS policy execution successful.
+2026-02-17 08:13:31.170 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - 204 null null 124.9611ms
+2026-02-17 08:13:31.212 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/Notification - null null
+2026-02-17 08:13:31.297 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/dashboard - null null
+2026-02-17 08:13:31.336 +03:00 [INF] CORS policy execution successful.
+2026-02-17 08:13:31.440 +03:00 [INF] CORS policy execution successful.
+2026-02-17 08:13:31.459 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '17/02/2026 5:13:31 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 08:13:31.484 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/dashboard - 204 null null 186.8993ms
+2026-02-17 08:13:31.593 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '17/02/2026 5:13:31 AM'.
+2026-02-17 08:13:31.759 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/dashboard - null null
+2026-02-17 08:13:31.837 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 08:13:32.191 +03:00 [INF] CORS policy execution successful.
+2026-02-17 08:13:32.478 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 08:13:32.534 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '17/02/2026 5:13:32 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 08:13:32.960 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/Notification - 401 0 null 1747.8591ms
+2026-02-17 08:13:33.241 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '17/02/2026 5:13:32 AM'.
+2026-02-17 08:13:34.096 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 08:13:34.178 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 08:13:34.252 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/dashboard - 401 0 null 2493.1588ms
+2026-02-17 13:14:53.679 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - null null
+2026-02-17 13:14:53.690 +03:00 [INF] CORS policy execution successful.
+2026-02-17 13:14:53.693 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - 204 null null 14.5535ms
+2026-02-17 13:14:53.698 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/Notification - null null
+2026-02-17 13:14:53.704 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - null null
+2026-02-17 13:14:53.713 +03:00 [INF] CORS policy execution successful.
+2026-02-17 13:14:53.720 +03:00 [INF] CORS policy execution successful.
+2026-02-17 13:14:53.725 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - 204 null null 20.2396ms
+2026-02-17 13:14:53.726 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '17/02/2026 10:14:53 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 13:14:53.735 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - null null
+2026-02-17 13:14:53.745 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '17/02/2026 10:14:53 AM'.
+2026-02-17 13:14:53.753 +03:00 [INF] CORS policy execution successful.
+2026-02-17 13:14:53.757 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 13:14:53.759 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '17/02/2026 10:14:53 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 13:14:53.762 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 13:14:53.770 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '17/02/2026 10:14:53 AM'.
+2026-02-17 13:14:53.772 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/Notification - 401 0 null 74.2214ms
+2026-02-17 13:14:53.775 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 13:14:53.788 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 13:14:53.791 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/request/0fb4fd27-7e6c-40df-8dd6-841944376289 - 401 0 null 55.232ms
+2026-02-17 13:14:55.500 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/dashboard - null null
+2026-02-17 13:14:55.506 +03:00 [INF] CORS policy execution successful.
+2026-02-17 13:14:55.509 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/dashboard - 204 null null 8.8464ms
+2026-02-17 13:14:55.518 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/dashboard - null null
+2026-02-17 13:14:55.525 +03:00 [INF] CORS policy execution successful.
+2026-02-17 13:14:55.528 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '17/02/2026 10:14:55 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 13:14:55.536 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '17/02/2026 10:14:55 AM'.
+2026-02-17 13:14:55.539 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 13:14:55.541 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 13:14:55.544 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/dashboard - 401 0 null 25.6731ms
+2026-02-17 13:14:56.270 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/case/waiting-queue - null null
+2026-02-17 13:14:56.279 +03:00 [INF] CORS policy execution successful.
+2026-02-17 13:14:56.282 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/case/waiting-queue - 204 null null 12.4009ms
+2026-02-17 13:14:56.291 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/case/waiting-queue - null null
+2026-02-17 13:14:56.299 +03:00 [INF] CORS policy execution successful.
+2026-02-17 13:14:56.302 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '17/02/2026 10:14:56 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-17 13:14:56.309 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '16/02/2026 9:03:40 PM', Current time (UTC): '17/02/2026 10:14:56 AM'.
+2026-02-17 13:14:56.313 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-17 13:14:56.317 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-17 13:14:56.320 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/case/waiting-queue - 401 0 null 28.7999ms
+2026-02-17 13:15:05.678 +03:00 [INF] Application is shutting down...
+2026-02-17 13:15:41.395 +03:00 [INF] User profile is available. Using 'C:\Users\saada\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-17 13:15:42.740 +03:00 [WRN] No store type was specified for the decimal property 'Latitude' on entity type 'ProviderBranch'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-02-17 13:15:42.743 +03:00 [WRN] No store type was specified for the decimal property 'Longitude' on entity type 'ProviderBranch'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-02-17 13:15:45.719 +03:00 [INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-02-17 13:15:45.745 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-02-17 13:15:45.816 +03:00 [INF] Executed DbCommand (61ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-02-17 13:15:45.991 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-02-17 13:15:46.068 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-02-17 13:15:46.080 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-02-17 13:15:46.113 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-02-17 13:15:46.159 +03:00 [INF] No migrations were applied. The database is already up to date.
+2026-02-17 13:15:46.180 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-02-17 13:15:46.923 +03:00 [INF] Executed DbCommand (146ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-17 13:15:47.060 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-17 13:15:47.069 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-17 13:15:47.079 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-17 13:15:47.134 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BranchId], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-17 13:15:47.339 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.348 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.355 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.361 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.370 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.377 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.386 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.394 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.401 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.409 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.416 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.424 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.432 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.440 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.447 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.455 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.478 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.485 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.495 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.502 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.511 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.520 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.529 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.537 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.545 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.553 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.561 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.697 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[FeatureGroup], [p].[Name]
+FROM [Permissions] AS [p]
+2026-02-17 13:15:47.717 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-17 13:15:47.745 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.757 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.764 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.773 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.781 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.789 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.797 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.805 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.814 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.822 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.829 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.835 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.843 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.850 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.857 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.866 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.874 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.881 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.889 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.896 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.902 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.912 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.921 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.930 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.938 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.946 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.952 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.960 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-17 13:15:47.976 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.985 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.992 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:47.999 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:48.007 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:48.015 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:48.022 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:48.032 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:48.041 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:48.050 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-02-17 13:15:48.071 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:48.080 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:48.089 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:48.098 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:48.106 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:48.116 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:48.124 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:48.132 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:48.141 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:48.187 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [ProviderTiers] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:48.206 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Themes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:48.213 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BranchId], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-17 13:15:48.237 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Companies] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:48.245 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-02-17 13:15:48.277 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[BranchLocations], [c].[BusinessActivity], [c].[CRCertificatePath], [c].[CRNumber], [c].[CompanySize], [c].[ContactEmail], [c].[ContactMobile], [c].[ContactName], [c].[ContactNumber], [c].[CreatedAt], [c].[DefaultProviderAssignmentMode], [c].[DesignatedContactPersonId], [c].[EstimatedMonthlyScreeningVolume], [c].[HeadOfficeAddress], [c].[IsActive], [c].[Latitude], [c].[LegalName], [c].[Longitude], [c].[TotalEmployees], [c].[UpdatedAt], [c].[VATRegistrationNumber]
+FROM [Companies] AS [c]
+2026-02-17 13:15:48.417 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Candidates] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:48.434 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Packages] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:48.451 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Requests] AS [r]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:48.459 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[BranchId], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-02-17 13:15:48.477 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Providers] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:48.485 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-02-17 13:15:48.509 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[ComplianceAuditJson], [p].[ContactEmail], [p].[ContactMobile], [p].[ContactName], [p].[ContactNumber], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[IsVerified], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LastVerificationDate], [p].[Latitude], [p].[LegalName], [p].[Longitude], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+2026-02-17 13:15:48.661 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__testProvider_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Requests] AS [r]
+        WHERE [r].[AssignedProviderId] = @__testProvider_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-17 13:15:49.165 +03:00 [INF] Now listening on: http://localhost:5284
+2026-02-17 13:15:49.173 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-17 13:15:49.178 +03:00 [INF] Hosting environment: Development
+2026-02-17 13:15:49.181 +03:00 [INF] Content root path: D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi

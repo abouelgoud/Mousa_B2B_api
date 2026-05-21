@@ -1,0 +1,115 @@
+<div class="container-fluid py-4">
+    <div class="mb-4">
+        <h2 class="text-dark fw-bold mb-0">Financial Reconciliation</h2>
+        <p class="text-muted mb-0">Track platform revenue, provider payouts, and outstanding corporate invoices.</p>
+    </div>
+
+    <!-- Metrics Grid -->
+    <div class="row g-4 mb-4">
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm glass-card bg-primary text-white">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between mb-3">
+                        <i class="bi bi-wallet2 fs-3"></i>
+                        <span class="badge bg-white text-primary rounded-pill">+12%</span>
+                    </div>
+                    <small class="text-uppercase text-white-50 fw-bold" style="font-size: 10px;">Total Gross
+                        Revenue</small>
+                    <h2 class="mb-0 fw-bold">SR {{ summary?.totalRevenue || '45,250' }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm glass-card bg-success text-white">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between mb-3">
+                        <i class="bi bi-person-check fs-3"></i>
+                        <span class="badge bg-white text-success rounded-pill">98% Paid</span>
+                    </div>
+                    <small class="text-uppercase text-white-50 fw-bold" style="font-size: 10px;">Total Provider
+                        Payouts</small>
+                    <h2 class="mb-0 fw-bold">SR {{ summary?.totalPayouts || '36,200' }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm glass-card bg-dark text-white">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between mb-3">
+                        <i class="bi bi-graph-up-arrow fs-3 text-info"></i>
+                        <span class="badge bg-info text-white rounded-pill">Net Fee</span>
+                    </div>
+                    <small class="text-uppercase text-white-50 fw-bold" style="font-size: 10px;">Platform Net
+                        (20%)</small>
+                    <h2 class="mb-0 fw-bold">SR {{ summary?.totalFees || '9,050' }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm glass-card bg-warning text-dark">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between mb-3">
+                        <i class="bi bi-clock-history fs-3"></i>
+                    </div>
+                    <small class="text-uppercase text-dark-50 fw-bold" style="font-size: 10px;">Pending
+                        Receivables</small>
+                    <h2 class="mb-0 fw-bold">SR 12,500</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-12">
+            <div class="card border-0 shadow-sm glass-card mt-2">
+                <div class="card-header bg-white border-bottom p-3 d-flex justify-content-between align-items-center">
+                    <h6 class="mb-0 fw-bold">Automatic Generated Invoices</h6>
+                    <button class="btn btn-sm btn-link text-decoration-none p-0">View All Records</button>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th class="ps-4">Invoice #</th>
+                                    <th>Corporate Client</th>
+                                    <th>Total Amount</th>
+                                    <th>Status</th>
+                                    <th class="text-end pe-4">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let record of recentInvoices" class="animate__animated animate__fadeIn">
+                                    <td class="ps-4 fw-bold text-dark">{{ record.invoiceNumber }}</td>
+                                    <td>Aramco Services Co.</td>
+                                    <td>SR {{ record.totalAmount }}</td>
+                                    <td>
+                                        <span class="badge" [class.bg-success]="record.isPaidByCompany"
+                                            [class.bg-warning]="!record.isPaidByCompany">
+                                            {{ record.isPaidByCompany ? 'Settle' : 'Pending Payment' }}
+                                        </span>
+                                    </td>
+                                    <td class="text-end pe-4">
+                                        <button class="btn btn-outline-dark btn-sm rounded-pill px-3">Download
+                                            PDF</button>
+                                    </td>
+                                </tr>
+
+                                <tr *ngIf="recentInvoices.length === 0" class="animate__animated animate__fadeIn">
+                                    <td class="ps-4 fw-bold text-dark">INV-20240123-001</td>
+                                    <td>Global Logistics Ltd</td>
+                                    <td>SR 3,250.00</td>
+                                    <td><span class="badge bg-warning text-dark">Unpaid</span></td>
+                                    <td class="text-end pe-4">
+                                        <button class="btn btn-outline-dark btn-sm rounded-pill px-3">Download
+                                            PDF</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

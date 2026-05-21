@@ -1,0 +1,20 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  B2B_V2.Domain -> D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Domain\bin\Debug\net9.0\B2B_V2.Domain.dll
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\CaseService.cs(41,44): error CS0117: 'RequestStatus' does not contain a definition for 'InReview' [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\B2B_V2.Application.csproj]
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\CaseService.cs(62,27): error CS1061: 'MedicalResult' does not contain a definition for 'Approved' and no accessible extension method 'Approved' accepting a first argument of type 'MedicalResult' could be found (are you missing a using directive or an assembly reference?) [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\B2B_V2.Application.csproj]
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\CaseService.cs(69,85): error CS0117: 'RequestStatus' does not contain a definition for 'Rejected' [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\B2B_V2.Application.csproj]
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\CaseService.cs(78,104): error CS0117: 'RequestStatus' does not contain a definition for 'Assigned' [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\B2B_V2.Application.csproj]
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\CaseService.cs(85,66): error CS0117: 'RequestStatus' does not contain a definition for 'InReview' [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\B2B_V2.Application.csproj]
+
+Build FAILED.
+
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\CaseService.cs(41,44): error CS0117: 'RequestStatus' does not contain a definition for 'InReview' [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\B2B_V2.Application.csproj]
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\CaseService.cs(62,27): error CS1061: 'MedicalResult' does not contain a definition for 'Approved' and no accessible extension method 'Approved' accepting a first argument of type 'MedicalResult' could be found (are you missing a using directive or an assembly reference?) [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\B2B_V2.Application.csproj]
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\CaseService.cs(69,85): error CS0117: 'RequestStatus' does not contain a definition for 'Rejected' [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\B2B_V2.Application.csproj]
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\CaseService.cs(78,104): error CS0117: 'RequestStatus' does not contain a definition for 'Assigned' [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\B2B_V2.Application.csproj]
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\CaseService.cs(85,66): error CS0117: 'RequestStatus' does not contain a definition for 'InReview' [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\B2B_V2.Application.csproj]
+    0 Warning(s)
+    5 Error(s)
+
+Time Elapsed 00:00:01.66

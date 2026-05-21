@@ -1,0 +1,128 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons.scss';
+
+// Standard Outlook/Fluent UI Fonts
+@font-face {
+    font-family: 'Segoe UI';
+    src: local('Segoe UI Light'), local('Segoe UI');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: local('Segoe UI Semilight'), local('Segoe UI');
+    font-weight: 350; // Approximated
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: local('Segoe UI'), local('Segoe UI');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: local('Segoe UI Semibold'), local('Segoe UI');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: local('Segoe UI Bold'), local('Segoe UI');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    --bs-body-font-family: 'Segoe UI', 'Segoe UI Web (West European)', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+    --bs-primary: #0078d4;
+    --bs-primary-rgb: 0, 120, 212;
+    --outlook-bg: #faf9f8;
+    --outlook-border: #edebe9;
+    --outlook-text-primary: #252423;
+    --outlook-text-secondary: #605e5c;
+}
+
+body {
+    background-color: var(--outlook-bg);
+    font-family: var(--bs-body-font-family);
+    color: var(--outlook-text-primary);
+    overflow: hidden; // App-like feel
+    -webkit-font-smoothing: antialiased;
+}
+
+// Global Scrollbar Styling (Overlay style)
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c8c6c4;
+    border: 4px solid transparent; // Creates padding effect
+    background-clip: content-box;
+    border-radius: 99px;
+    min-height: 30px;
+
+    &:hover {
+        background-color: #a19f9d;
+    }
+}
+
+// Utilities
+.text-secondary {
+    color: var(--outlook-text-secondary) !important;
+}
+
+.bg-light-gray {
+    background-color: #f0f0f0;
+}
+
+.fw-semibold {
+    font-weight: 600 !important;
+}
+
+// Bootstrap Overrides for Flat/Fluent Look
+.btn {
+    border-radius: 4px; // Slight rounding, almost square
+    font-size: 14px;
+
+    &.rounded-pill {
+        border-radius: 50rem !important;
+    }
+}
+
+.form-control {
+    font-size: 14px;
+    border-color: #8a8886;
+
+    &:focus {
+        border-color: var(--bs-primary);
+        box-shadow: none;
+        border-bottom-width: 2px; // Outlook input underline effect often used
+    }
+}
+
+.card {
+    border: 1px solid var(--outlook-border);
+    box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
+}
+
+// Global Dropdown z-index override to ensure it stays on top of everything
+.dropdown-menu {
+    z-index: 9999 !important;
+}
+
+// Prevent table containers from clipping dropdown menus
+.table-container {
+    overflow: visible !important;
+}

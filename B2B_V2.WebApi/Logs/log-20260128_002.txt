@@ -1,0 +1,1658 @@
+2026-01-28 22:56:36.719 +03:00 [INF] User profile is available. Using 'C:\Users\saada\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-28 22:56:37.781 +03:00 [ERR] An error occurred while seeding the database.
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ApplicationDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at B2B_V2.Infrastructure.Data.DbInitializer.SeedAsync(ApplicationDbContext context, UserManager`1 userManager, RoleManager`1 roleManager) in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Infrastructure\Data\DbInitializer.cs:line 18
+   at Program.<Main>$(String[] args) in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\Program.cs:line 129
+2026-01-28 22:56:37.944 +03:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5284: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-01-28 22:58:28.670 +03:00 [INF] User profile is available. Using 'C:\Users\saada\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-28 22:58:29.931 +03:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-01-28 22:58:29.954 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-01-28 22:58:29.996 +03:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-01-28 22:58:30.061 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-01-28 22:58:30.085 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-01-28 22:58:30.091 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-01-28 22:58:30.102 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-01-28 22:58:30.113 +03:00 [INF] No migrations were applied. The database is already up to date.
+2026-01-28 22:58:30.118 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-01-28 22:58:30.449 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-28 22:58:30.503 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-28 22:58:30.507 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-28 22:58:30.511 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-28 22:58:30.535 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-28 22:58:30.621 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.626 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.630 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.633 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.636 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.639 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.641 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.645 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.647 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.650 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.654 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.657 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.661 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.665 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.669 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.674 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.678 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.681 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.685 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.689 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.691 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.694 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.696 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.699 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.702 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.704 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.768 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[FeatureGroup], [p].[Name]
+FROM [Permissions] AS [p]
+2026-01-28 22:58:30.781 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-28 22:58:30.793 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.795 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.797 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.800 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.802 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.806 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.809 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.812 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.814 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.816 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.817 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.819 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.821 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.823 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.824 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.826 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.829 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.831 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.833 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.836 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.839 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.841 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.843 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.846 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.847 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.849 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.852 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-28 22:58:30.858 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.860 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.862 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.865 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.867 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.870 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.871 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.873 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.875 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-28 22:58:30.881 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.883 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.885 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.887 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.890 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.892 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.894 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.896 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.898 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.916 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [ProviderTiers] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.924 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Themes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.927 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-28 22:58:30.934 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Companies] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.936 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-01-28 22:58:30.945 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[BranchLocations], [c].[BusinessActivity], [c].[CRCertificatePath], [c].[CRNumber], [c].[CompanySize], [c].[CreatedAt], [c].[DefaultProviderAssignmentMode], [c].[DesignatedContactPersonId], [c].[EstimatedMonthlyScreeningVolume], [c].[HeadOfficeAddress], [c].[IsActive], [c].[Latitude], [c].[LegalName], [c].[Longitude], [c].[TotalEmployees], [c].[UpdatedAt], [c].[VATRegistrationNumber]
+FROM [Companies] AS [c]
+2026-01-28 22:58:30.987 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Candidates] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.992 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Packages] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:30.995 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-28 22:58:31.001 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Providers] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:31.004 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-01-28 22:58:31.012 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[ComplianceAuditJson], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[IsVerified], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LastVerificationDate], [p].[Latitude], [p].[LegalName], [p].[Longitude], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+2026-01-28 22:58:31.070 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__testProvider_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Requests] AS [r]
+        WHERE [r].[AssignedProviderId] = @__testProvider_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-28 22:58:31.199 +03:00 [INF] Now listening on: http://localhost:5284
+2026-01-28 22:58:31.203 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-28 22:58:31.207 +03:00 [INF] Hosting environment: Development
+2026-01-28 22:58:31.208 +03:00 [INF] Content root path: D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi
+2026-01-28 22:58:45.063 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/provider/54ed873e-cc48-4caa-8021-0559133642b2/verify-audit - null null
+2026-01-28 22:58:45.127 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-01-28 22:58:45.130 +03:00 [INF] CORS policy execution successful.
+2026-01-28 22:58:45.136 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/provider/54ed873e-cc48-4caa-8021-0559133642b2/verify-audit - 204 null null 74.9898ms
+2026-01-28 22:58:45.146 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/api/provider/54ed873e-cc48-4caa-8021-0559133642b2/verify-audit - application/json 1183
+2026-01-28 22:58:45.153 +03:00 [INF] CORS policy execution successful.
+2026-01-28 22:58:45.227 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ProviderController.VerifyAudit (B2B_V2.WebApi)'
+2026-01-28 22:58:45.242 +03:00 [INF] Route matched with {action = "VerifyAudit", controller = "Provider"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] VerifyAudit(System.Guid, B2B_V2.Application.Interfaces.ComplianceAuditResultDto) on controller B2B_V2.WebApi.Controllers.ProviderController (B2B_V2.WebApi).
+2026-01-28 22:58:45.329 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[ComplianceAuditJson], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[IsVerified], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LastVerificationDate], [p].[Latitude], [p].[LegalName], [p].[Longitude], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+WHERE [p].[Id] = @__id_0
+2026-01-28 22:58:45.438 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@p22='?' (DbType = Guid), @p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int32), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (Size = 4000), @p10='?' (DbType = Int32), @p11='?' (DbType = DateTime2), @p12='?' (Precision = 18) (Scale = 10) (DbType = Decimal), @p13='?' (Size = 4000), @p14='?' (Precision = 18) (Scale = 10) (DbType = Decimal), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (Size = 4000), @p18='?' (DbType = Guid), @p19='?' (Size = 4000), @p20='?' (DbType = Int32), @p21='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Providers] SET [BankAccountId] = @p0, [BranchLocations] = @p1, [CBAHIAccreditationPath] = @p2, [CRCertificatePath] = @p3, [ComplianceAuditJson] = @p4, [CreatedAt] = @p5, [EstimatedDailyOperationalCapacity] = @p6, [IsActive] = @p7, [IsVerified] = @p8, [LabAccreditationPath] = @p9, [LabSetup] = @p10, [LastVerificationDate] = @p11, [Latitude] = @p12, [LegalName] = @p13, [Longitude] = @p14, [MOHLicensePath] = @p15, [MedicalWasteManagementContractPath] = @p16, [OccupationalPhysicianLicensePath] = @p17, [PrimaryContactPersonId] = @p18, [ProfessionalLiabilityInsurancePath] = @p19, [TierId] = @p20, [UpdatedAt] = @p21
+OUTPUT 1
+WHERE [Id] = @p22;
+2026-01-28 22:58:45.456 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`2[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-01-28 22:58:45.464 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ProviderController.VerifyAudit (B2B_V2.WebApi) in 217.1333ms
+2026-01-28 22:58:45.465 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ProviderController.VerifyAudit (B2B_V2.WebApi)'
+2026-01-28 22:58:45.468 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/api/provider/54ed873e-cc48-4caa-8021-0559133642b2/verify-audit - 200 null application/json; charset=utf-8 322.3101ms
+2026-01-28 22:58:54.799 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/provider - null null
+2026-01-28 22:58:54.807 +03:00 [INF] CORS policy execution successful.
+2026-01-28 22:58:54.809 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/provider - 204 null null 9.821ms
+2026-01-28 22:58:54.812 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/provider - null null
+2026-01-28 22:58:54.819 +03:00 [INF] CORS policy execution successful.
+2026-01-28 22:58:54.824 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi)'
+2026-01-28 22:58:54.828 +03:00 [INF] Route matched with {action = "GetProviders", controller = "Provider"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.ProviderDto]]] GetProviders() on controller B2B_V2.WebApi.Controllers.ProviderController (B2B_V2.WebApi).
+2026-01-28 22:58:54.888 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[ComplianceAuditJson], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[IsVerified], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LastVerificationDate], [p].[Latitude], [p].[LegalName], [p].[Longitude], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+2026-01-28 22:58:54.893 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[B2B_V2.Domain.Entities.Provider, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.ProviderDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 22:58:54.919 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi) in 89.5295ms
+2026-01-28 22:58:54.920 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi)'
+2026-01-28 22:58:54.921 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/provider - 200 null application/json; charset=utf-8 108.8843ms
+2026-01-28 22:58:56.775 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/provider/54ed873e-cc48-4caa-8021-0559133642b2 - null null
+2026-01-28 22:58:56.783 +03:00 [INF] CORS policy execution successful.
+2026-01-28 22:58:56.784 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/provider/54ed873e-cc48-4caa-8021-0559133642b2 - 204 null null 8.9031ms
+2026-01-28 22:58:56.789 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/provider/54ed873e-cc48-4caa-8021-0559133642b2 - null null
+2026-01-28 22:58:56.792 +03:00 [INF] CORS policy execution successful.
+2026-01-28 22:58:56.797 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProvider (B2B_V2.WebApi)'
+2026-01-28 22:58:56.802 +03:00 [INF] Route matched with {action = "GetProvider", controller = "Provider"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[B2B_V2.Application.DTOs.ProviderDto]] GetProvider(System.Guid) on controller B2B_V2.WebApi.Controllers.ProviderController (B2B_V2.WebApi).
+2026-01-28 22:58:56.812 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[ComplianceAuditJson], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[IsVerified], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LastVerificationDate], [p].[Latitude], [p].[LegalName], [p].[Longitude], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+WHERE [p].[Id] = @__id_0
+2026-01-28 22:58:56.816 +03:00 [INF] Executing OkObjectResult, writing value of type 'B2B_V2.Application.DTOs.ProviderDto'.
+2026-01-28 22:58:56.819 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ProviderController.GetProvider (B2B_V2.WebApi) in 14.2395ms
+2026-01-28 22:58:56.820 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProvider (B2B_V2.WebApi)'
+2026-01-28 22:58:56.822 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/provider/54ed873e-cc48-4caa-8021-0559133642b2 - 200 null application/json; charset=utf-8 32.9294ms
+2026-01-28 22:59:06.072 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/package - null null
+2026-01-28 22:59:06.076 +03:00 [INF] CORS policy execution successful.
+2026-01-28 22:59:06.077 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/package - 204 null null 4.575ms
+2026-01-28 22:59:06.081 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/package - null null
+2026-01-28 22:59:06.084 +03:00 [INF] CORS policy execution successful.
+2026-01-28 22:59:06.086 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.PackageController.GetPackages (B2B_V2.WebApi)'
+2026-01-28 22:59:06.091 +03:00 [INF] Route matched with {action = "GetPackages", controller = "Package"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.PackageDto]]] GetPackages() on controller B2B_V2.WebApi.Controllers.PackageController (B2B_V2.WebApi).
+2026-01-28 22:59:06.167 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[UpdatedAt], [p0].[PackageId], [p0].[ServiceId]
+FROM [Packages] AS [p]
+LEFT JOIN [PackageServices] AS [p0] ON [p].[Id] = [p0].[PackageId]
+ORDER BY [p].[Id], [p0].[PackageId]
+2026-01-28 22:59:06.217 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Code], [s].[CreatedAt], [s].[Description], [s].[IsActive], [s].[Name], [s].[Price], [s].[UpdatedAt]
+FROM [Services] AS [s]
+WHERE [s].[Id] = @__id_0
+2026-01-28 22:59:06.236 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Code], [s].[CreatedAt], [s].[Description], [s].[IsActive], [s].[Name], [s].[Price], [s].[UpdatedAt]
+FROM [Services] AS [s]
+WHERE [s].[Id] = @__id_0
+2026-01-28 22:59:06.238 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[B2B_V2.Application.DTOs.PackageDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 22:59:06.242 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.PackageController.GetPackages (B2B_V2.WebApi) in 149.3213ms
+2026-01-28 22:59:06.243 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.PackageController.GetPackages (B2B_V2.WebApi)'
+2026-01-28 22:59:06.244 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/package - 200 null application/json; charset=utf-8 163.5315ms
+2026-01-28 22:59:26.289 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/auth/login - null null
+2026-01-28 22:59:26.294 +03:00 [INF] CORS policy execution successful.
+2026-01-28 22:59:26.295 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/auth/login - 204 null null 5.6917ms
+2026-01-28 22:59:26.299 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/api/auth/login - application/json 60
+2026-01-28 22:59:26.304 +03:00 [INF] CORS policy execution successful.
+2026-01-28 22:59:26.306 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.AuthController.Login (B2B_V2.WebApi)'
+2026-01-28 22:59:26.310 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(B2B_V2.Application.DTOs.LoginDto) on controller B2B_V2.WebApi.Controllers.AuthController (B2B_V2.WebApi).
+2026-01-28 22:59:26.326 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-28 22:59:26.544 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-28 22:59:26.565 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[RoleId], [r].[PermissionId], [p].[Id], [p].[Description], [p].[FeatureGroup], [p].[Name], [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [RolePermissions] AS [r]
+INNER JOIN [Permissions] AS [p] ON [r].[PermissionId] = [p].[Id]
+INNER JOIN [AspNetRoles] AS [a] ON [r].[RoleId] = [a].[Id]
+2026-01-28 22:59:26.594 +03:00 [INF] Executing OkObjectResult, writing value of type 'B2B_V2.Application.DTOs.AuthResponseDto'.
+2026-01-28 22:59:26.600 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.AuthController.Login (B2B_V2.WebApi) in 287.6859ms
+2026-01-28 22:59:26.601 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.AuthController.Login (B2B_V2.WebApi)'
+2026-01-28 22:59:26.602 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/api/auth/login - 200 null application/json; charset=utf-8 302.4214ms
+2026-01-28 22:59:26.613 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - null null
+2026-01-28 22:59:26.616 +03:00 [INF] CORS policy execution successful.
+2026-01-28 22:59:26.618 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - 204 null null 4.3325ms
+2026-01-28 22:59:26.621 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/Notification - null null
+2026-01-28 22:59:26.623 +03:00 [INF] CORS policy execution successful.
+2026-01-28 22:59:26.625 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.NotificationController.GetUserNotifications (B2B_V2.WebApi)'
+2026-01-28 22:59:26.630 +03:00 [INF] Route matched with {action = "GetUserNotifications", controller = "Notification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.Object]]] GetUserNotifications() on controller B2B_V2.WebApi.Controllers.NotificationController (B2B_V2.WebApi).
+2026-01-28 22:59:26.644 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CaseId], [n].[CreatedAt], [n].[IsActive], [n].[IsRead], [n].[Message], [n].[RecipientIdentifier], [n].[Type], [n].[UpdatedAt], [n].[UserId]
+FROM [Notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+2026-01-28 22:59:26.668 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+IteratorSelectIterator`2[[B2B_V2.Domain.Entities.Notification, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType2`5[[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], B2B_V2.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 22:59:26.674 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.NotificationController.GetUserNotifications (B2B_V2.WebApi) in 42.7652ms
+2026-01-28 22:59:26.676 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.NotificationController.GetUserNotifications (B2B_V2.WebApi)'
+2026-01-28 22:59:26.677 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/Notification - 200 null application/json; charset=utf-8 56.911ms
+2026-01-28 22:59:40.277 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/candidate/company/198227a9-c688-4c1a-9dbc-f14842735179 - null null
+2026-01-28 22:59:40.282 +03:00 [INF] CORS policy execution successful.
+2026-01-28 22:59:40.283 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/candidate/company/198227a9-c688-4c1a-9dbc-f14842735179 - 204 null null 6.0535ms
+2026-01-28 22:59:40.287 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/candidate/company/198227a9-c688-4c1a-9dbc-f14842735179 - null null
+2026-01-28 22:59:40.289 +03:00 [INF] CORS policy execution successful.
+2026-01-28 22:59:40.291 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CandidateController.GetByCompanyId (B2B_V2.WebApi)'
+2026-01-28 22:59:40.296 +03:00 [INF] Route matched with {action = "GetByCompanyId", controller = "Candidate"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.CandidateDto]]] GetByCompanyId(System.Guid) on controller B2B_V2.WebApi.Controllers.CandidateController (B2B_V2.WebApi).
+2026-01-28 22:59:40.525 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__companyId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[BranchLocation], [c].[CompanyId], [c].[CreatedAt], [c].[Department], [c].[FullName], [c].[Gender], [c].[IsActive], [c].[MobileNumber], [c].[NationalID], [c].[Position], [c].[UpdatedAt], [c0].[Id], [c0].[CandidateId], [c0].[ContentType], [c0].[CreatedAt], [c0].[FileName], [c0].[FilePath], [c0].[FileSize], [c0].[IsActive], [c0].[UpdatedAt]
+FROM [Candidates] AS [c]
+LEFT JOIN [CandidateAttachments] AS [c0] ON [c].[Id] = [c0].[CandidateId]
+WHERE [c].[CompanyId] = @__companyId_0
+ORDER BY [c].[Id]
+2026-01-28 22:59:40.717 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[B2B_V2.Domain.Entities.Candidate, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.CandidateDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 22:59:40.729 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CandidateController.GetByCompanyId (B2B_V2.WebApi) in 431.0078ms
+2026-01-28 22:59:40.730 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CandidateController.GetByCompanyId (B2B_V2.WebApi)'
+2026-01-28 22:59:40.731 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/candidate/company/198227a9-c688-4c1a-9dbc-f14842735179 - 200 null application/json; charset=utf-8 444.6869ms
+2026-01-28 22:59:43.971 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/package - null null
+2026-01-28 22:59:43.973 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/provider/by-location/198227a9-c688-4c1a-9dbc-f14842735179 - null null
+2026-01-28 22:59:43.974 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/candidate/company/198227a9-c688-4c1a-9dbc-f14842735179 - null null
+2026-01-28 22:59:43.981 +03:00 [INF] CORS policy execution successful.
+2026-01-28 22:59:43.985 +03:00 [INF] CORS policy execution successful.
+2026-01-28 22:59:43.988 +03:00 [INF] CORS policy execution successful.
+2026-01-28 22:59:43.989 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/package - 204 null null 17.9664ms
+2026-01-28 22:59:43.991 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/provider/by-location/198227a9-c688-4c1a-9dbc-f14842735179 - 204 null null 17.7228ms
+2026-01-28 22:59:43.993 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CandidateController.GetByCompanyId (B2B_V2.WebApi)'
+2026-01-28 22:59:43.996 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/package - null null
+2026-01-28 22:59:44.000 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/provider/by-location/198227a9-c688-4c1a-9dbc-f14842735179 - null null
+2026-01-28 22:59:44.001 +03:00 [INF] Route matched with {action = "GetByCompanyId", controller = "Candidate"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.CandidateDto]]] GetByCompanyId(System.Guid) on controller B2B_V2.WebApi.Controllers.CandidateController (B2B_V2.WebApi).
+2026-01-28 22:59:44.004 +03:00 [INF] CORS policy execution successful.
+2026-01-28 22:59:44.007 +03:00 [INF] CORS policy execution successful.
+2026-01-28 22:59:44.011 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.PackageController.GetPackages (B2B_V2.WebApi)'
+2026-01-28 22:59:44.012 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetByLocation (B2B_V2.WebApi)'
+2026-01-28 22:59:44.013 +03:00 [INF] Route matched with {action = "GetPackages", controller = "Package"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.PackageDto]]] GetPackages() on controller B2B_V2.WebApi.Controllers.PackageController (B2B_V2.WebApi).
+2026-01-28 22:59:44.013 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[BranchLocation], [c].[CompanyId], [c].[CreatedAt], [c].[Department], [c].[FullName], [c].[Gender], [c].[IsActive], [c].[MobileNumber], [c].[NationalID], [c].[Position], [c].[UpdatedAt], [c0].[Id], [c0].[CandidateId], [c0].[ContentType], [c0].[CreatedAt], [c0].[FileName], [c0].[FilePath], [c0].[FileSize], [c0].[IsActive], [c0].[UpdatedAt]
+FROM [Candidates] AS [c]
+LEFT JOIN [CandidateAttachments] AS [c0] ON [c].[Id] = [c0].[CandidateId]
+WHERE [c].[CompanyId] = @__companyId_0
+ORDER BY [c].[Id]
+2026-01-28 22:59:44.018 +03:00 [INF] Route matched with {action = "GetByLocation", controller = "Provider"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.ProviderDto]]] GetByLocation(System.Guid) on controller B2B_V2.WebApi.Controllers.ProviderController (B2B_V2.WebApi).
+2026-01-28 22:59:44.018 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[B2B_V2.Domain.Entities.Candidate, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.CandidateDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 22:59:44.022 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CandidateController.GetByCompanyId (B2B_V2.WebApi) in 12.0731ms
+2026-01-28 22:59:44.022 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[UpdatedAt], [p0].[PackageId], [p0].[ServiceId]
+FROM [Packages] AS [p]
+LEFT JOIN [PackageServices] AS [p0] ON [p].[Id] = [p0].[PackageId]
+ORDER BY [p].[Id], [p0].[PackageId]
+2026-01-28 22:59:44.023 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CandidateController.GetByCompanyId (B2B_V2.WebApi)'
+2026-01-28 22:59:44.028 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/candidate/company/198227a9-c688-4c1a-9dbc-f14842735179 - 200 null application/json; charset=utf-8 53.6304ms
+2026-01-28 22:59:44.028 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Code], [s].[CreatedAt], [s].[Description], [s].[IsActive], [s].[Name], [s].[Price], [s].[UpdatedAt]
+FROM [Services] AS [s]
+WHERE [s].[Id] = @__id_0
+2026-01-28 22:59:44.030 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[BranchLocations], [c].[BusinessActivity], [c].[CRCertificatePath], [c].[CRNumber], [c].[CompanySize], [c].[CreatedAt], [c].[DefaultProviderAssignmentMode], [c].[DesignatedContactPersonId], [c].[EstimatedMonthlyScreeningVolume], [c].[HeadOfficeAddress], [c].[IsActive], [c].[Latitude], [c].[LegalName], [c].[Longitude], [c].[TotalEmployees], [c].[UpdatedAt], [c].[VATRegistrationNumber]
+FROM [Companies] AS [c]
+WHERE [c].[Id] = @__id_0
+2026-01-28 22:59:44.034 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Code], [s].[CreatedAt], [s].[Description], [s].[IsActive], [s].[Name], [s].[Price], [s].[UpdatedAt]
+FROM [Services] AS [s]
+WHERE [s].[Id] = @__id_0
+2026-01-28 22:59:44.036 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[ComplianceAuditJson], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[IsVerified], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LastVerificationDate], [p].[Latitude], [p].[LegalName], [p].[Longitude], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+2026-01-28 22:59:44.037 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[B2B_V2.Application.DTOs.PackageDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 22:59:44.039 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[B2B_V2.Application.DTOs.ProviderDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 22:59:44.040 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.PackageController.GetPackages (B2B_V2.WebApi) in 24.4245ms
+2026-01-28 22:59:44.042 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ProviderController.GetByLocation (B2B_V2.WebApi) in 21.7517ms
+2026-01-28 22:59:44.043 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.PackageController.GetPackages (B2B_V2.WebApi)'
+2026-01-28 22:59:44.044 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetByLocation (B2B_V2.WebApi)'
+2026-01-28 22:59:44.045 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/package - 200 null application/json; charset=utf-8 48.9511ms
+2026-01-28 22:59:44.046 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/provider/by-location/198227a9-c688-4c1a-9dbc-f14842735179 - 200 null application/json; charset=utf-8 46.6137ms
+2026-01-28 23:00:01.042 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/request - null null
+2026-01-28 23:00:01.047 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:01.048 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/request - 204 null null 6.1535ms
+2026-01-28 23:00:01.052 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/api/request - application/json 216
+2026-01-28 23:00:01.055 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:01.057 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.RequestController.CreateRequest (B2B_V2.WebApi)'
+2026-01-28 23:00:01.062 +03:00 [INF] Route matched with {action = "CreateRequest", controller = "Request"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.RequestDto]]] CreateRequest(B2B_V2.Application.DTOs.CreateRequestDto) on controller B2B_V2.WebApi.Controllers.RequestController (B2B_V2.WebApi).
+2026-01-28 23:00:01.177 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid), @p3='?' (Size = 450), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Boolean), @p8='?' (DbType = Guid), @p9='?' (DbType = Guid), @p10='?' (DbType = Guid), @p11='?' (DbType = Int32), @p12='?' (Size = 4000), @p13='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Requests] ([Id], [AssignedProviderId], [CandidateId], [CaseID], [CompanyId], [CreatedAt], [ExpectedVisitDate], [IsActive], [PackageId], [RequestedProviderId], [ScreeningBatchId], [Status], [SupportingDocumentPath], [UpdatedAt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2026-01-28 23:00:01.191 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Notifications] ([Id], [CaseId], [CreatedAt], [IsActive], [IsRead], [Message], [RecipientIdentifier], [Type], [UpdatedAt], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2026-01-28 23:00:01.200 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__dto_RequestedProviderId_Value_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[ProviderId] = @__dto_RequestedProviderId_Value_0
+2026-01-28 23:00:01.205 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Notifications] ([Id], [CaseId], [CreatedAt], [IsActive], [IsRead], [Message], [RecipientIdentifier], [Type], [UpdatedAt], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2026-01-28 23:00:01.209 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Notifications] ([Id], [CaseId], [CreatedAt], [IsActive], [IsRead], [Message], [RecipientIdentifier], [Type], [UpdatedAt], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2026-01-28 23:00:01.241 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__batchId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AssignedProviderId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[PackageId], [r].[RequestedProviderId], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt], [c].[Id], [c].[BranchLocation], [c].[CompanyId], [c].[CreatedAt], [c].[Department], [c].[FullName], [c].[Gender], [c].[IsActive], [c].[MobileNumber], [c].[NationalID], [c].[Position], [c].[UpdatedAt], [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[UpdatedAt], [p0].[Id], [p0].[BankAccountId], [p0].[BranchLocations], [p0].[CBAHIAccreditationPath], [p0].[CRCertificatePath], [p0].[ComplianceAuditJson], [p0].[CreatedAt], [p0].[EstimatedDailyOperationalCapacity], [p0].[IsActive], [p0].[IsVerified], [p0].[LabAccreditationPath], [p0].[LabSetup], [p0].[LastVerificationDate], [p0].[Latitude], [p0].[LegalName], [p0].[Longitude], [p0].[MOHLicensePath], [p0].[MedicalWasteManagementContractPath], [p0].[OccupationalPhysicianLicensePath], [p0].[PrimaryContactPersonId], [p0].[ProfessionalLiabilityInsurancePath], [p0].[TierId], [p0].[UpdatedAt], [p1].[Id], [p1].[BankAccountId], [p1].[BranchLocations], [p1].[CBAHIAccreditationPath], [p1].[CRCertificatePath], [p1].[ComplianceAuditJson], [p1].[CreatedAt], [p1].[EstimatedDailyOperationalCapacity], [p1].[IsActive], [p1].[IsVerified], [p1].[LabAccreditationPath], [p1].[LabSetup], [p1].[LastVerificationDate], [p1].[Latitude], [p1].[LegalName], [p1].[Longitude], [p1].[MOHLicensePath], [p1].[MedicalWasteManagementContractPath], [p1].[OccupationalPhysicianLicensePath], [p1].[PrimaryContactPersonId], [p1].[ProfessionalLiabilityInsurancePath], [p1].[TierId], [p1].[UpdatedAt]
+FROM [Requests] AS [r]
+LEFT JOIN [Candidates] AS [c] ON [r].[CandidateId] = [c].[Id]
+INNER JOIN [Packages] AS [p] ON [r].[PackageId] = [p].[Id]
+LEFT JOIN [Providers] AS [p0] ON [r].[RequestedProviderId] = [p0].[Id]
+LEFT JOIN [Providers] AS [p1] ON [r].[AssignedProviderId] = [p1].[Id]
+WHERE [r].[ScreeningBatchId] = @__batchId_0
+2026-01-28 23:00:01.245 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[B2B_V2.Domain.Entities.Request, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.RequestDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:00:01.252 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.RequestController.CreateRequest (B2B_V2.WebApi) in 186.686ms
+2026-01-28 23:00:01.253 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.RequestController.CreateRequest (B2B_V2.WebApi)'
+2026-01-28 23:00:01.254 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/api/request - 200 null application/json; charset=utf-8 202.2987ms
+2026-01-28 23:00:03.116 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/provider/by-location/198227a9-c688-4c1a-9dbc-f14842735179 - null null
+2026-01-28 23:00:03.120 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:03.116 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/candidate/company/198227a9-c688-4c1a-9dbc-f14842735179 - null null
+2026-01-28 23:00:03.116 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/package - null null
+2026-01-28 23:00:03.124 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/provider/by-location/198227a9-c688-4c1a-9dbc-f14842735179 - 204 null null 7.923ms
+2026-01-28 23:00:03.127 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:03.129 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:03.133 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/provider/by-location/198227a9-c688-4c1a-9dbc-f14842735179 - null null
+2026-01-28 23:00:03.134 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/candidate/company/198227a9-c688-4c1a-9dbc-f14842735179 - 204 null null 17.6406ms
+2026-01-28 23:00:03.135 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/package - 204 null null 18.8416ms
+2026-01-28 23:00:03.139 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:03.142 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/candidate/company/198227a9-c688-4c1a-9dbc-f14842735179 - null null
+2026-01-28 23:00:03.145 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/package - null null
+2026-01-28 23:00:03.146 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetByLocation (B2B_V2.WebApi)'
+2026-01-28 23:00:03.148 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:03.151 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:03.151 +03:00 [INF] Route matched with {action = "GetByLocation", controller = "Provider"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.ProviderDto]]] GetByLocation(System.Guid) on controller B2B_V2.WebApi.Controllers.ProviderController (B2B_V2.WebApi).
+2026-01-28 23:00:03.152 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CandidateController.GetByCompanyId (B2B_V2.WebApi)'
+2026-01-28 23:00:03.153 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.PackageController.GetPackages (B2B_V2.WebApi)'
+2026-01-28 23:00:03.157 +03:00 [INF] Route matched with {action = "GetByCompanyId", controller = "Candidate"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.CandidateDto]]] GetByCompanyId(System.Guid) on controller B2B_V2.WebApi.Controllers.CandidateController (B2B_V2.WebApi).
+2026-01-28 23:00:03.158 +03:00 [INF] Route matched with {action = "GetPackages", controller = "Package"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.PackageDto]]] GetPackages() on controller B2B_V2.WebApi.Controllers.PackageController (B2B_V2.WebApi).
+2026-01-28 23:00:03.158 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[BranchLocations], [c].[BusinessActivity], [c].[CRCertificatePath], [c].[CRNumber], [c].[CompanySize], [c].[CreatedAt], [c].[DefaultProviderAssignmentMode], [c].[DesignatedContactPersonId], [c].[EstimatedMonthlyScreeningVolume], [c].[HeadOfficeAddress], [c].[IsActive], [c].[Latitude], [c].[LegalName], [c].[Longitude], [c].[TotalEmployees], [c].[UpdatedAt], [c].[VATRegistrationNumber]
+FROM [Companies] AS [c]
+WHERE [c].[Id] = @__id_0
+2026-01-28 23:00:03.164 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[BranchLocation], [c].[CompanyId], [c].[CreatedAt], [c].[Department], [c].[FullName], [c].[Gender], [c].[IsActive], [c].[MobileNumber], [c].[NationalID], [c].[Position], [c].[UpdatedAt], [c0].[Id], [c0].[CandidateId], [c0].[ContentType], [c0].[CreatedAt], [c0].[FileName], [c0].[FilePath], [c0].[FileSize], [c0].[IsActive], [c0].[UpdatedAt]
+FROM [Candidates] AS [c]
+LEFT JOIN [CandidateAttachments] AS [c0] ON [c].[Id] = [c0].[CandidateId]
+WHERE [c].[CompanyId] = @__companyId_0
+ORDER BY [c].[Id]
+2026-01-28 23:00:03.166 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[ComplianceAuditJson], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[IsVerified], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LastVerificationDate], [p].[Latitude], [p].[LegalName], [p].[Longitude], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+2026-01-28 23:00:03.168 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[B2B_V2.Domain.Entities.Candidate, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.CandidateDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:00:03.169 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[UpdatedAt], [p0].[PackageId], [p0].[ServiceId]
+FROM [Packages] AS [p]
+LEFT JOIN [PackageServices] AS [p0] ON [p].[Id] = [p0].[PackageId]
+ORDER BY [p].[Id], [p0].[PackageId]
+2026-01-28 23:00:03.170 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[B2B_V2.Application.DTOs.ProviderDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:00:03.172 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CandidateController.GetByCompanyId (B2B_V2.WebApi) in 11.7279ms
+2026-01-28 23:00:03.176 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ProviderController.GetByLocation (B2B_V2.WebApi) in 20.289ms
+2026-01-28 23:00:03.176 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Code], [s].[CreatedAt], [s].[Description], [s].[IsActive], [s].[Name], [s].[Price], [s].[UpdatedAt]
+FROM [Services] AS [s]
+WHERE [s].[Id] = @__id_0
+2026-01-28 23:00:03.177 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CandidateController.GetByCompanyId (B2B_V2.WebApi)'
+2026-01-28 23:00:03.178 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetByLocation (B2B_V2.WebApi)'
+2026-01-28 23:00:03.182 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/candidate/company/198227a9-c688-4c1a-9dbc-f14842735179 - 200 null application/json; charset=utf-8 39.0661ms
+2026-01-28 23:00:03.182 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Code], [s].[CreatedAt], [s].[Description], [s].[IsActive], [s].[Name], [s].[Price], [s].[UpdatedAt]
+FROM [Services] AS [s]
+WHERE [s].[Id] = @__id_0
+2026-01-28 23:00:03.183 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/provider/by-location/198227a9-c688-4c1a-9dbc-f14842735179 - 200 null application/json; charset=utf-8 50.067ms
+2026-01-28 23:00:03.189 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[B2B_V2.Application.DTOs.PackageDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:00:03.193 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.PackageController.GetPackages (B2B_V2.WebApi) in 30.4336ms
+2026-01-28 23:00:03.194 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.PackageController.GetPackages (B2B_V2.WebApi)'
+2026-01-28 23:00:03.196 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/package - 200 null application/json; charset=utf-8 50.2444ms
+2026-01-28 23:00:08.882 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/Notification/0c499917-a2a7-40a6-b895-57992ddba97e/mark-read - null null
+2026-01-28 23:00:08.886 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:08.887 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/Notification/0c499917-a2a7-40a6-b895-57992ddba97e/mark-read - 204 null null 4.4101ms
+2026-01-28 23:00:08.890 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/api/Notification/0c499917-a2a7-40a6-b895-57992ddba97e/mark-read - application/json 2
+2026-01-28 23:00:08.894 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:08.895 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.NotificationController.MarkAsRead (B2B_V2.WebApi)'
+2026-01-28 23:00:08.899 +03:00 [INF] Route matched with {action = "MarkAsRead", controller = "Notification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MarkAsRead(System.Guid) on controller B2B_V2.WebApi.Controllers.NotificationController (B2B_V2.WebApi).
+2026-01-28 23:00:08.913 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [n].[Id], [n].[CaseId], [n].[CreatedAt], [n].[IsActive], [n].[IsRead], [n].[Message], [n].[RecipientIdentifier], [n].[Type], [n].[UpdatedAt], [n].[UserId]
+FROM [Notifications] AS [n]
+WHERE [n].[Id] = @__id_0
+2026-01-28 23:00:08.925 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p9='?' (DbType = Guid), @p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Boolean), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Notifications] SET [CaseId] = @p0, [CreatedAt] = @p1, [IsActive] = @p2, [IsRead] = @p3, [Message] = @p4, [RecipientIdentifier] = @p5, [Type] = @p6, [UpdatedAt] = @p7, [UserId] = @p8
+OUTPUT 1
+WHERE [Id] = @p9;
+2026-01-28 23:00:08.931 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2026-01-28 23:00:08.932 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.NotificationController.MarkAsRead (B2B_V2.WebApi) in 31.2187ms
+2026-01-28 23:00:08.934 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.NotificationController.MarkAsRead (B2B_V2.WebApi)'
+2026-01-28 23:00:08.935 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/api/Notification/0c499917-a2a7-40a6-b895-57992ddba97e/mark-read - 204 null null 45.2816ms
+2026-01-28 23:00:08.939 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - null null
+2026-01-28 23:00:08.942 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:08.942 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - 204 null null 2.9759ms
+2026-01-28 23:00:08.945 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/Notification - null null
+2026-01-28 23:00:08.947 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:08.949 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.NotificationController.GetUserNotifications (B2B_V2.WebApi)'
+2026-01-28 23:00:08.950 +03:00 [INF] Route matched with {action = "GetUserNotifications", controller = "Notification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.Object]]] GetUserNotifications() on controller B2B_V2.WebApi.Controllers.NotificationController (B2B_V2.WebApi).
+2026-01-28 23:00:08.955 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CaseId], [n].[CreatedAt], [n].[IsActive], [n].[IsRead], [n].[Message], [n].[RecipientIdentifier], [n].[Type], [n].[UpdatedAt], [n].[UserId]
+FROM [Notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+2026-01-28 23:00:08.957 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+IteratorSelectIterator`2[[B2B_V2.Domain.Entities.Notification, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType2`5[[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], B2B_V2.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:00:08.959 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.NotificationController.GetUserNotifications (B2B_V2.WebApi) in 7.6307ms
+2026-01-28 23:00:08.960 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.NotificationController.GetUserNotifications (B2B_V2.WebApi)'
+2026-01-28 23:00:08.961 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/Notification - 200 null application/json; charset=utf-8 15.9274ms
+2026-01-28 23:00:14.808 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - null null
+2026-01-28 23:00:14.812 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:14.813 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - 204 null null 5.1767ms
+2026-01-28 23:00:14.820 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/Notification - null null
+2026-01-28 23:00:14.823 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:14.825 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.NotificationController.GetUserNotifications (B2B_V2.WebApi)'
+2026-01-28 23:00:14.826 +03:00 [INF] Route matched with {action = "GetUserNotifications", controller = "Notification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.Object]]] GetUserNotifications() on controller B2B_V2.WebApi.Controllers.NotificationController (B2B_V2.WebApi).
+2026-01-28 23:00:14.830 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CaseId], [n].[CreatedAt], [n].[IsActive], [n].[IsRead], [n].[Message], [n].[RecipientIdentifier], [n].[Type], [n].[UpdatedAt], [n].[UserId]
+FROM [Notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+2026-01-28 23:00:14.833 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+IteratorSelectIterator`2[[B2B_V2.Domain.Entities.Notification, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType2`5[[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], B2B_V2.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:00:14.834 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.NotificationController.GetUserNotifications (B2B_V2.WebApi) in 6.6421ms
+2026-01-28 23:00:14.836 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.NotificationController.GetUserNotifications (B2B_V2.WebApi)'
+2026-01-28 23:00:14.838 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/Notification - 200 null application/json; charset=utf-8 18.1059ms
+2026-01-28 23:00:16.096 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/package - null null
+2026-01-28 23:00:16.097 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/provider/by-location/198227a9-c688-4c1a-9dbc-f14842735179 - null null
+2026-01-28 23:00:16.097 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/candidate/company/198227a9-c688-4c1a-9dbc-f14842735179 - null null
+2026-01-28 23:00:16.099 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:16.102 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:16.106 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:16.108 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/package - 204 null null 11.7786ms
+2026-01-28 23:00:16.108 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/provider/by-location/198227a9-c688-4c1a-9dbc-f14842735179 - 204 null null 11.4108ms
+2026-01-28 23:00:16.109 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/candidate/company/198227a9-c688-4c1a-9dbc-f14842735179 - 204 null null 12.1047ms
+2026-01-28 23:00:16.113 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/candidate/company/198227a9-c688-4c1a-9dbc-f14842735179 - null null
+2026-01-28 23:00:16.117 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/package - null null
+2026-01-28 23:00:16.120 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/provider/by-location/198227a9-c688-4c1a-9dbc-f14842735179 - null null
+2026-01-28 23:00:16.123 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:16.125 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:16.128 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:16.129 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CandidateController.GetByCompanyId (B2B_V2.WebApi)'
+2026-01-28 23:00:16.129 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.PackageController.GetPackages (B2B_V2.WebApi)'
+2026-01-28 23:00:16.131 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetByLocation (B2B_V2.WebApi)'
+2026-01-28 23:00:16.132 +03:00 [INF] Route matched with {action = "GetByCompanyId", controller = "Candidate"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.CandidateDto]]] GetByCompanyId(System.Guid) on controller B2B_V2.WebApi.Controllers.CandidateController (B2B_V2.WebApi).
+2026-01-28 23:00:16.133 +03:00 [INF] Route matched with {action = "GetPackages", controller = "Package"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.PackageDto]]] GetPackages() on controller B2B_V2.WebApi.Controllers.PackageController (B2B_V2.WebApi).
+2026-01-28 23:00:16.134 +03:00 [INF] Route matched with {action = "GetByLocation", controller = "Provider"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.ProviderDto]]] GetByLocation(System.Guid) on controller B2B_V2.WebApi.Controllers.ProviderController (B2B_V2.WebApi).
+2026-01-28 23:00:16.141 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[BranchLocation], [c].[CompanyId], [c].[CreatedAt], [c].[Department], [c].[FullName], [c].[Gender], [c].[IsActive], [c].[MobileNumber], [c].[NationalID], [c].[Position], [c].[UpdatedAt], [c0].[Id], [c0].[CandidateId], [c0].[ContentType], [c0].[CreatedAt], [c0].[FileName], [c0].[FilePath], [c0].[FileSize], [c0].[IsActive], [c0].[UpdatedAt]
+FROM [Candidates] AS [c]
+LEFT JOIN [CandidateAttachments] AS [c0] ON [c].[Id] = [c0].[CandidateId]
+WHERE [c].[CompanyId] = @__companyId_0
+ORDER BY [c].[Id]
+2026-01-28 23:00:16.142 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[UpdatedAt], [p0].[PackageId], [p0].[ServiceId]
+FROM [Packages] AS [p]
+LEFT JOIN [PackageServices] AS [p0] ON [p].[Id] = [p0].[PackageId]
+ORDER BY [p].[Id], [p0].[PackageId]
+2026-01-28 23:00:16.144 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[BranchLocations], [c].[BusinessActivity], [c].[CRCertificatePath], [c].[CRNumber], [c].[CompanySize], [c].[CreatedAt], [c].[DefaultProviderAssignmentMode], [c].[DesignatedContactPersonId], [c].[EstimatedMonthlyScreeningVolume], [c].[HeadOfficeAddress], [c].[IsActive], [c].[Latitude], [c].[LegalName], [c].[Longitude], [c].[TotalEmployees], [c].[UpdatedAt], [c].[VATRegistrationNumber]
+FROM [Companies] AS [c]
+WHERE [c].[Id] = @__id_0
+2026-01-28 23:00:16.146 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[B2B_V2.Domain.Entities.Candidate, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.CandidateDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:00:16.148 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Code], [s].[CreatedAt], [s].[Description], [s].[IsActive], [s].[Name], [s].[Price], [s].[UpdatedAt]
+FROM [Services] AS [s]
+WHERE [s].[Id] = @__id_0
+2026-01-28 23:00:16.150 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[ComplianceAuditJson], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[IsVerified], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LastVerificationDate], [p].[Latitude], [p].[LegalName], [p].[Longitude], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+2026-01-28 23:00:16.150 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CandidateController.GetByCompanyId (B2B_V2.WebApi) in 12.164ms
+2026-01-28 23:00:16.155 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Code], [s].[CreatedAt], [s].[Description], [s].[IsActive], [s].[Name], [s].[Price], [s].[UpdatedAt]
+FROM [Services] AS [s]
+WHERE [s].[Id] = @__id_0
+2026-01-28 23:00:16.157 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[B2B_V2.Application.DTOs.ProviderDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:00:16.157 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CandidateController.GetByCompanyId (B2B_V2.WebApi)'
+2026-01-28 23:00:16.160 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[B2B_V2.Application.DTOs.PackageDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:00:16.162 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ProviderController.GetByLocation (B2B_V2.WebApi) in 18.6175ms
+2026-01-28 23:00:16.163 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/candidate/company/198227a9-c688-4c1a-9dbc-f14842735179 - 200 null application/json; charset=utf-8 49.9431ms
+2026-01-28 23:00:16.166 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.PackageController.GetPackages (B2B_V2.WebApi) in 25.0543ms
+2026-01-28 23:00:16.167 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetByLocation (B2B_V2.WebApi)'
+2026-01-28 23:00:16.172 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.PackageController.GetPackages (B2B_V2.WebApi)'
+2026-01-28 23:00:16.173 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/provider/by-location/198227a9-c688-4c1a-9dbc-f14842735179 - 200 null application/json; charset=utf-8 53.5423ms
+2026-01-28 23:00:16.174 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/package - 200 null application/json; charset=utf-8 57.8106ms
+2026-01-28 23:00:49.856 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/auth/login - null null
+2026-01-28 23:00:49.860 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:49.862 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/auth/login - 204 null null 6.0749ms
+2026-01-28 23:00:49.867 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/api/auth/login - application/json 58
+2026-01-28 23:00:49.871 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:49.872 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.AuthController.Login (B2B_V2.WebApi)'
+2026-01-28 23:00:49.873 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(B2B_V2.Application.DTOs.LoginDto) on controller B2B_V2.WebApi.Controllers.AuthController (B2B_V2.WebApi).
+2026-01-28 23:00:49.879 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-28 23:00:49.965 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-28 23:00:49.969 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[RoleId], [r].[PermissionId], [p].[Id], [p].[Description], [p].[FeatureGroup], [p].[Name], [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [RolePermissions] AS [r]
+INNER JOIN [Permissions] AS [p] ON [r].[PermissionId] = [p].[Id]
+INNER JOIN [AspNetRoles] AS [a] ON [r].[RoleId] = [a].[Id]
+2026-01-28 23:00:49.973 +03:00 [INF] Executing OkObjectResult, writing value of type 'B2B_V2.Application.DTOs.AuthResponseDto'.
+2026-01-28 23:00:49.974 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.AuthController.Login (B2B_V2.WebApi) in 98.9626ms
+2026-01-28 23:00:49.975 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.AuthController.Login (B2B_V2.WebApi)'
+2026-01-28 23:00:49.976 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/api/auth/login - 200 null application/json; charset=utf-8 109.1512ms
+2026-01-28 23:00:49.987 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - null null
+2026-01-28 23:00:49.989 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:49.990 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - 204 null null 3.3005ms
+2026-01-28 23:00:49.995 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/Notification - null null
+2026-01-28 23:00:49.999 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:50.000 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.NotificationController.GetUserNotifications (B2B_V2.WebApi)'
+2026-01-28 23:00:50.001 +03:00 [INF] Route matched with {action = "GetUserNotifications", controller = "Notification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.Object]]] GetUserNotifications() on controller B2B_V2.WebApi.Controllers.NotificationController (B2B_V2.WebApi).
+2026-01-28 23:00:50.005 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CaseId], [n].[CreatedAt], [n].[IsActive], [n].[IsRead], [n].[Message], [n].[RecipientIdentifier], [n].[Type], [n].[UpdatedAt], [n].[UserId]
+FROM [Notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+2026-01-28 23:00:50.007 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+IteratorSelectIterator`2[[B2B_V2.Domain.Entities.Notification, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType2`5[[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], B2B_V2.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:00:50.009 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.NotificationController.GetUserNotifications (B2B_V2.WebApi) in 5.5727ms
+2026-01-28 23:00:50.011 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.NotificationController.GetUserNotifications (B2B_V2.WebApi)'
+2026-01-28 23:00:50.012 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/Notification - 200 null application/json; charset=utf-8 16.9598ms
+2026-01-28 23:00:54.049 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/provider - null null
+2026-01-28 23:00:54.055 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:54.057 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/provider - 204 null null 7.3809ms
+2026-01-28 23:00:54.065 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/provider - null null
+2026-01-28 23:00:54.069 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:54.070 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi)'
+2026-01-28 23:00:54.071 +03:00 [INF] Route matched with {action = "GetProviders", controller = "Provider"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.ProviderDto]]] GetProviders() on controller B2B_V2.WebApi.Controllers.ProviderController (B2B_V2.WebApi).
+2026-01-28 23:00:54.075 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[ComplianceAuditJson], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[IsVerified], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LastVerificationDate], [p].[Latitude], [p].[LegalName], [p].[Longitude], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+2026-01-28 23:00:54.081 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[B2B_V2.Domain.Entities.Provider, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.ProviderDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:00:54.085 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi) in 11.0904ms
+2026-01-28 23:00:54.087 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi)'
+2026-01-28 23:00:54.088 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/provider - 200 null application/json; charset=utf-8 22.9502ms
+2026-01-28 23:00:55.176 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/provider/9d52c915-bf56-4a71-8346-1b599662838e - null null
+2026-01-28 23:00:55.181 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:55.183 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/provider/9d52c915-bf56-4a71-8346-1b599662838e - 204 null null 6.2229ms
+2026-01-28 23:00:55.188 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/provider/9d52c915-bf56-4a71-8346-1b599662838e - null null
+2026-01-28 23:00:55.191 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:55.192 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProvider (B2B_V2.WebApi)'
+2026-01-28 23:00:55.193 +03:00 [INF] Route matched with {action = "GetProvider", controller = "Provider"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[B2B_V2.Application.DTOs.ProviderDto]] GetProvider(System.Guid) on controller B2B_V2.WebApi.Controllers.ProviderController (B2B_V2.WebApi).
+2026-01-28 23:00:55.197 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[ComplianceAuditJson], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[IsVerified], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LastVerificationDate], [p].[Latitude], [p].[LegalName], [p].[Longitude], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+WHERE [p].[Id] = @__id_0
+2026-01-28 23:00:55.199 +03:00 [INF] Executing OkObjectResult, writing value of type 'B2B_V2.Application.DTOs.ProviderDto'.
+2026-01-28 23:00:55.201 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ProviderController.GetProvider (B2B_V2.WebApi) in 5.5105ms
+2026-01-28 23:00:55.202 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProvider (B2B_V2.WebApi)'
+2026-01-28 23:00:55.203 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/provider/9d52c915-bf56-4a71-8346-1b599662838e - 200 null application/json; charset=utf-8 14.7422ms
+2026-01-28 23:00:58.129 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/ai/compliance-audit - null null
+2026-01-28 23:00:58.133 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:58.134 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/ai/compliance-audit - 204 null null 5.5754ms
+2026-01-28 23:00:58.139 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/api/ai/compliance-audit - application/json 84
+2026-01-28 23:00:58.143 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:00:58.144 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.AIController.RunComplianceAudit (B2B_V2.WebApi)'
+2026-01-28 23:00:58.149 +03:00 [INF] Route matched with {action = "RunComplianceAudit", controller = "AI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[B2B_V2.Application.Interfaces.ComplianceAuditResultDto]] RunComplianceAudit(B2B_V2.Application.Interfaces.ComplianceAuditRequestDto) on controller B2B_V2.WebApi.Controllers.AIController (B2B_V2.WebApi).
+2026-01-28 23:00:58.172 +03:00 [INF] Start processing HTTP request POST http://localhost:8000/audit
+2026-01-28 23:00:58.178 +03:00 [INF] Sending HTTP request POST http://localhost:8000/audit
+2026-01-28 23:01:29.944 +03:00 [INF] Received HTTP response headers after 31761.6473ms - 200
+2026-01-28 23:01:29.946 +03:00 [INF] End processing HTTP request after 31774.7987ms - 200
+2026-01-28 23:01:29.949 +03:00 [INF] Executing OkObjectResult, writing value of type 'B2B_V2.Application.Interfaces.ComplianceAuditResultDto'.
+2026-01-28 23:01:29.952 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.AIController.RunComplianceAudit (B2B_V2.WebApi) in 31801.1423ms
+2026-01-28 23:01:29.954 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.AIController.RunComplianceAudit (B2B_V2.WebApi)'
+2026-01-28 23:01:29.956 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/api/ai/compliance-audit - 200 null application/json; charset=utf-8 31817.1125ms
+2026-01-28 23:01:44.408 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/provider/9d52c915-bf56-4a71-8346-1b599662838e/verify-audit - null null
+2026-01-28 23:01:44.413 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:01:44.414 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/provider/9d52c915-bf56-4a71-8346-1b599662838e/verify-audit - 204 null null 5.8599ms
+2026-01-28 23:01:44.418 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/api/provider/9d52c915-bf56-4a71-8346-1b599662838e/verify-audit - application/json 1198
+2026-01-28 23:01:44.423 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:01:44.425 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ProviderController.VerifyAudit (B2B_V2.WebApi)'
+2026-01-28 23:01:44.426 +03:00 [INF] Route matched with {action = "VerifyAudit", controller = "Provider"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] VerifyAudit(System.Guid, B2B_V2.Application.Interfaces.ComplianceAuditResultDto) on controller B2B_V2.WebApi.Controllers.ProviderController (B2B_V2.WebApi).
+2026-01-28 23:01:44.432 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[ComplianceAuditJson], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[IsVerified], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LastVerificationDate], [p].[Latitude], [p].[LegalName], [p].[Longitude], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+WHERE [p].[Id] = @__id_0
+2026-01-28 23:01:44.442 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p22='?' (DbType = Guid), @p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int32), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (Size = 4000), @p10='?' (DbType = Int32), @p11='?' (DbType = DateTime2), @p12='?' (Precision = 18) (Scale = 10) (DbType = Decimal), @p13='?' (Size = 4000), @p14='?' (Precision = 18) (Scale = 10) (DbType = Decimal), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (Size = 4000), @p18='?' (DbType = Guid), @p19='?' (Size = 4000), @p20='?' (DbType = Int32), @p21='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Providers] SET [BankAccountId] = @p0, [BranchLocations] = @p1, [CBAHIAccreditationPath] = @p2, [CRCertificatePath] = @p3, [ComplianceAuditJson] = @p4, [CreatedAt] = @p5, [EstimatedDailyOperationalCapacity] = @p6, [IsActive] = @p7, [IsVerified] = @p8, [LabAccreditationPath] = @p9, [LabSetup] = @p10, [LastVerificationDate] = @p11, [Latitude] = @p12, [LegalName] = @p13, [Longitude] = @p14, [MOHLicensePath] = @p15, [MedicalWasteManagementContractPath] = @p16, [OccupationalPhysicianLicensePath] = @p17, [PrimaryContactPersonId] = @p18, [ProfessionalLiabilityInsurancePath] = @p19, [TierId] = @p20, [UpdatedAt] = @p21
+OUTPUT 1
+WHERE [Id] = @p22;
+2026-01-28 23:01:44.445 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`2[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-01-28 23:01:44.447 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ProviderController.VerifyAudit (B2B_V2.WebApi) in 18.1878ms
+2026-01-28 23:01:44.449 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ProviderController.VerifyAudit (B2B_V2.WebApi)'
+2026-01-28 23:01:44.450 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/api/provider/9d52c915-bf56-4a71-8346-1b599662838e/verify-audit - 200 null application/json; charset=utf-8 32.4734ms
+2026-01-28 23:05:03.019 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/company - null null
+2026-01-28 23:05:03.023 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:05:03.024 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/company - 204 null null 4.4139ms
+2026-01-28 23:05:03.028 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/company - null null
+2026-01-28 23:05:03.030 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:05:03.032 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CompanyController.GetCompanies (B2B_V2.WebApi)'
+2026-01-28 23:05:03.035 +03:00 [INF] Route matched with {action = "GetCompanies", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.CompanyDto]]] GetCompanies() on controller B2B_V2.WebApi.Controllers.CompanyController (B2B_V2.WebApi).
+2026-01-28 23:05:03.049 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[BranchLocations], [c].[BusinessActivity], [c].[CRCertificatePath], [c].[CRNumber], [c].[CompanySize], [c].[CreatedAt], [c].[DefaultProviderAssignmentMode], [c].[DesignatedContactPersonId], [c].[EstimatedMonthlyScreeningVolume], [c].[HeadOfficeAddress], [c].[IsActive], [c].[Latitude], [c].[LegalName], [c].[Longitude], [c].[TotalEmployees], [c].[UpdatedAt], [c].[VATRegistrationNumber]
+FROM [Companies] AS [c]
+2026-01-28 23:05:03.051 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[B2B_V2.Domain.Entities.Company, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.CompanyDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:05:03.060 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CompanyController.GetCompanies (B2B_V2.WebApi) in 21.7693ms
+2026-01-28 23:05:03.062 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CompanyController.GetCompanies (B2B_V2.WebApi)'
+2026-01-28 23:05:03.063 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/company - 200 null application/json; charset=utf-8 35.1551ms
+2026-01-28 23:05:03.701 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/provider - null null
+2026-01-28 23:05:03.706 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:05:03.708 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/provider - 204 null null 6.8754ms
+2026-01-28 23:05:03.712 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/provider - null null
+2026-01-28 23:05:03.715 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:05:03.716 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi)'
+2026-01-28 23:05:03.717 +03:00 [INF] Route matched with {action = "GetProviders", controller = "Provider"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.ProviderDto]]] GetProviders() on controller B2B_V2.WebApi.Controllers.ProviderController (B2B_V2.WebApi).
+2026-01-28 23:05:03.721 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[ComplianceAuditJson], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[IsVerified], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LastVerificationDate], [p].[Latitude], [p].[LegalName], [p].[Longitude], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+2026-01-28 23:05:03.724 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[B2B_V2.Domain.Entities.Provider, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.ProviderDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:05:03.726 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi) in 8.1196ms
+2026-01-28 23:05:03.728 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi)'
+2026-01-28 23:05:03.729 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/provider - 200 null application/json; charset=utf-8 16.3235ms
+2026-01-28 23:05:04.996 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/provider/54ed873e-cc48-4caa-8021-0559133642b2 - null null
+2026-01-28 23:05:05.002 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:05:05.004 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/provider/54ed873e-cc48-4caa-8021-0559133642b2 - 204 null null 7.7474ms
+2026-01-28 23:05:05.009 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/provider/54ed873e-cc48-4caa-8021-0559133642b2 - null null
+2026-01-28 23:05:05.014 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:05:05.016 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProvider (B2B_V2.WebApi)'
+2026-01-28 23:05:05.017 +03:00 [INF] Route matched with {action = "GetProvider", controller = "Provider"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[B2B_V2.Application.DTOs.ProviderDto]] GetProvider(System.Guid) on controller B2B_V2.WebApi.Controllers.ProviderController (B2B_V2.WebApi).
+2026-01-28 23:05:05.038 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[ComplianceAuditJson], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[IsVerified], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LastVerificationDate], [p].[Latitude], [p].[LegalName], [p].[Longitude], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+WHERE [p].[Id] = @__id_0
+2026-01-28 23:05:05.041 +03:00 [INF] Executing OkObjectResult, writing value of type 'B2B_V2.Application.DTOs.ProviderDto'.
+2026-01-28 23:05:05.043 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ProviderController.GetProvider (B2B_V2.WebApi) in 7.5419ms
+2026-01-28 23:05:05.044 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProvider (B2B_V2.WebApi)'
+2026-01-28 23:05:05.045 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/provider/54ed873e-cc48-4caa-8021-0559133642b2 - 200 null application/json; charset=utf-8 35.7784ms
+2026-01-28 23:05:57.304 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/ai/compliance-audit - null null
+2026-01-28 23:05:57.308 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:05:57.309 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/ai/compliance-audit - 204 null null 5.3256ms
+2026-01-28 23:05:57.314 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/api/ai/compliance-audit - application/json 68
+2026-01-28 23:05:57.318 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:05:57.319 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.AIController.RunComplianceAudit (B2B_V2.WebApi)'
+2026-01-28 23:05:57.320 +03:00 [INF] Route matched with {action = "RunComplianceAudit", controller = "AI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[B2B_V2.Application.Interfaces.ComplianceAuditResultDto]] RunComplianceAudit(B2B_V2.Application.Interfaces.ComplianceAuditRequestDto) on controller B2B_V2.WebApi.Controllers.AIController (B2B_V2.WebApi).
+2026-01-28 23:05:57.324 +03:00 [INF] Start processing HTTP request POST http://localhost:8000/audit
+2026-01-28 23:05:57.325 +03:00 [INF] Sending HTTP request POST http://localhost:8000/audit
+2026-01-28 23:06:23.653 +03:00 [INF] Received HTTP response headers after 26326.1407ms - 200
+2026-01-28 23:06:23.655 +03:00 [INF] End processing HTTP request after 26330.702ms - 200
+2026-01-28 23:06:23.656 +03:00 [INF] Executing OkObjectResult, writing value of type 'B2B_V2.Application.Interfaces.ComplianceAuditResultDto'.
+2026-01-28 23:06:23.659 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.AIController.RunComplianceAudit (B2B_V2.WebApi) in 26336.0577ms
+2026-01-28 23:06:23.661 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.AIController.RunComplianceAudit (B2B_V2.WebApi)'
+2026-01-28 23:06:23.665 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/api/ai/compliance-audit - 200 null application/json; charset=utf-8 26351.1996ms
+2026-01-28 23:06:55.179 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/provider/54ed873e-cc48-4caa-8021-0559133642b2 - null null
+2026-01-28 23:06:55.194 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:06:55.195 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/provider/54ed873e-cc48-4caa-8021-0559133642b2 - 204 null null 16.1458ms
+2026-01-28 23:06:55.200 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/provider/54ed873e-cc48-4caa-8021-0559133642b2 - null null
+2026-01-28 23:06:55.203 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:06:55.204 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProvider (B2B_V2.WebApi)'
+2026-01-28 23:06:55.205 +03:00 [INF] Route matched with {action = "GetProvider", controller = "Provider"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[B2B_V2.Application.DTOs.ProviderDto]] GetProvider(System.Guid) on controller B2B_V2.WebApi.Controllers.ProviderController (B2B_V2.WebApi).
+2026-01-28 23:06:55.211 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[ComplianceAuditJson], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[IsVerified], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LastVerificationDate], [p].[Latitude], [p].[LegalName], [p].[Longitude], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+WHERE [p].[Id] = @__id_0
+2026-01-28 23:06:55.216 +03:00 [INF] Executing OkObjectResult, writing value of type 'B2B_V2.Application.DTOs.ProviderDto'.
+2026-01-28 23:06:55.217 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ProviderController.GetProvider (B2B_V2.WebApi) in 9.7432ms
+2026-01-28 23:06:55.219 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProvider (B2B_V2.WebApi)'
+2026-01-28 23:06:55.222 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/provider/54ed873e-cc48-4caa-8021-0559133642b2 - 200 null application/json; charset=utf-8 22.2481ms
+2026-01-28 23:07:16.419 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/provider/54ed873e-cc48-4caa-8021-0559133642b2 - null null
+2026-01-28 23:07:16.423 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:07:16.424 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/provider/54ed873e-cc48-4caa-8021-0559133642b2 - 204 null null 5.1457ms
+2026-01-28 23:07:16.427 +03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5284/api/provider/54ed873e-cc48-4caa-8021-0559133642b2 - application/json 312
+2026-01-28 23:07:16.430 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:07:16.432 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ProviderController.UpdateProvider (B2B_V2.WebApi)'
+2026-01-28 23:07:16.436 +03:00 [INF] Route matched with {action = "UpdateProvider", controller = "Provider"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProvider(System.Guid, B2B_V2.Application.DTOs.ProviderDto) on controller B2B_V2.WebApi.Controllers.ProviderController (B2B_V2.WebApi).
+2026-01-28 23:07:16.457 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[ComplianceAuditJson], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[IsVerified], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LastVerificationDate], [p].[Latitude], [p].[LegalName], [p].[Longitude], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+WHERE [p].[Id] = @__id_0
+2026-01-28 23:07:16.469 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p22='?' (DbType = Guid), @p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int32), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (Size = 4000), @p10='?' (DbType = Int32), @p11='?' (DbType = DateTime2), @p12='?' (Precision = 18) (Scale = 10) (DbType = Decimal), @p13='?' (Size = 4000), @p14='?' (Precision = 18) (Scale = 10) (DbType = Decimal), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (Size = 4000), @p18='?' (DbType = Guid), @p19='?' (Size = 4000), @p20='?' (DbType = Int32), @p21='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Providers] SET [BankAccountId] = @p0, [BranchLocations] = @p1, [CBAHIAccreditationPath] = @p2, [CRCertificatePath] = @p3, [ComplianceAuditJson] = @p4, [CreatedAt] = @p5, [EstimatedDailyOperationalCapacity] = @p6, [IsActive] = @p7, [IsVerified] = @p8, [LabAccreditationPath] = @p9, [LabSetup] = @p10, [LastVerificationDate] = @p11, [Latitude] = @p12, [LegalName] = @p13, [Longitude] = @p14, [MOHLicensePath] = @p15, [MedicalWasteManagementContractPath] = @p16, [OccupationalPhysicianLicensePath] = @p17, [PrimaryContactPersonId] = @p18, [ProfessionalLiabilityInsurancePath] = @p19, [TierId] = @p20, [UpdatedAt] = @p21
+OUTPUT 1
+WHERE [Id] = @p22;
+2026-01-28 23:07:16.472 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2026-01-28 23:07:16.473 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ProviderController.UpdateProvider (B2B_V2.WebApi) in 34.2737ms
+2026-01-28 23:07:16.474 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ProviderController.UpdateProvider (B2B_V2.WebApi)'
+2026-01-28 23:07:16.475 +03:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5284/api/provider/54ed873e-cc48-4caa-8021-0559133642b2 - 204 null null 47.5519ms
+2026-01-28 23:07:16.482 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/provider - null null
+2026-01-28 23:07:16.485 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:07:16.486 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/provider - 204 null null 4.2336ms
+2026-01-28 23:07:16.490 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/provider - null null
+2026-01-28 23:07:16.492 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:07:16.493 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi)'
+2026-01-28 23:07:16.494 +03:00 [INF] Route matched with {action = "GetProviders", controller = "Provider"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.ProviderDto]]] GetProviders() on controller B2B_V2.WebApi.Controllers.ProviderController (B2B_V2.WebApi).
+2026-01-28 23:07:16.498 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[ComplianceAuditJson], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[IsVerified], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LastVerificationDate], [p].[Latitude], [p].[LegalName], [p].[Longitude], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+2026-01-28 23:07:16.501 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[B2B_V2.Domain.Entities.Provider, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.ProviderDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:07:16.503 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi) in 6.7588ms
+2026-01-28 23:07:16.504 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi)'
+2026-01-28 23:07:16.505 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/provider - 200 null application/json; charset=utf-8 15.6066ms
+2026-01-28 23:07:17.975 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/provider/54ed873e-cc48-4caa-8021-0559133642b2 - null null
+2026-01-28 23:07:17.979 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:07:17.980 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProvider (B2B_V2.WebApi)'
+2026-01-28 23:07:17.982 +03:00 [INF] Route matched with {action = "GetProvider", controller = "Provider"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[B2B_V2.Application.DTOs.ProviderDto]] GetProvider(System.Guid) on controller B2B_V2.WebApi.Controllers.ProviderController (B2B_V2.WebApi).
+2026-01-28 23:07:17.986 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[ComplianceAuditJson], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[IsVerified], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LastVerificationDate], [p].[Latitude], [p].[LegalName], [p].[Longitude], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+WHERE [p].[Id] = @__id_0
+2026-01-28 23:07:17.989 +03:00 [INF] Executing OkObjectResult, writing value of type 'B2B_V2.Application.DTOs.ProviderDto'.
+2026-01-28 23:07:17.990 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ProviderController.GetProvider (B2B_V2.WebApi) in 6.38ms
+2026-01-28 23:07:17.991 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProvider (B2B_V2.WebApi)'
+2026-01-28 23:07:17.993 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/provider/54ed873e-cc48-4caa-8021-0559133642b2 - 200 null application/json; charset=utf-8 18.1585ms
+2026-01-28 23:08:25.730 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/provider - null null
+2026-01-28 23:08:25.738 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:08:25.739 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/provider - 204 null null 9.0452ms
+2026-01-28 23:08:25.744 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/provider - null null
+2026-01-28 23:08:25.747 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:08:25.748 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi)'
+2026-01-28 23:08:25.749 +03:00 [INF] Route matched with {action = "GetProviders", controller = "Provider"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.ProviderDto]]] GetProviders() on controller B2B_V2.WebApi.Controllers.ProviderController (B2B_V2.WebApi).
+2026-01-28 23:08:25.753 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[ComplianceAuditJson], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[IsVerified], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LastVerificationDate], [p].[Latitude], [p].[LegalName], [p].[Longitude], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+2026-01-28 23:08:25.756 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[B2B_V2.Domain.Entities.Provider, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.ProviderDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:08:25.758 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi) in 7.5468ms
+2026-01-28 23:08:25.759 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi)'
+2026-01-28 23:08:25.761 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/provider - 200 null application/json; charset=utf-8 16.638ms
+2026-01-28 23:08:35.848 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/Profile - null null
+2026-01-28 23:08:35.851 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:08:35.852 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/Profile - 204 null null 4.5822ms
+2026-01-28 23:08:35.856 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/Profile - null null
+2026-01-28 23:08:35.858 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:08:35.860 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ProfileController.GetProfile (B2B_V2.WebApi)'
+2026-01-28 23:08:35.863 +03:00 [INF] Route matched with {action = "GetProfile", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[B2B_V2.Application.DTOs.UserProfileDto]] GetProfile() on controller B2B_V2.WebApi.Controllers.ProfileController (B2B_V2.WebApi).
+2026-01-28 23:08:35.893 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2026-01-28 23:08:35.896 +03:00 [INF] Executing OkObjectResult, writing value of type 'B2B_V2.Application.DTOs.UserProfileDto'.
+2026-01-28 23:08:35.897 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ProfileController.GetProfile (B2B_V2.WebApi) in 32.0318ms
+2026-01-28 23:08:35.899 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ProfileController.GetProfile (B2B_V2.WebApi)'
+2026-01-28 23:08:35.901 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/Profile - 200 null application/json; charset=utf-8 45.1785ms
+2026-01-28 23:08:51.585 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/auth/login - null null
+2026-01-28 23:08:51.589 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:08:51.590 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/auth/login - 204 null null 5.5774ms
+2026-01-28 23:08:51.595 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/api/auth/login - application/json 61
+2026-01-28 23:08:51.597 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:08:51.598 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.AuthController.Login (B2B_V2.WebApi)'
+2026-01-28 23:08:51.599 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(B2B_V2.Application.DTOs.LoginDto) on controller B2B_V2.WebApi.Controllers.AuthController (B2B_V2.WebApi).
+2026-01-28 23:08:51.617 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-28 23:08:51.712 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-28 23:08:51.720 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[RoleId], [r].[PermissionId], [p].[Id], [p].[Description], [p].[FeatureGroup], [p].[Name], [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [RolePermissions] AS [r]
+INNER JOIN [Permissions] AS [p] ON [r].[PermissionId] = [p].[Id]
+INNER JOIN [AspNetRoles] AS [a] ON [r].[RoleId] = [a].[Id]
+2026-01-28 23:08:51.723 +03:00 [INF] Executing OkObjectResult, writing value of type 'B2B_V2.Application.DTOs.AuthResponseDto'.
+2026-01-28 23:08:51.724 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.AuthController.Login (B2B_V2.WebApi) in 122.2982ms
+2026-01-28 23:08:51.724 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.AuthController.Login (B2B_V2.WebApi)'
+2026-01-28 23:08:51.725 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/api/auth/login - 200 null application/json; charset=utf-8 130.3726ms
+2026-01-28 23:08:51.735 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - null null
+2026-01-28 23:08:51.737 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:08:51.737 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - 204 null null 2.3064ms
+2026-01-28 23:08:51.739 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/Notification - null null
+2026-01-28 23:08:51.746 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:08:51.747 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.NotificationController.GetUserNotifications (B2B_V2.WebApi)'
+2026-01-28 23:08:51.751 +03:00 [INF] Route matched with {action = "GetUserNotifications", controller = "Notification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.Object]]] GetUserNotifications() on controller B2B_V2.WebApi.Controllers.NotificationController (B2B_V2.WebApi).
+2026-01-28 23:08:51.756 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CaseId], [n].[CreatedAt], [n].[IsActive], [n].[IsRead], [n].[Message], [n].[RecipientIdentifier], [n].[Type], [n].[UpdatedAt], [n].[UserId]
+FROM [Notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+2026-01-28 23:08:51.761 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+IteratorSelectIterator`2[[B2B_V2.Domain.Entities.Notification, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType2`5[[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], B2B_V2.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:08:51.762 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.NotificationController.GetUserNotifications (B2B_V2.WebApi) in 9.1751ms
+2026-01-28 23:08:51.764 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.NotificationController.GetUserNotifications (B2B_V2.WebApi)'
+2026-01-28 23:08:51.765 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/Notification - 200 null application/json; charset=utf-8 26.0425ms
+2026-01-28 23:08:53.625 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/case/waiting-queue - null null
+2026-01-28 23:08:53.630 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:08:53.631 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/case/waiting-queue - 204 null null 6.8713ms
+2026-01-28 23:08:53.639 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/case/waiting-queue - null null
+2026-01-28 23:08:53.642 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:08:53.643 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi)'
+2026-01-28 23:08:53.647 +03:00 [INF] Route matched with {action = "GetGlobalWaitingQueue", controller = "Case"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.RequestDto]]] GetGlobalWaitingQueue() on controller B2B_V2.WebApi.Controllers.CaseController (B2B_V2.WebApi).
+2026-01-28 23:08:53.669 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AssignedProviderId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[PackageId], [r].[RequestedProviderId], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt], [c].[Id], [c].[BranchLocation], [c].[CompanyId], [c].[CreatedAt], [c].[Department], [c].[FullName], [c].[Gender], [c].[IsActive], [c].[MobileNumber], [c].[NationalID], [c].[Position], [c].[UpdatedAt], [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[UpdatedAt], [p0].[Id], [p0].[BankAccountId], [p0].[BranchLocations], [p0].[CBAHIAccreditationPath], [p0].[CRCertificatePath], [p0].[ComplianceAuditJson], [p0].[CreatedAt], [p0].[EstimatedDailyOperationalCapacity], [p0].[IsActive], [p0].[IsVerified], [p0].[LabAccreditationPath], [p0].[LabSetup], [p0].[LastVerificationDate], [p0].[Latitude], [p0].[LegalName], [p0].[Longitude], [p0].[MOHLicensePath], [p0].[MedicalWasteManagementContractPath], [p0].[OccupationalPhysicianLicensePath], [p0].[PrimaryContactPersonId], [p0].[ProfessionalLiabilityInsurancePath], [p0].[TierId], [p0].[UpdatedAt]
+FROM [Requests] AS [r]
+LEFT JOIN [Candidates] AS [c] ON [r].[CandidateId] = [c].[Id]
+INNER JOIN [Packages] AS [p] ON [r].[PackageId] = [p].[Id]
+LEFT JOIN [Providers] AS [p0] ON [r].[AssignedProviderId] = [p0].[Id]
+2026-01-28 23:08:53.674 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListWhereSelectIterator`2[[B2B_V2.Domain.Entities.Request, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.RequestDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:08:53.677 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi) in 28.0233ms
+2026-01-28 23:08:53.678 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi)'
+2026-01-28 23:08:53.679 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/case/waiting-queue - 200 null application/json; charset=utf-8 40.6634ms
+2026-01-28 23:08:55.301 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/case/d25bb6e4-435f-408f-8dbb-bd4a212d9886 - null null
+2026-01-28 23:08:55.305 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:08:55.306 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/case/d25bb6e4-435f-408f-8dbb-bd4a212d9886 - 204 null null 4.9095ms
+2026-01-28 23:08:55.313 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/case/d25bb6e4-435f-408f-8dbb-bd4a212d9886 - null null
+2026-01-28 23:08:55.316 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:08:55.318 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetCaseDetails (B2B_V2.WebApi)'
+2026-01-28 23:08:55.322 +03:00 [INF] Route matched with {action = "GetCaseDetails", controller = "Case"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[B2B_V2.Application.DTOs.RequestDto]] GetCaseDetails(System.Guid) on controller B2B_V2.WebApi.Controllers.CaseController (B2B_V2.WebApi).
+2026-01-28 23:08:55.339 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[AssignedProviderId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[PackageId], [r].[RequestedProviderId], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__id_0
+2026-01-28 23:08:55.343 +03:00 [INF] Executing OkObjectResult, writing value of type 'B2B_V2.Application.DTOs.RequestDto'.
+2026-01-28 23:08:55.345 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CaseController.GetCaseDetails (B2B_V2.WebApi) in 19.5555ms
+2026-01-28 23:08:55.346 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetCaseDetails (B2B_V2.WebApi)'
+2026-01-28 23:08:55.348 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/case/d25bb6e4-435f-408f-8dbb-bd4a212d9886 - 200 null application/json; charset=utf-8 35.2558ms
+2026-01-28 23:08:58.921 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/ai/analyze/d25bb6e4-435f-408f-8dbb-bd4a212d9886 - null null
+2026-01-28 23:08:58.927 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:08:58.928 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/ai/analyze/d25bb6e4-435f-408f-8dbb-bd4a212d9886 - 204 null null 7.2125ms
+2026-01-28 23:08:58.932 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/ai/analyze/d25bb6e4-435f-408f-8dbb-bd4a212d9886 - null null
+2026-01-28 23:08:58.934 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:08:58.935 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.AIController.AnalyzeRisk (B2B_V2.WebApi)'
+2026-01-28 23:08:58.939 +03:00 [INF] Route matched with {action = "AnalyzeRisk", controller = "AI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[B2B_V2.Application.Interfaces.AIRiskResultDto]] AnalyzeRisk(System.Guid) on controller B2B_V2.WebApi.Controllers.AIController (B2B_V2.WebApi).
+2026-01-28 23:08:58.962 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__requestId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Approved], [m].[CreatedAt], [m].[IsActive], [m].[IsFitForWork], [m].[LabFindings], [m].[PhysicianNotes], [m].[RequestId], [m].[ResultDocumentPath], [m].[ReviewComments], [m].[ReviewedAt], [m].[ReviewedBy], [m].[UpdatedAt], [m].[VitalSigns]
+FROM [MedicalResults] AS [m]
+WHERE [m].[RequestId] = @__requestId_0
+2026-01-28 23:08:58.968 +03:00 [INF] Executing OkObjectResult, writing value of type 'B2B_V2.Application.Interfaces.AIRiskResultDto'.
+2026-01-28 23:08:58.971 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.AIController.AnalyzeRisk (B2B_V2.WebApi) in 29.1719ms
+2026-01-28 23:08:58.973 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.AIController.AnalyzeRisk (B2B_V2.WebApi)'
+2026-01-28 23:08:58.974 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/ai/analyze/d25bb6e4-435f-408f-8dbb-bd4a212d9886 - 200 null application/json; charset=utf-8 42.3379ms
+2026-01-28 23:10:03.264 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/case/submit-results - null null
+2026-01-28 23:10:03.268 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:10:03.269 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/case/submit-results - 204 null null 5.0385ms
+2026-01-28 23:10:03.274 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/api/case/submit-results - application/json 149
+2026-01-28 23:10:03.276 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:10:03.277 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CaseController.SubmitResults (B2B_V2.WebApi)'
+2026-01-28 23:10:03.281 +03:00 [INF] Route matched with {action = "SubmitResults", controller = "Case"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SubmitResults(B2B_V2.Application.DTOs.MedicalResultDto) on controller B2B_V2.WebApi.Controllers.CaseController (B2B_V2.WebApi).
+2026-01-28 23:10:03.292 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[AssignedProviderId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[PackageId], [r].[RequestedProviderId], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__id_0
+2026-01-28 23:10:03.354 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Guid), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = DateTime2), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p27='?' (DbType = Guid), @p14='?' (DbType = Guid), @p15='?' (DbType = Guid), @p16='?' (Size = 450), @p17='?' (DbType = Guid), @p18='?' (DbType = DateTime2), @p19='?' (DbType = DateTime2), @p20='?' (DbType = Boolean), @p21='?' (DbType = Guid), @p22='?' (DbType = Guid), @p23='?' (DbType = Guid), @p24='?' (DbType = Int32), @p25='?' (Size = 4000), @p26='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MedicalResults] ([Id], [Approved], [CreatedAt], [IsActive], [IsFitForWork], [LabFindings], [PhysicianNotes], [RequestId], [ResultDocumentPath], [ReviewComments], [ReviewedAt], [ReviewedBy], [UpdatedAt], [VitalSigns])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+UPDATE [Requests] SET [AssignedProviderId] = @p14, [CandidateId] = @p15, [CaseID] = @p16, [CompanyId] = @p17, [CreatedAt] = @p18, [ExpectedVisitDate] = @p19, [IsActive] = @p20, [PackageId] = @p21, [RequestedProviderId] = @p22, [ScreeningBatchId] = @p23, [Status] = @p24, [SupportingDocumentPath] = @p25, [UpdatedAt] = @p26
+OUTPUT 1
+WHERE [Id] = @p27;
+2026-01-28 23:10:03.358 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2026-01-28 23:10:03.358 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CaseController.SubmitResults (B2B_V2.WebApi) in 75.3341ms
+2026-01-28 23:10:03.360 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CaseController.SubmitResults (B2B_V2.WebApi)'
+2026-01-28 23:10:03.361 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/api/case/submit-results - 200 0 null 87.1111ms
+2026-01-28 23:10:03.363 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/case/d25bb6e4-435f-408f-8dbb-bd4a212d9886 - null null
+2026-01-28 23:10:03.366 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:10:03.366 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/case/d25bb6e4-435f-408f-8dbb-bd4a212d9886 - 204 null null 3.0335ms
+2026-01-28 23:10:03.369 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/case/d25bb6e4-435f-408f-8dbb-bd4a212d9886 - null null
+2026-01-28 23:10:03.371 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:10:03.372 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetCaseDetails (B2B_V2.WebApi)'
+2026-01-28 23:10:03.373 +03:00 [INF] Route matched with {action = "GetCaseDetails", controller = "Case"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[B2B_V2.Application.DTOs.RequestDto]] GetCaseDetails(System.Guid) on controller B2B_V2.WebApi.Controllers.CaseController (B2B_V2.WebApi).
+2026-01-28 23:10:03.377 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[AssignedProviderId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[PackageId], [r].[RequestedProviderId], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__id_0
+2026-01-28 23:10:03.379 +03:00 [INF] Executing OkObjectResult, writing value of type 'B2B_V2.Application.DTOs.RequestDto'.
+2026-01-28 23:10:03.381 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CaseController.GetCaseDetails (B2B_V2.WebApi) in 4.9136ms
+2026-01-28 23:10:03.382 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetCaseDetails (B2B_V2.WebApi)'
+2026-01-28 23:10:03.383 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/case/d25bb6e4-435f-408f-8dbb-bd4a212d9886 - 200 null application/json; charset=utf-8 13.9769ms
+2026-01-28 23:10:06.119 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/ai/analyze/d25bb6e4-435f-408f-8dbb-bd4a212d9886 - null null
+2026-01-28 23:10:06.124 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:10:06.125 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/ai/analyze/d25bb6e4-435f-408f-8dbb-bd4a212d9886 - 204 null null 5.8748ms
+2026-01-28 23:10:06.129 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/ai/analyze/d25bb6e4-435f-408f-8dbb-bd4a212d9886 - null null
+2026-01-28 23:10:06.131 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:10:06.132 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.AIController.AnalyzeRisk (B2B_V2.WebApi)'
+2026-01-28 23:10:06.133 +03:00 [INF] Route matched with {action = "AnalyzeRisk", controller = "AI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[B2B_V2.Application.Interfaces.AIRiskResultDto]] AnalyzeRisk(System.Guid) on controller B2B_V2.WebApi.Controllers.AIController (B2B_V2.WebApi).
+2026-01-28 23:10:06.138 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__requestId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Approved], [m].[CreatedAt], [m].[IsActive], [m].[IsFitForWork], [m].[LabFindings], [m].[PhysicianNotes], [m].[RequestId], [m].[ResultDocumentPath], [m].[ReviewComments], [m].[ReviewedAt], [m].[ReviewedBy], [m].[UpdatedAt], [m].[VitalSigns]
+FROM [MedicalResults] AS [m]
+WHERE [m].[RequestId] = @__requestId_0
+2026-01-28 23:10:06.141 +03:00 [INF] Executing OkObjectResult, writing value of type 'B2B_V2.Application.Interfaces.AIRiskResultDto'.
+2026-01-28 23:10:06.143 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.AIController.AnalyzeRisk (B2B_V2.WebApi) in 7.7111ms
+2026-01-28 23:10:06.144 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.AIController.AnalyzeRisk (B2B_V2.WebApi)'
+2026-01-28 23:10:06.145 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/ai/analyze/d25bb6e4-435f-408f-8dbb-bd4a212d9886 - 200 null application/json; charset=utf-8 16.523ms
+2026-01-28 23:10:26.639 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/case/provider-worklist/54ed873e-cc48-4caa-8021-0559133642b2 - null null
+2026-01-28 23:10:26.643 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:10:26.644 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/case/provider-worklist/54ed873e-cc48-4caa-8021-0559133642b2 - 204 null null 5.0439ms
+2026-01-28 23:10:26.648 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/case/provider-worklist/54ed873e-cc48-4caa-8021-0559133642b2 - null null
+2026-01-28 23:10:26.651 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:10:26.652 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi)'
+2026-01-28 23:10:26.656 +03:00 [INF] Route matched with {action = "GetProviderWorklist", controller = "Case"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.RequestDto]]] GetProviderWorklist(System.Guid) on controller B2B_V2.WebApi.Controllers.CaseController (B2B_V2.WebApi).
+2026-01-28 23:10:26.677 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AssignedProviderId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[PackageId], [r].[RequestedProviderId], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt], [c].[Id], [c].[BranchLocation], [c].[CompanyId], [c].[CreatedAt], [c].[Department], [c].[FullName], [c].[Gender], [c].[IsActive], [c].[MobileNumber], [c].[NationalID], [c].[Position], [c].[UpdatedAt], [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[UpdatedAt]
+FROM [Requests] AS [r]
+LEFT JOIN [Candidates] AS [c] ON [r].[CandidateId] = [c].[Id]
+INNER JOIN [Packages] AS [p] ON [r].[PackageId] = [p].[Id]
+2026-01-28 23:10:26.682 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListWhereSelectIterator`2[[B2B_V2.Domain.Entities.Request, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.RequestDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:10:26.684 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi) in 26.4241ms
+2026-01-28 23:10:26.686 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi)'
+2026-01-28 23:10:26.687 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/case/provider-worklist/54ed873e-cc48-4caa-8021-0559133642b2 - 200 null application/json; charset=utf-8 39.173ms
+2026-01-28 23:10:27.582 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/case/waiting-queue - null null
+2026-01-28 23:10:27.587 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:10:27.589 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/case/waiting-queue - 204 null null 6.8081ms
+2026-01-28 23:10:27.593 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/case/waiting-queue - null null
+2026-01-28 23:10:27.595 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:10:27.597 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi)'
+2026-01-28 23:10:27.598 +03:00 [INF] Route matched with {action = "GetGlobalWaitingQueue", controller = "Case"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.RequestDto]]] GetGlobalWaitingQueue() on controller B2B_V2.WebApi.Controllers.CaseController (B2B_V2.WebApi).
+2026-01-28 23:10:27.604 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AssignedProviderId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[PackageId], [r].[RequestedProviderId], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt], [c].[Id], [c].[BranchLocation], [c].[CompanyId], [c].[CreatedAt], [c].[Department], [c].[FullName], [c].[Gender], [c].[IsActive], [c].[MobileNumber], [c].[NationalID], [c].[Position], [c].[UpdatedAt], [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[UpdatedAt], [p0].[Id], [p0].[BankAccountId], [p0].[BranchLocations], [p0].[CBAHIAccreditationPath], [p0].[CRCertificatePath], [p0].[ComplianceAuditJson], [p0].[CreatedAt], [p0].[EstimatedDailyOperationalCapacity], [p0].[IsActive], [p0].[IsVerified], [p0].[LabAccreditationPath], [p0].[LabSetup], [p0].[LastVerificationDate], [p0].[Latitude], [p0].[LegalName], [p0].[Longitude], [p0].[MOHLicensePath], [p0].[MedicalWasteManagementContractPath], [p0].[OccupationalPhysicianLicensePath], [p0].[PrimaryContactPersonId], [p0].[ProfessionalLiabilityInsurancePath], [p0].[TierId], [p0].[UpdatedAt]
+FROM [Requests] AS [r]
+LEFT JOIN [Candidates] AS [c] ON [r].[CandidateId] = [c].[Id]
+INNER JOIN [Packages] AS [p] ON [r].[PackageId] = [p].[Id]
+LEFT JOIN [Providers] AS [p0] ON [r].[AssignedProviderId] = [p0].[Id]
+2026-01-28 23:10:27.608 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListWhereSelectIterator`2[[B2B_V2.Domain.Entities.Request, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.RequestDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:10:27.609 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi) in 9.4491ms
+2026-01-28 23:10:27.610 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi)'
+2026-01-28 23:10:27.611 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/case/waiting-queue - 200 null application/json; charset=utf-8 18.2454ms
+2026-01-28 23:10:28.102 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/case/provider-worklist/54ed873e-cc48-4caa-8021-0559133642b2 - null null
+2026-01-28 23:10:28.107 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:10:28.109 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi)'
+2026-01-28 23:10:28.110 +03:00 [INF] Route matched with {action = "GetProviderWorklist", controller = "Case"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.RequestDto]]] GetProviderWorklist(System.Guid) on controller B2B_V2.WebApi.Controllers.CaseController (B2B_V2.WebApi).
+2026-01-28 23:10:28.114 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AssignedProviderId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[PackageId], [r].[RequestedProviderId], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt], [c].[Id], [c].[BranchLocation], [c].[CompanyId], [c].[CreatedAt], [c].[Department], [c].[FullName], [c].[Gender], [c].[IsActive], [c].[MobileNumber], [c].[NationalID], [c].[Position], [c].[UpdatedAt], [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[UpdatedAt]
+FROM [Requests] AS [r]
+LEFT JOIN [Candidates] AS [c] ON [r].[CandidateId] = [c].[Id]
+INNER JOIN [Packages] AS [p] ON [r].[PackageId] = [p].[Id]
+2026-01-28 23:10:28.117 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListWhereSelectIterator`2[[B2B_V2.Domain.Entities.Request, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.RequestDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:10:28.119 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi) in 6.0954ms
+2026-01-28 23:10:28.120 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi)'
+2026-01-28 23:10:28.121 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/case/provider-worklist/54ed873e-cc48-4caa-8021-0559133642b2 - 200 null application/json; charset=utf-8 19.1133ms
+2026-01-28 23:10:28.990 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/case/waiting-queue - null null
+2026-01-28 23:10:28.994 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:10:28.996 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi)'
+2026-01-28 23:10:28.998 +03:00 [INF] Route matched with {action = "GetGlobalWaitingQueue", controller = "Case"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.RequestDto]]] GetGlobalWaitingQueue() on controller B2B_V2.WebApi.Controllers.CaseController (B2B_V2.WebApi).
+2026-01-28 23:10:29.002 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AssignedProviderId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[PackageId], [r].[RequestedProviderId], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt], [c].[Id], [c].[BranchLocation], [c].[CompanyId], [c].[CreatedAt], [c].[Department], [c].[FullName], [c].[Gender], [c].[IsActive], [c].[MobileNumber], [c].[NationalID], [c].[Position], [c].[UpdatedAt], [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[UpdatedAt], [p0].[Id], [p0].[BankAccountId], [p0].[BranchLocations], [p0].[CBAHIAccreditationPath], [p0].[CRCertificatePath], [p0].[ComplianceAuditJson], [p0].[CreatedAt], [p0].[EstimatedDailyOperationalCapacity], [p0].[IsActive], [p0].[IsVerified], [p0].[LabAccreditationPath], [p0].[LabSetup], [p0].[LastVerificationDate], [p0].[Latitude], [p0].[LegalName], [p0].[Longitude], [p0].[MOHLicensePath], [p0].[MedicalWasteManagementContractPath], [p0].[OccupationalPhysicianLicensePath], [p0].[PrimaryContactPersonId], [p0].[ProfessionalLiabilityInsurancePath], [p0].[TierId], [p0].[UpdatedAt]
+FROM [Requests] AS [r]
+LEFT JOIN [Candidates] AS [c] ON [r].[CandidateId] = [c].[Id]
+INNER JOIN [Packages] AS [p] ON [r].[PackageId] = [p].[Id]
+LEFT JOIN [Providers] AS [p0] ON [r].[AssignedProviderId] = [p0].[Id]
+2026-01-28 23:10:29.006 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListWhereSelectIterator`2[[B2B_V2.Domain.Entities.Request, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.RequestDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:10:29.008 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi) in 6.9653ms
+2026-01-28 23:10:29.010 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi)'
+2026-01-28 23:10:29.011 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/case/waiting-queue - 200 null application/json; charset=utf-8 20.7432ms
+2026-01-28 23:10:35.461 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/case/waiting-queue - null null
+2026-01-28 23:10:35.470 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:10:35.472 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/case/waiting-queue - 204 null null 11.134ms
+2026-01-28 23:10:35.475 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/case/waiting-queue - null null
+2026-01-28 23:10:35.478 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:10:35.479 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi)'
+2026-01-28 23:10:35.480 +03:00 [INF] Route matched with {action = "GetGlobalWaitingQueue", controller = "Case"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.RequestDto]]] GetGlobalWaitingQueue() on controller B2B_V2.WebApi.Controllers.CaseController (B2B_V2.WebApi).
+2026-01-28 23:10:35.484 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AssignedProviderId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[PackageId], [r].[RequestedProviderId], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt], [c].[Id], [c].[BranchLocation], [c].[CompanyId], [c].[CreatedAt], [c].[Department], [c].[FullName], [c].[Gender], [c].[IsActive], [c].[MobileNumber], [c].[NationalID], [c].[Position], [c].[UpdatedAt], [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[UpdatedAt], [p0].[Id], [p0].[BankAccountId], [p0].[BranchLocations], [p0].[CBAHIAccreditationPath], [p0].[CRCertificatePath], [p0].[ComplianceAuditJson], [p0].[CreatedAt], [p0].[EstimatedDailyOperationalCapacity], [p0].[IsActive], [p0].[IsVerified], [p0].[LabAccreditationPath], [p0].[LabSetup], [p0].[LastVerificationDate], [p0].[Latitude], [p0].[LegalName], [p0].[Longitude], [p0].[MOHLicensePath], [p0].[MedicalWasteManagementContractPath], [p0].[OccupationalPhysicianLicensePath], [p0].[PrimaryContactPersonId], [p0].[ProfessionalLiabilityInsurancePath], [p0].[TierId], [p0].[UpdatedAt]
+FROM [Requests] AS [r]
+LEFT JOIN [Candidates] AS [c] ON [r].[CandidateId] = [c].[Id]
+INNER JOIN [Packages] AS [p] ON [r].[PackageId] = [p].[Id]
+LEFT JOIN [Providers] AS [p0] ON [r].[AssignedProviderId] = [p0].[Id]
+2026-01-28 23:10:35.487 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListWhereSelectIterator`2[[B2B_V2.Domain.Entities.Request, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.RequestDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:10:35.488 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi) in 5.7945ms
+2026-01-28 23:10:35.489 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi)'
+2026-01-28 23:10:35.490 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/case/waiting-queue - 200 null application/json; charset=utf-8 14.4493ms
+2026-01-28 23:10:36.574 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/case/provider-worklist/54ed873e-cc48-4caa-8021-0559133642b2 - null null
+2026-01-28 23:10:36.579 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:10:36.580 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/case/provider-worklist/54ed873e-cc48-4caa-8021-0559133642b2 - 204 null null 6.2215ms
+2026-01-28 23:10:36.584 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/case/provider-worklist/54ed873e-cc48-4caa-8021-0559133642b2 - null null
+2026-01-28 23:10:36.588 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:10:36.589 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi)'
+2026-01-28 23:10:36.590 +03:00 [INF] Route matched with {action = "GetProviderWorklist", controller = "Case"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.RequestDto]]] GetProviderWorklist(System.Guid) on controller B2B_V2.WebApi.Controllers.CaseController (B2B_V2.WebApi).
+2026-01-28 23:10:36.594 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AssignedProviderId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[PackageId], [r].[RequestedProviderId], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt], [c].[Id], [c].[BranchLocation], [c].[CompanyId], [c].[CreatedAt], [c].[Department], [c].[FullName], [c].[Gender], [c].[IsActive], [c].[MobileNumber], [c].[NationalID], [c].[Position], [c].[UpdatedAt], [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[UpdatedAt]
+FROM [Requests] AS [r]
+LEFT JOIN [Candidates] AS [c] ON [r].[CandidateId] = [c].[Id]
+INNER JOIN [Packages] AS [p] ON [r].[PackageId] = [p].[Id]
+2026-01-28 23:10:36.597 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListWhereSelectIterator`2[[B2B_V2.Domain.Entities.Request, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.RequestDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:10:36.598 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi) in 5.8696ms
+2026-01-28 23:10:36.599 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi)'
+2026-01-28 23:10:36.601 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/case/provider-worklist/54ed873e-cc48-4caa-8021-0559133642b2 - 200 null application/json; charset=utf-8 16.126ms
+2026-01-28 23:10:38.069 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/case/waiting-queue - null null
+2026-01-28 23:10:38.073 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:10:38.074 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi)'
+2026-01-28 23:10:38.076 +03:00 [INF] Route matched with {action = "GetGlobalWaitingQueue", controller = "Case"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.RequestDto]]] GetGlobalWaitingQueue() on controller B2B_V2.WebApi.Controllers.CaseController (B2B_V2.WebApi).
+2026-01-28 23:10:38.080 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AssignedProviderId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[PackageId], [r].[RequestedProviderId], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt], [c].[Id], [c].[BranchLocation], [c].[CompanyId], [c].[CreatedAt], [c].[Department], [c].[FullName], [c].[Gender], [c].[IsActive], [c].[MobileNumber], [c].[NationalID], [c].[Position], [c].[UpdatedAt], [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[UpdatedAt], [p0].[Id], [p0].[BankAccountId], [p0].[BranchLocations], [p0].[CBAHIAccreditationPath], [p0].[CRCertificatePath], [p0].[ComplianceAuditJson], [p0].[CreatedAt], [p0].[EstimatedDailyOperationalCapacity], [p0].[IsActive], [p0].[IsVerified], [p0].[LabAccreditationPath], [p0].[LabSetup], [p0].[LastVerificationDate], [p0].[Latitude], [p0].[LegalName], [p0].[Longitude], [p0].[MOHLicensePath], [p0].[MedicalWasteManagementContractPath], [p0].[OccupationalPhysicianLicensePath], [p0].[PrimaryContactPersonId], [p0].[ProfessionalLiabilityInsurancePath], [p0].[TierId], [p0].[UpdatedAt]
+FROM [Requests] AS [r]
+LEFT JOIN [Candidates] AS [c] ON [r].[CandidateId] = [c].[Id]
+INNER JOIN [Packages] AS [p] ON [r].[PackageId] = [p].[Id]
+LEFT JOIN [Providers] AS [p0] ON [r].[AssignedProviderId] = [p0].[Id]
+2026-01-28 23:10:38.084 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListWhereSelectIterator`2[[B2B_V2.Domain.Entities.Request, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.RequestDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:10:38.085 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi) in 6.5775ms
+2026-01-28 23:10:38.087 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi)'
+2026-01-28 23:10:38.089 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/case/waiting-queue - 200 null application/json; charset=utf-8 19.2634ms
+2026-01-28 23:10:39.989 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/case/provider-worklist/54ed873e-cc48-4caa-8021-0559133642b2 - null null
+2026-01-28 23:10:39.996 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:10:39.997 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi)'
+2026-01-28 23:10:39.999 +03:00 [INF] Route matched with {action = "GetProviderWorklist", controller = "Case"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.RequestDto]]] GetProviderWorklist(System.Guid) on controller B2B_V2.WebApi.Controllers.CaseController (B2B_V2.WebApi).
+2026-01-28 23:10:40.003 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AssignedProviderId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[PackageId], [r].[RequestedProviderId], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt], [c].[Id], [c].[BranchLocation], [c].[CompanyId], [c].[CreatedAt], [c].[Department], [c].[FullName], [c].[Gender], [c].[IsActive], [c].[MobileNumber], [c].[NationalID], [c].[Position], [c].[UpdatedAt], [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[UpdatedAt]
+FROM [Requests] AS [r]
+LEFT JOIN [Candidates] AS [c] ON [r].[CandidateId] = [c].[Id]
+INNER JOIN [Packages] AS [p] ON [r].[PackageId] = [p].[Id]
+2026-01-28 23:10:40.005 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListWhereSelectIterator`2[[B2B_V2.Domain.Entities.Request, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.RequestDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:10:40.007 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi) in 5.8538ms
+2026-01-28 23:10:40.008 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi)'
+2026-01-28 23:10:40.009 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/case/provider-worklist/54ed873e-cc48-4caa-8021-0559133642b2 - 200 null application/json; charset=utf-8 19.4924ms
+2026-01-28 23:10:42.514 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/case/waiting-queue - null null
+2026-01-28 23:10:42.520 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:10:42.521 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/case/waiting-queue - 204 null null 7.4829ms
+2026-01-28 23:10:42.525 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/case/waiting-queue - null null
+2026-01-28 23:10:42.527 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:10:42.528 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi)'
+2026-01-28 23:10:42.529 +03:00 [INF] Route matched with {action = "GetGlobalWaitingQueue", controller = "Case"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.RequestDto]]] GetGlobalWaitingQueue() on controller B2B_V2.WebApi.Controllers.CaseController (B2B_V2.WebApi).
+2026-01-28 23:10:42.533 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AssignedProviderId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[PackageId], [r].[RequestedProviderId], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt], [c].[Id], [c].[BranchLocation], [c].[CompanyId], [c].[CreatedAt], [c].[Department], [c].[FullName], [c].[Gender], [c].[IsActive], [c].[MobileNumber], [c].[NationalID], [c].[Position], [c].[UpdatedAt], [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[UpdatedAt], [p0].[Id], [p0].[BankAccountId], [p0].[BranchLocations], [p0].[CBAHIAccreditationPath], [p0].[CRCertificatePath], [p0].[ComplianceAuditJson], [p0].[CreatedAt], [p0].[EstimatedDailyOperationalCapacity], [p0].[IsActive], [p0].[IsVerified], [p0].[LabAccreditationPath], [p0].[LabSetup], [p0].[LastVerificationDate], [p0].[Latitude], [p0].[LegalName], [p0].[Longitude], [p0].[MOHLicensePath], [p0].[MedicalWasteManagementContractPath], [p0].[OccupationalPhysicianLicensePath], [p0].[PrimaryContactPersonId], [p0].[ProfessionalLiabilityInsurancePath], [p0].[TierId], [p0].[UpdatedAt]
+FROM [Requests] AS [r]
+LEFT JOIN [Candidates] AS [c] ON [r].[CandidateId] = [c].[Id]
+INNER JOIN [Packages] AS [p] ON [r].[PackageId] = [p].[Id]
+LEFT JOIN [Providers] AS [p0] ON [r].[AssignedProviderId] = [p0].[Id]
+2026-01-28 23:10:42.536 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListWhereSelectIterator`2[[B2B_V2.Domain.Entities.Request, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.RequestDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-28 23:10:42.538 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi) in 6.5152ms
+2026-01-28 23:10:42.539 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi)'
+2026-01-28 23:10:42.540 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/case/waiting-queue - 200 null application/json; charset=utf-8 15.4028ms
+2026-01-28 23:28:46.469 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - null null
+2026-01-28 23:28:46.473 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:28:46.474 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - 204 null null 4.8569ms
+2026-01-28 23:28:46.478 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/Notification - null null
+2026-01-28 23:28:46.482 +03:00 [INF] CORS policy execution successful.
+2026-01-28 23:28:46.484 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.NotificationController.GetUserNotifications (B2B_V2.WebApi)'
+2026-01-28 23:28:46.485 +03:00 [INF] Route matched with {action = "GetUserNotifications", controller = "Notification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.Object]]] GetUserNotifications() on controller B2B_V2.WebApi.Controllers.NotificationController (B2B_V2.WebApi).

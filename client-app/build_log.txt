@@ -1,0 +1,183 @@
+[33mÔØ»[39m Building...
+[32mÔ£ö[39m Building...
+Application bundle generation failed. [4.284 seconds]
+
+Ôû▓ [WARNING] TS-998113: NotificationBellComponent is not used within the template of HeaderComponent [plugin angular-compiler]
+
+    src/app/_bound_archive/core/components/header/header.ts:11:28:
+      11 Ôöé ...ts: [CommonModule, NotificationBellComponent, GlobalSearchCompo...
+         ÔòÁ                       ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Ôû▓ [WARNING] TS-998113: GlobalSearchComponent is not used within the template of HeaderComponent [plugin angular-compiler]
+
+    src/app/_bound_archive/core/components/header/header.ts:11:55:
+      11 Ôöé ... [CommonModule, NotificationBellComponent, GlobalSearchComponent],
+         ÔòÁ                                               ~~~~~~~~~~~~~~~~~~~~~
+
+
+Ôû▓ [WARNING] Deprecation [plugin angular-sass]
+
+    src/app/layouts/sidebar/sidebar.component.scss:27:26:
+      27 Ôöé         background-color: fade-out(#3b82f6, 0.9); // Fallback or u...
+         ÔòÁ                           ^
+
+
+  Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+  Use color.adjust instead.
+  
+  More info and automated migrator: https://sass-lang.com/d/import
+
+
+Ôû▓ [WARNING] Deprecation [plugin angular-sass]
+
+    src/app/layouts/sidebar/sidebar.component.scss:27:26:
+      27 Ôöé         background-color: fade-out(#3b82f6, 0.9); // Fallback or u...
+         ÔòÁ                           ^
+
+
+  fade-out() is deprecated. Suggestions:
+  
+  color.scale($color, $alpha: -90%)
+  color.adjust($color, $alpha: -0.9)
+  
+  More info: https://sass-lang.com/d/color-functions
+
+
+Ôû▓ [WARNING] Deprecation [plugin angular-sass]
+
+    src/app/shared/components/button/button.component.scss:29:30:
+      29 Ôöé             background-color: darken(#2563eb, 5%); // fallback or ...
+         ÔòÁ                               ^
+
+
+  Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+  Use color.adjust instead.
+  
+  More info and automated migrator: https://sass-lang.com/d/import
+
+
+Ôû▓ [WARNING] Deprecation [plugin angular-sass]
+
+    src/app/shared/components/button/button.component.scss:29:30:
+      29 Ôöé             background-color: darken(#2563eb, 5%); // fallback or ...
+         ÔòÁ                               ^
+
+
+  darken() is deprecated. Suggestions:
+  
+  color.scale($color, $lightness: -9.375%)
+  color.adjust($color, $lightness: -5%)
+  
+  More info: https://sass-lang.com/d/color-functions
+
+
+Ôû▓ [WARNING] 9 repetitive deprecation warnings omitted.
+Run in verbose mode to see all warnings. [plugin angular-sass]
+
+    angular:styles/global:styles:1:8:
+      1 Ôöé @import 'src/styles.scss';
+        ÔòÁ         ~~~~~~~~~~~~~~~~~
+
+  null
+
+
+Ôû▓ [WARNING] Deprecation [plugin angular-sass]
+
+    src/styles.scss:6:8:
+      6 Ôöé @import 'app/styles/variables';
+        ÔòÁ         ^
+
+
+  Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  
+  More info and automated migrator: https://sass-lang.com/d/import
+
+  The plugin "angular-sass" was triggered by this import
+
+    angular:styles/global:styles:1:8:
+      1 Ôöé @import 'src/styles.scss';
+        ÔòÁ         ~~~~~~~~~~~~~~~~~
+
+
+Ôû▓ [WARNING] Deprecation [plugin angular-sass]
+
+    src/styles.scss:9:8:
+      9 Ôöé @import "bootstrap/scss/functions";
+        ÔòÁ         ^
+
+
+  Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  
+  More info and automated migrator: https://sass-lang.com/d/import
+
+  The plugin "angular-sass" was triggered by this import
+
+    angular:styles/global:styles:1:8:
+      1 Ôöé @import 'src/styles.scss';
+        ÔòÁ         ~~~~~~~~~~~~~~~~~
+
+
+Ôû▓ [WARNING] Deprecation [plugin angular-sass]
+
+    src/styles.scss:10:8:
+      10 Ôöé @import "bootstrap/scss/variables"; // Allows mapped bootstrap var...
+         ÔòÁ         ^
+
+
+  Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  
+  More info and automated migrator: https://sass-lang.com/d/import
+
+  The plugin "angular-sass" was triggered by this import
+
+    angular:styles/global:styles:1:8:
+      1 Ôöé @import 'src/styles.scss';
+        ÔòÁ         ~~~~~~~~~~~~~~~~~
+
+
+Ôû▓ [WARNING] Deprecation [plugin angular-sass]
+
+    src/styles.scss:11:8:
+      11 Ôöé @import "bootstrap/scss/maps";
+         ÔòÁ         ^
+
+
+  Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  
+  More info and automated migrator: https://sass-lang.com/d/import
+
+  The plugin "angular-sass" was triggered by this import
+
+    angular:styles/global:styles:1:8:
+      1 Ôöé @import 'src/styles.scss';
+        ÔòÁ         ~~~~~~~~~~~~~~~~~
+
+
+Ôû▓ [WARNING] Deprecation [plugin angular-sass]
+
+    src/styles.scss:12:8:
+      12 Ôöé @import "bootstrap/scss/mixins";
+         ÔòÁ         ^
+
+
+  Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  
+  More info and automated migrator: https://sass-lang.com/d/import
+
+  The plugin "angular-sass" was triggered by this import
+
+    angular:styles/global:styles:1:8:
+      1 Ôöé @import 'src/styles.scss';
+        ÔòÁ         ~~~~~~~~~~~~~~~~~
+
+
+X [ERROR] Could not resolve "@angular/animations/browser"
+
+    node_modules/@angular/platform-browser/fesm2022/animations/async.mjs:54:53:
+      54 Ôöé ....moduleImpl ?? import('@angular/animations/browser').then(m => m);
+         ÔòÁ                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  You can mark the path "@angular/animations/browser" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle. You can also add ".catch()" here to handle this failure at run-time instead of bundle-time.
+
+

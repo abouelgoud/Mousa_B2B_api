@@ -1,0 +1,16 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  B2B_V2.Domain -> d:\SourceCode\Anti-g\B2B_V2\B2B_V2.Domain\bin\Debug\net9.0\B2B_V2.Domain.dll
+  B2B_V2.Application -> d:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\bin\Debug\net9.0\B2B_V2.Application.dll
+  B2B_V2.Infrastructure -> d:\SourceCode\Anti-g\B2B_V2\B2B_V2.Infrastructure\bin\Debug\net9.0\B2B_V2.Infrastructure.dll
+d:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\Controllers\AuthController.cs(35,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [d:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\B2B_V2.WebApi.csproj]
+d:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\Controllers\PatientFlowController.cs(45,66): error CS0165: Use of unassigned local variable 'candidateId' [d:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\B2B_V2.WebApi.csproj]
+
+Build FAILED.
+
+d:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\Controllers\AuthController.cs(35,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [d:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\B2B_V2.WebApi.csproj]
+d:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\Controllers\PatientFlowController.cs(45,66): error CS0165: Use of unassigned local variable 'candidateId' [d:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\B2B_V2.WebApi.csproj]
+    1 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:02.11

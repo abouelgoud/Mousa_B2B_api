@@ -1,0 +1,32 @@
+2026-05-22 00:00:26.905 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__cutoffTime_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ArrivedAt], [r].[AssignedProviderId], [r].[BranchId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExamStartedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[IsBroadcasted], [r].[PackageId], [r].[RequestedProviderId], [r].[SamplesCollectedAt], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt]
+FROM [Requests] AS [r]
+WHERE [r].[Status] = 0 AND [r].[IsBroadcasted] = CAST(0 AS bit) AND [r].[AssignedProviderId] IS NULL AND [r].[CreatedAt] <= @__cutoffTime_0
+2026-05-22 00:00:56.918 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__cutoffTime_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ArrivedAt], [r].[AssignedProviderId], [r].[BranchId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExamStartedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[IsBroadcasted], [r].[PackageId], [r].[RequestedProviderId], [r].[SamplesCollectedAt], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt]
+FROM [Requests] AS [r]
+WHERE [r].[Status] = 0 AND [r].[IsBroadcasted] = CAST(0 AS bit) AND [r].[AssignedProviderId] IS NULL AND [r].[CreatedAt] <= @__cutoffTime_0
+2026-05-22 00:01:26.929 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__cutoffTime_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ArrivedAt], [r].[AssignedProviderId], [r].[BranchId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExamStartedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[IsBroadcasted], [r].[PackageId], [r].[RequestedProviderId], [r].[SamplesCollectedAt], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt]
+FROM [Requests] AS [r]
+WHERE [r].[Status] = 0 AND [r].[IsBroadcasted] = CAST(0 AS bit) AND [r].[AssignedProviderId] IS NULL AND [r].[CreatedAt] <= @__cutoffTime_0
+2026-05-22 00:01:56.935 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__cutoffTime_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ArrivedAt], [r].[AssignedProviderId], [r].[BranchId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExamStartedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[IsBroadcasted], [r].[PackageId], [r].[RequestedProviderId], [r].[SamplesCollectedAt], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt]
+FROM [Requests] AS [r]
+WHERE [r].[Status] = 0 AND [r].[IsBroadcasted] = CAST(0 AS bit) AND [r].[AssignedProviderId] IS NULL AND [r].[CreatedAt] <= @__cutoffTime_0
+2026-05-22 00:02:26.945 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__cutoffTime_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ArrivedAt], [r].[AssignedProviderId], [r].[BranchId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExamStartedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[IsBroadcasted], [r].[PackageId], [r].[RequestedProviderId], [r].[SamplesCollectedAt], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt]
+FROM [Requests] AS [r]
+WHERE [r].[Status] = 0 AND [r].[IsBroadcasted] = CAST(0 AS bit) AND [r].[AssignedProviderId] IS NULL AND [r].[CreatedAt] <= @__cutoffTime_0
+2026-05-22 00:02:56.956 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__cutoffTime_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ArrivedAt], [r].[AssignedProviderId], [r].[BranchId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExamStartedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[IsBroadcasted], [r].[PackageId], [r].[RequestedProviderId], [r].[SamplesCollectedAt], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt]
+FROM [Requests] AS [r]
+WHERE [r].[Status] = 0 AND [r].[IsBroadcasted] = CAST(0 AS bit) AND [r].[AssignedProviderId] IS NULL AND [r].[CreatedAt] <= @__cutoffTime_0
+2026-05-22 00:03:26.976 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__cutoffTime_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ArrivedAt], [r].[AssignedProviderId], [r].[BranchId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExamStartedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[IsBroadcasted], [r].[PackageId], [r].[RequestedProviderId], [r].[SamplesCollectedAt], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt]
+FROM [Requests] AS [r]
+WHERE [r].[Status] = 0 AND [r].[IsBroadcasted] = CAST(0 AS bit) AND [r].[AssignedProviderId] IS NULL AND [r].[CreatedAt] <= @__cutoffTime_0
+2026-05-22 00:03:56.993 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__cutoffTime_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ArrivedAt], [r].[AssignedProviderId], [r].[BranchId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExamStartedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[IsBroadcasted], [r].[PackageId], [r].[RequestedProviderId], [r].[SamplesCollectedAt], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt]
+FROM [Requests] AS [r]
+WHERE [r].[Status] = 0 AND [r].[IsBroadcasted] = CAST(0 AS bit) AND [r].[AssignedProviderId] IS NULL AND [r].[CreatedAt] <= @__cutoffTime_0

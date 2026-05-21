@@ -1,0 +1,13 @@
+.glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 120, 212, 0.015);
+}
+
+.animate__animated {
+    animation-duration: 0.5s;
+}

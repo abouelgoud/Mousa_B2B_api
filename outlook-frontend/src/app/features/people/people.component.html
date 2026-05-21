@@ -1,0 +1,118 @@
+<div class="people-container h-100 d-flex flex-column overflow-hidden">
+    <!-- Toolbar -->
+    <header class="toolbar d-flex justify-content-between align-items-center">
+        <div>
+            <h4 class="mb-0"><i class="bi bi-hospital me-2 text-primary"></i>Healthcare Affiliations</h4>
+            <p class="text-muted small mb-0">Governance of medical network partners, clinical settings, and throughput
+                capacities.</p>
+        </div>
+        <button *ngIf="authService.hasPermission('Providers.Manage')" class="btn btn-primary d-flex align-items-center"
+            (click)="registerNewProvider()">
+            <i class="bi bi-plus-lg me-2"></i>Affiliate Provider
+        </button>
+    </header>
+
+    <!-- Content Area -->
+    <div class="flex-grow-1 overflow-auto p-4 custom-scrollbar">
+        <div class="table-container shadow-sm">
+            <table class="table table-hover align-middle">
+                <thead>
+                    <tr>
+                        <th>Organization Identity</th>
+                        <th>Laboratory Setup</th>
+                        <th>Operational Capacity</th>
+                        <th>Network Rating</th>
+                        <th class="text-end">Actions</th>
+                    </tr>
+                </thead>
+                <tbody *ngIf="!loading()">
+                    <tr *ngFor="let p of providers(); let i = index" class="cursor-pointer"
+                        [style.animation-delay]="(i * 0.05) + 's'" (click)="viewDetails(p.id, $event)">
+                        <td>
+                            <div class="provider-identity">
+                                <div class="icon-box">
+                                    <i class="bi bi-hospital"></i>
+                                </div>
+                                <div>
+                                    <div class="name">{{ p.legalName }}</div>
+                                    <div class="meta">
+                                        <span class="badge bg-light text-dark border me-2">{{ p.tierId === 1 ? 'Premium'
+                                            : 'Standard' }}</span>
+                                        <span>REG #{{ p.id.substring(0,8).toUpperCase() }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="setup-tag" [ngClass]="'setup-' + (p.labSetup ?? 'default')">
+                                {{ getLabSetupLabel(p.labSetup) }}
+                            </span>
+                        </td>
+                        <td>
+                            <div class="capacity-meter">
+                                <div class="meter-label">
+                                    <span>{{ p.estimatedDailyOperationalCapacity || 0 }} SPD</span>
+                                    <span>{{ getCapacityPercentage(p.estimatedDailyOperationalCapacity) }}%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar"
+                                        [style.width.%]="getCapacityPercentage(p.estimatedDailyOperationalCapacity)"
+                                        [ngClass]="getCapacityColor(getCapacityPercentage(p.estimatedDailyOperationalCapacity))">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="rating-display">
+                                <i class="bi bi-star-fill"></i>
+                                <span>{{ p.rating || '4.8' }}</span>
+                            </div>
+                        </td>
+                        <td class="text-end">
+                            <div class="d-flex justify-content-end gap-1">
+                                <button class="btn btn-action" (click)="viewDetails(p.id, $event)" title="Governance">
+                                    <i class="bi bi-shield-check"></i>
+                                </button>
+                                <div class="dropdown" *ngIf="authService.hasPermission('Providers.Manage')">
+                                    <button class="btn btn-action" type="button" data-bs-toggle="dropdown"
+                                        (click)="$event.stopPropagation()">
+                                        <i class="bi bi-three-dots"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                                        <li><button class="dropdown-item py-2 small"
+                                                (click)="editProvider(p.id, $event)"><i
+                                                    class="bi bi-pencil me-2"></i>Update Profile</button></li>
+                                        <li><button class="dropdown-item py-2 small"
+                                                (click)="viewDetails(p.id, $event)"><i
+                                                    class="bi bi-geo-alt me-2"></i>Branch Governance</button></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><button class="dropdown-item py-2 small text-danger"
+                                                (click)="deleteProvider(p.id, $event)"><i
+                                                    class="bi bi-trash me-2"></i>Decommission</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Empty State -->
+            <div *ngIf="!loading() && providers().length === 0" class="text-center py-5">
+                <i class="bi bi-hospital-fill display-1 text-muted opacity-10 mb-3"></i>
+                <h6 class="fw-bold">No partner organizations registered</h6>
+                <p class="small text-secondary mb-4">Initialize your medical network by affiliating your first provider.
+                </p>
+                <button class="btn btn-primary btn-sm px-4" (click)="registerNewProvider()">Affiliate Provider</button>
+            </div>
+
+            <!-- Loading State -->
+            <div *ngIf="loading()" class="text-center py-5">
+                <div class="spinner-border text-primary spinner-border-sm" role="status"></div>
+                <div class="mt-2 text-muted small">Synchronizing affiliate data...</div>
+            </div>
+        </div>
+    </div>
+</div>

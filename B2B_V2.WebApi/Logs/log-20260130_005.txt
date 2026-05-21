@@ -1,0 +1,2239 @@
+2026-01-30 20:04:54.008 +03:00 [INF] User profile is available. Using 'C:\Users\saada\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-30 20:04:55.003 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-01-30 20:04:55.021 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-01-30 20:04:55.050 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-01-30 20:04:55.116 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-01-30 20:04:55.135 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-01-30 20:04:55.139 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-01-30 20:04:55.145 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-01-30 20:04:55.159 +03:00 [INF] No migrations were applied. The database is already up to date.
+2026-01-30 20:04:55.167 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-01-30 20:04:55.441 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-30 20:04:55.499 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-30 20:04:55.505 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-30 20:04:55.511 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-30 20:04:55.529 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-30 20:04:55.608 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.615 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.620 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.626 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.632 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.638 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.644 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.650 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.653 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.657 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.661 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.664 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.667 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.670 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.674 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.677 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.681 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.684 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.688 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.691 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.694 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.698 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.701 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.705 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.708 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.711 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.767 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[FeatureGroup], [p].[Name]
+FROM [Permissions] AS [p]
+2026-01-30 20:04:55.809 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-30 20:04:55.822 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.829 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.834 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.841 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.846 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.852 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.858 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.865 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.871 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.877 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.883 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.889 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.894 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.901 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.904 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.908 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.911 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.915 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.918 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.922 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.926 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.930 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.934 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.938 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.941 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.963 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.970 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-30 20:04:55.983 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.987 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.992 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:55.998 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:56.002 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:56.008 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:56.012 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:56.016 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:56.022 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-30 20:04:56.034 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:56.041 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:56.047 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:56.054 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:56.060 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:56.066 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:56.073 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:56.080 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:56.086 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:56.111 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [ProviderTiers] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:56.123 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Themes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:56.131 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-30 20:04:56.143 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Companies] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:56.148 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-01-30 20:04:56.163 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[BranchLocations], [c].[BusinessActivity], [c].[CRCertificatePath], [c].[CRNumber], [c].[CompanySize], [c].[CreatedAt], [c].[DefaultProviderAssignmentMode], [c].[DesignatedContactPersonId], [c].[EstimatedMonthlyScreeningVolume], [c].[HeadOfficeAddress], [c].[IsActive], [c].[Latitude], [c].[LegalName], [c].[Longitude], [c].[TotalEmployees], [c].[UpdatedAt], [c].[VATRegistrationNumber]
+FROM [Companies] AS [c]
+2026-01-30 20:04:56.226 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Candidates] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:56.235 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Packages] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:56.243 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Requests] AS [r]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:56.249 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-30 20:04:56.260 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Providers] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:56.265 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-01-30 20:04:56.280 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[ComplianceAuditJson], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[IsVerified], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LastVerificationDate], [p].[Latitude], [p].[LegalName], [p].[Longitude], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+2026-01-30 20:04:56.347 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__testProvider_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Requests] AS [r]
+        WHERE [r].[AssignedProviderId] = @__testProvider_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:04:56.542 +03:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5284: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-01-30 20:07:00.764 +03:00 [INF] User profile is available. Using 'C:\Users\saada\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-30 20:07:01.616 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-01-30 20:07:01.632 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-01-30 20:07:01.658 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-01-30 20:07:01.724 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-01-30 20:07:01.746 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-01-30 20:07:01.753 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-01-30 20:07:01.760 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-01-30 20:07:01.773 +03:00 [INF] No migrations were applied. The database is already up to date.
+2026-01-30 20:07:01.777 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-01-30 20:07:01.982 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-30 20:07:02.023 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-30 20:07:02.026 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-30 20:07:02.030 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-30 20:07:02.044 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-30 20:07:02.098 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.103 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.106 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.109 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.111 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.115 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.118 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.121 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.123 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.125 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.127 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.130 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.133 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.137 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.141 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.143 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.146 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.148 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.151 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.154 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.157 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.159 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.162 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.164 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.168 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.171 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.206 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[FeatureGroup], [p].[Name]
+FROM [Permissions] AS [p]
+2026-01-30 20:07:02.227 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-30 20:07:02.236 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.244 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.247 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.252 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.255 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.258 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.260 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.263 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.265 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.270 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.273 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.275 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.278 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.282 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.286 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.289 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.292 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.294 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.297 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.301 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.304 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.308 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.312 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.315 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.319 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.324 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.333 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-30 20:07:02.343 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.347 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.352 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.355 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.361 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.365 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.368 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.371 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.374 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-30 20:07:02.381 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.385 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.390 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.397 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.402 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.407 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.411 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.414 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.418 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.431 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [ProviderTiers] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.439 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Themes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.442 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-30 20:07:02.449 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Companies] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.452 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-01-30 20:07:02.460 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[BranchLocations], [c].[BusinessActivity], [c].[CRCertificatePath], [c].[CRNumber], [c].[CompanySize], [c].[CreatedAt], [c].[DefaultProviderAssignmentMode], [c].[DesignatedContactPersonId], [c].[EstimatedMonthlyScreeningVolume], [c].[HeadOfficeAddress], [c].[IsActive], [c].[Latitude], [c].[LegalName], [c].[Longitude], [c].[TotalEmployees], [c].[UpdatedAt], [c].[VATRegistrationNumber]
+FROM [Companies] AS [c]
+2026-01-30 20:07:02.491 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Candidates] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.495 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Packages] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.499 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Requests] AS [r]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.503 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-30 20:07:02.509 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Providers] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.511 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-01-30 20:07:02.517 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[ComplianceAuditJson], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[IsVerified], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LastVerificationDate], [p].[Latitude], [p].[LegalName], [p].[Longitude], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+2026-01-30 20:07:02.551 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__testProvider_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Requests] AS [r]
+        WHERE [r].[AssignedProviderId] = @__testProvider_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:07:02.643 +03:00 [INF] Now listening on: http://localhost:5284
+2026-01-30 20:07:02.646 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-30 20:07:02.647 +03:00 [INF] Hosting environment: Development
+2026-01-30 20:07:02.649 +03:00 [INF] Content root path: D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi
+2026-01-30 20:07:03.282 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - null null
+2026-01-30 20:07:03.288 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/case/waiting-queue - null null
+2026-01-30 20:07:03.292 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - null null
+2026-01-30 20:07:03.319 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-01-30 20:07:03.321 +03:00 [INF] CORS policy execution successful.
+2026-01-30 20:07:03.321 +03:00 [INF] CORS policy execution successful.
+2026-01-30 20:07:03.321 +03:00 [INF] CORS policy execution successful.
+2026-01-30 20:07:03.327 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - 204 null null 46.0129ms
+2026-01-30 20:07:03.327 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/case/waiting-queue - 204 null null 38.5488ms
+2026-01-30 20:07:03.327 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/Notification - 204 null null 34.7072ms
+2026-01-30 20:07:03.337 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/case/waiting-queue - null null
+2026-01-30 20:07:03.340 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/Notification - null null
+2026-01-30 20:07:03.342 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/Notification - null null
+2026-01-30 20:07:03.351 +03:00 [INF] CORS policy execution successful.
+2026-01-30 20:07:03.351 +03:00 [INF] CORS policy execution successful.
+2026-01-30 20:07:03.351 +03:00 [INF] CORS policy execution successful.
+2026-01-30 20:07:03.408 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.NotificationController.GetUserNotifications (B2B_V2.WebApi)'
+2026-01-30 20:07:03.408 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi)'
+2026-01-30 20:07:03.408 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.NotificationController.GetUserNotifications (B2B_V2.WebApi)'
+2026-01-30 20:07:03.421 +03:00 [INF] Route matched with {action = "GetUserNotifications", controller = "Notification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.Object]]] GetUserNotifications() on controller B2B_V2.WebApi.Controllers.NotificationController (B2B_V2.WebApi).
+2026-01-30 20:07:03.421 +03:00 [INF] Route matched with {action = "GetGlobalWaitingQueue", controller = "Case"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.RequestDto]]] GetGlobalWaitingQueue() on controller B2B_V2.WebApi.Controllers.CaseController (B2B_V2.WebApi).
+2026-01-30 20:07:03.421 +03:00 [INF] Route matched with {action = "GetUserNotifications", controller = "Notification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.Object]]] GetUserNotifications() on controller B2B_V2.WebApi.Controllers.NotificationController (B2B_V2.WebApi).
+2026-01-30 20:07:03.454 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CaseId], [n].[CreatedAt], [n].[IsActive], [n].[IsRead], [n].[Message], [n].[RecipientIdentifier], [n].[Type], [n].[UpdatedAt], [n].[UserId]
+FROM [Notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+2026-01-30 20:07:03.457 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CaseId], [n].[CreatedAt], [n].[IsActive], [n].[IsRead], [n].[Message], [n].[RecipientIdentifier], [n].[Type], [n].[UpdatedAt], [n].[UserId]
+FROM [Notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+2026-01-30 20:07:03.480 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+IteratorSelectIterator`2[[B2B_V2.Domain.Entities.Notification, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType2`5[[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], B2B_V2.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-30 20:07:03.480 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+IteratorSelectIterator`2[[B2B_V2.Domain.Entities.Notification, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType2`5[[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], B2B_V2.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-30 20:07:03.506 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AssignedProviderId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[PackageId], [r].[RequestedProviderId], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt], [c].[Id], [c].[BranchLocation], [c].[CompanyId], [c].[CreatedAt], [c].[Department], [c].[FullName], [c].[Gender], [c].[IsActive], [c].[MobileNumber], [c].[NationalID], [c].[Position], [c].[UpdatedAt], [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[UpdatedAt], [p0].[Id], [p0].[BankAccountId], [p0].[BranchLocations], [p0].[CBAHIAccreditationPath], [p0].[CRCertificatePath], [p0].[ComplianceAuditJson], [p0].[CreatedAt], [p0].[EstimatedDailyOperationalCapacity], [p0].[IsActive], [p0].[IsVerified], [p0].[LabAccreditationPath], [p0].[LabSetup], [p0].[LastVerificationDate], [p0].[Latitude], [p0].[LegalName], [p0].[Longitude], [p0].[MOHLicensePath], [p0].[MedicalWasteManagementContractPath], [p0].[OccupationalPhysicianLicensePath], [p0].[PrimaryContactPersonId], [p0].[ProfessionalLiabilityInsurancePath], [p0].[TierId], [p0].[UpdatedAt]
+FROM [Requests] AS [r]
+LEFT JOIN [Candidates] AS [c] ON [r].[CandidateId] = [c].[Id]
+INNER JOIN [Packages] AS [p] ON [r].[PackageId] = [p].[Id]
+LEFT JOIN [Providers] AS [p0] ON [r].[AssignedProviderId] = [p0].[Id]
+2026-01-30 20:07:03.509 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.NotificationController.GetUserNotifications (B2B_V2.WebApi) in 83.084ms
+2026-01-30 20:07:03.509 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.NotificationController.GetUserNotifications (B2B_V2.WebApi) in 77.8479ms
+2026-01-30 20:07:03.511 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.NotificationController.GetUserNotifications (B2B_V2.WebApi)'
+2026-01-30 20:07:03.513 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.NotificationController.GetUserNotifications (B2B_V2.WebApi)'
+2026-01-30 20:07:03.518 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/Notification - 200 null application/json; charset=utf-8 175.7006ms
+2026-01-30 20:07:03.518 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/Notification - 200 null application/json; charset=utf-8 177.7893ms
+2026-01-30 20:07:03.571 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListWhereSelectIterator`2[[B2B_V2.Domain.Entities.Request, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.RequestDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-30 20:07:03.590 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi) in 163.9677ms
+2026-01-30 20:07:03.592 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi)'
+2026-01-30 20:07:03.593 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/case/waiting-queue - 200 null application/json; charset=utf-8 255.7901ms
+2026-01-30 20:07:43.562 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/case/356b4a76-ce84-445c-a432-0dd29dcd7ba8 - null null
+2026-01-30 20:07:43.566 +03:00 [INF] CORS policy execution successful.
+2026-01-30 20:07:43.567 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/case/356b4a76-ce84-445c-a432-0dd29dcd7ba8 - 204 null null 4.6954ms
+2026-01-30 20:07:43.570 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/case/356b4a76-ce84-445c-a432-0dd29dcd7ba8 - null null
+2026-01-30 20:07:43.572 +03:00 [INF] CORS policy execution successful.
+2026-01-30 20:07:43.576 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetCaseDetails (B2B_V2.WebApi)'
+2026-01-30 20:07:43.585 +03:00 [INF] Route matched with {action = "GetCaseDetails", controller = "Case"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[B2B_V2.Application.DTOs.RequestDto]] GetCaseDetails(System.Guid) on controller B2B_V2.WebApi.Controllers.CaseController (B2B_V2.WebApi).
+2026-01-30 20:07:43.717 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[AssignedProviderId], [s].[CandidateId], [s].[CaseID], [s].[CompanyId], [s].[CreatedAt], [s].[ExpectedVisitDate], [s].[IsActive], [s].[PackageId], [s].[RequestedProviderId], [s].[ScreeningBatchId], [s].[Status], [s].[SupportingDocumentPath], [s].[UpdatedAt], [s].[Id0], [s].[BranchLocation], [s].[CompanyId0], [s].[CreatedAt0], [s].[Department], [s].[FullName], [s].[Gender], [s].[IsActive0], [s].[MobileNumber], [s].[NationalID], [s].[Position], [s].[UpdatedAt0], [s].[Id1], [s].[CreatedAt1], [s].[Description], [s].[IsActive1], [s].[Name], [s].[Price], [s].[UpdatedAt1], [s].[Id2], [s].[BankAccountId], [s].[BranchLocations], [s].[CBAHIAccreditationPath], [s].[CRCertificatePath], [s].[ComplianceAuditJson], [s].[CreatedAt2], [s].[EstimatedDailyOperationalCapacity], [s].[IsActive2], [s].[IsVerified], [s].[LabAccreditationPath], [s].[LabSetup], [s].[LastVerificationDate], [s].[Latitude], [s].[LegalName], [s].[Longitude], [s].[MOHLicensePath], [s].[MedicalWasteManagementContractPath], [s].[OccupationalPhysicianLicensePath], [s].[PrimaryContactPersonId], [s].[ProfessionalLiabilityInsurancePath], [s].[TierId], [s].[UpdatedAt2], [s].[Id3], [s].[BankAccountId0], [s].[BranchLocations0], [s].[CBAHIAccreditationPath0], [s].[CRCertificatePath0], [s].[ComplianceAuditJson0], [s].[CreatedAt3], [s].[EstimatedDailyOperationalCapacity0], [s].[IsActive3], [s].[IsVerified0], [s].[LabAccreditationPath0], [s].[LabSetup0], [s].[LastVerificationDate0], [s].[Latitude0], [s].[LegalName0], [s].[Longitude0], [s].[MOHLicensePath0], [s].[MedicalWasteManagementContractPath0], [s].[OccupationalPhysicianLicensePath0], [s].[PrimaryContactPersonId0], [s].[ProfessionalLiabilityInsurancePath0], [s].[TierId0], [s].[UpdatedAt3], [r0].[Id], [r0].[CreatedAt], [r0].[DocumentType], [r0].[FilePath], [r0].[IsActive], [r0].[RequestId], [r0].[UpdatedAt], [r0].[UploadedAt], [r0].[UploadedByUserId]
+FROM (
+    SELECT TOP(1) [r].[Id], [r].[AssignedProviderId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[PackageId], [r].[RequestedProviderId], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt], [c].[Id] AS [Id0], [c].[BranchLocation], [c].[CompanyId] AS [CompanyId0], [c].[CreatedAt] AS [CreatedAt0], [c].[Department], [c].[FullName], [c].[Gender], [c].[IsActive] AS [IsActive0], [c].[MobileNumber], [c].[NationalID], [c].[Position], [c].[UpdatedAt] AS [UpdatedAt0], [p].[Id] AS [Id1], [p].[CreatedAt] AS [CreatedAt1], [p].[Description], [p].[IsActive] AS [IsActive1], [p].[Name], [p].[Price], [p].[UpdatedAt] AS [UpdatedAt1], [p0].[Id] AS [Id2], [p0].[BankAccountId], [p0].[BranchLocations], [p0].[CBAHIAccreditationPath], [p0].[CRCertificatePath], [p0].[ComplianceAuditJson], [p0].[CreatedAt] AS [CreatedAt2], [p0].[EstimatedDailyOperationalCapacity], [p0].[IsActive] AS [IsActive2], [p0].[IsVerified], [p0].[LabAccreditationPath], [p0].[LabSetup], [p0].[LastVerificationDate], [p0].[Latitude], [p0].[LegalName], [p0].[Longitude], [p0].[MOHLicensePath], [p0].[MedicalWasteManagementContractPath], [p0].[OccupationalPhysicianLicensePath], [p0].[PrimaryContactPersonId], [p0].[ProfessionalLiabilityInsurancePath], [p0].[TierId], [p0].[UpdatedAt] AS [UpdatedAt2], [p1].[Id] AS [Id3], [p1].[BankAccountId] AS [BankAccountId0], [p1].[BranchLocations] AS [BranchLocations0], [p1].[CBAHIAccreditationPath] AS [CBAHIAccreditationPath0], [p1].[CRCertificatePath] AS [CRCertificatePath0], [p1].[ComplianceAuditJson] AS [ComplianceAuditJson0], [p1].[CreatedAt] AS [CreatedAt3], [p1].[EstimatedDailyOperationalCapacity] AS [EstimatedDailyOperationalCapacity0], [p1].[IsActive] AS [IsActive3], [p1].[IsVerified] AS [IsVerified0], [p1].[LabAccreditationPath] AS [LabAccreditationPath0], [p1].[LabSetup] AS [LabSetup0], [p1].[LastVerificationDate] AS [LastVerificationDate0], [p1].[Latitude] AS [Latitude0], [p1].[LegalName] AS [LegalName0], [p1].[Longitude] AS [Longitude0], [p1].[MOHLicensePath] AS [MOHLicensePath0], [p1].[MedicalWasteManagementContractPath] AS [MedicalWasteManagementContractPath0], [p1].[OccupationalPhysicianLicensePath] AS [OccupationalPhysicianLicensePath0], [p1].[PrimaryContactPersonId] AS [PrimaryContactPersonId0], [p1].[ProfessionalLiabilityInsurancePath] AS [ProfessionalLiabilityInsurancePath0], [p1].[TierId] AS [TierId0], [p1].[UpdatedAt] AS [UpdatedAt3]
+    FROM [Requests] AS [r]
+    LEFT JOIN [Candidates] AS [c] ON [r].[CandidateId] = [c].[Id]
+    INNER JOIN [Packages] AS [p] ON [r].[PackageId] = [p].[Id]
+    LEFT JOIN [Providers] AS [p0] ON [r].[RequestedProviderId] = [p0].[Id]
+    LEFT JOIN [Providers] AS [p1] ON [r].[AssignedProviderId] = [p1].[Id]
+    WHERE [r].[Id] = @__id_0
+) AS [s]
+LEFT JOIN [RequestDocuments] AS [r0] ON [s].[Id] = [r0].[RequestId]
+ORDER BY [s].[Id], [s].[Id0], [s].[Id1], [s].[Id2], [s].[Id3]
+2026-01-30 20:07:43.742 +03:00 [INF] Executing OkObjectResult, writing value of type 'B2B_V2.Application.DTOs.RequestDto'.
+2026-01-30 20:07:43.747 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CaseController.GetCaseDetails (B2B_V2.WebApi) in 159.5066ms
+2026-01-30 20:07:43.748 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetCaseDetails (B2B_V2.WebApi)'
+2026-01-30 20:07:43.749 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/case/356b4a76-ce84-445c-a432-0dd29dcd7ba8 - 200 null application/json; charset=utf-8 178.9519ms
+2026-01-30 20:07:46.183 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/uploads/medical-documents/d5e7ffae-5b0c-4f2f-9cac-78ff0b26bacf.pdf - null null
+2026-01-30 20:07:46.199 +03:00 [INF] Sending file. Request path: '/uploads/medical-documents/d5e7ffae-5b0c-4f2f-9cac-78ff0b26bacf.pdf'. Physical path: 'D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\wwwroot\uploads\medical-documents\d5e7ffae-5b0c-4f2f-9cac-78ff0b26bacf.pdf'
+2026-01-30 20:07:46.200 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/uploads/medical-documents/d5e7ffae-5b0c-4f2f-9cac-78ff0b26bacf.pdf - 200 262481 application/pdf 17.1059ms
+2026-01-30 20:07:46.222 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/favicon.ico - null null
+2026-01-30 20:07:46.226 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/favicon.ico - 404 0 null 3.7142ms
+2026-01-30 20:07:46.230 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5284/favicon.ico, Response status code: 404
+2026-01-30 20:11:52.020 +03:00 [INF] User profile is available. Using 'C:\Users\saada\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-30 20:11:52.735 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-01-30 20:11:52.745 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-01-30 20:11:52.763 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-01-30 20:11:52.805 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-01-30 20:11:52.817 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-01-30 20:11:52.820 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-01-30 20:11:52.826 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-01-30 20:11:52.833 +03:00 [INF] No migrations were applied. The database is already up to date.
+2026-01-30 20:11:52.837 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-01-30 20:11:53.014 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-30 20:11:53.058 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-30 20:11:53.060 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-30 20:11:53.062 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-30 20:11:53.073 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-30 20:11:53.122 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.125 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.127 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.129 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.131 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.133 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.135 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.137 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.139 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.142 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.144 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.147 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.149 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.153 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.157 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.160 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.162 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.164 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.167 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.169 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.172 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.174 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.177 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.179 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.181 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.183 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Permissions] AS [p]
+        WHERE [p].[Name] = @__p_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.231 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[FeatureGroup], [p].[Name]
+FROM [Permissions] AS [p]
+2026-01-30 20:11:53.245 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-30 20:11:53.257 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.262 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.266 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.270 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.274 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.278 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.282 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.285 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.287 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.290 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.293 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.295 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.299 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.303 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.306 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.308 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.311 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.313 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.316 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.319 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.321 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.323 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.326 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.328 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.330 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.332 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_superAdminRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals1_superAdminRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.335 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-30 20:11:53.342 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.345 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.348 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.351 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.353 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.356 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.358 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.361 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals2_companyRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals2_companyRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.364 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-30 20:11:53.371 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.374 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.377 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.379 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.382 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.385 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.388 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.400 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.407 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals4_providerRole_Id_0='?' (DbType = Guid), @__p_Id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [RolePermissions] AS [r]
+        WHERE [r].[RoleId] = @__8__locals4_providerRole_Id_0 AND [r].[PermissionId] = @__p_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.419 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [ProviderTiers] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.426 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Themes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.429 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-30 20:11:53.435 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Companies] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.439 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-01-30 20:11:53.446 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[BranchLocations], [c].[BusinessActivity], [c].[CRCertificatePath], [c].[CRNumber], [c].[CompanySize], [c].[CreatedAt], [c].[DefaultProviderAssignmentMode], [c].[DesignatedContactPersonId], [c].[EstimatedMonthlyScreeningVolume], [c].[HeadOfficeAddress], [c].[IsActive], [c].[Latitude], [c].[LegalName], [c].[Longitude], [c].[TotalEmployees], [c].[UpdatedAt], [c].[VATRegistrationNumber]
+FROM [Companies] AS [c]
+2026-01-30 20:11:53.477 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Candidates] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.483 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Packages] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.488 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Requests] AS [r]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.491 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-30 20:11:53.496 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Providers] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.498 +03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-01-30 20:11:53.508 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[ComplianceAuditJson], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[IsVerified], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LastVerificationDate], [p].[Latitude], [p].[LegalName], [p].[Longitude], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+2026-01-30 20:11:53.543 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__testProvider_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Requests] AS [r]
+        WHERE [r].[AssignedProviderId] = @__testProvider_Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-30 20:11:53.640 +03:00 [INF] Now listening on: http://localhost:5284
+2026-01-30 20:11:53.643 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-30 20:11:53.644 +03:00 [INF] Hosting environment: Development
+2026-01-30 20:11:53.645 +03:00 [INF] Content root path: D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi
+2026-01-30 20:12:22.323 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/case/provider-worklist/54ed873e-cc48-4caa-8021-0559133642b2 - null null
+2026-01-30 20:12:22.381 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-01-30 20:12:22.383 +03:00 [INF] CORS policy execution successful.
+2026-01-30 20:12:22.387 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/case/provider-worklist/54ed873e-cc48-4caa-8021-0559133642b2 - 204 null null 65.6453ms
+2026-01-30 20:12:22.392 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/case/provider-worklist/54ed873e-cc48-4caa-8021-0559133642b2 - null null
+2026-01-30 20:12:22.399 +03:00 [INF] CORS policy execution successful.
+2026-01-30 20:12:22.470 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi)'
+2026-01-30 20:12:22.490 +03:00 [INF] Route matched with {action = "GetProviderWorklist", controller = "Case"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.RequestDto]]] GetProviderWorklist(System.Guid) on controller B2B_V2.WebApi.Controllers.CaseController (B2B_V2.WebApi).
+2026-01-30 20:12:22.607 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AssignedProviderId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[PackageId], [r].[RequestedProviderId], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt], [c].[Id], [c].[BranchLocation], [c].[CompanyId], [c].[CreatedAt], [c].[Department], [c].[FullName], [c].[Gender], [c].[IsActive], [c].[MobileNumber], [c].[NationalID], [c].[Position], [c].[UpdatedAt], [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[UpdatedAt]
+FROM [Requests] AS [r]
+LEFT JOIN [Candidates] AS [c] ON [r].[CandidateId] = [c].[Id]
+INNER JOIN [Packages] AS [p] ON [r].[PackageId] = [p].[Id]
+2026-01-30 20:12:22.702 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListWhereSelectIterator`2[[B2B_V2.Domain.Entities.Request, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.RequestDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-30 20:12:22.779 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi) in 278.2016ms
+2026-01-30 20:12:22.781 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi)'
+2026-01-30 20:12:22.789 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/case/provider-worklist/54ed873e-cc48-4caa-8021-0559133642b2 - 200 null application/json; charset=utf-8 397.0671ms
+2026-01-30 20:12:23.329 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/case/waiting-queue - null null
+2026-01-30 20:12:23.336 +03:00 [INF] CORS policy execution successful.
+2026-01-30 20:12:23.337 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/case/waiting-queue - 204 null null 7.5727ms
+2026-01-30 20:12:23.340 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/case/waiting-queue - null null
+2026-01-30 20:12:23.343 +03:00 [INF] CORS policy execution successful.
+2026-01-30 20:12:23.349 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi)'
+2026-01-30 20:12:23.353 +03:00 [INF] Route matched with {action = "GetGlobalWaitingQueue", controller = "Case"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.RequestDto]]] GetGlobalWaitingQueue() on controller B2B_V2.WebApi.Controllers.CaseController (B2B_V2.WebApi).
+2026-01-30 20:12:23.483 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AssignedProviderId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[PackageId], [r].[RequestedProviderId], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt], [c].[Id], [c].[BranchLocation], [c].[CompanyId], [c].[CreatedAt], [c].[Department], [c].[FullName], [c].[Gender], [c].[IsActive], [c].[MobileNumber], [c].[NationalID], [c].[Position], [c].[UpdatedAt], [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[UpdatedAt], [p0].[Id], [p0].[BankAccountId], [p0].[BranchLocations], [p0].[CBAHIAccreditationPath], [p0].[CRCertificatePath], [p0].[ComplianceAuditJson], [p0].[CreatedAt], [p0].[EstimatedDailyOperationalCapacity], [p0].[IsActive], [p0].[IsVerified], [p0].[LabAccreditationPath], [p0].[LabSetup], [p0].[LastVerificationDate], [p0].[Latitude], [p0].[LegalName], [p0].[Longitude], [p0].[MOHLicensePath], [p0].[MedicalWasteManagementContractPath], [p0].[OccupationalPhysicianLicensePath], [p0].[PrimaryContactPersonId], [p0].[ProfessionalLiabilityInsurancePath], [p0].[TierId], [p0].[UpdatedAt]
+FROM [Requests] AS [r]
+LEFT JOIN [Candidates] AS [c] ON [r].[CandidateId] = [c].[Id]
+INNER JOIN [Packages] AS [p] ON [r].[PackageId] = [p].[Id]
+LEFT JOIN [Providers] AS [p0] ON [r].[AssignedProviderId] = [p0].[Id]
+2026-01-30 20:12:23.490 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListWhereSelectIterator`2[[B2B_V2.Domain.Entities.Request, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.RequestDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-30 20:12:23.501 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi) in 145.7579ms
+2026-01-30 20:12:23.504 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetGlobalWaitingQueue (B2B_V2.WebApi)'
+2026-01-30 20:12:23.506 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/case/waiting-queue - 200 null application/json; charset=utf-8 165.2103ms
+2026-01-30 20:12:25.885 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/case/356b4a76-ce84-445c-a432-0dd29dcd7ba8 - null null
+2026-01-30 20:12:25.894 +03:00 [INF] CORS policy execution successful.
+2026-01-30 20:12:25.896 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/case/356b4a76-ce84-445c-a432-0dd29dcd7ba8 - 204 null null 10.7413ms
+2026-01-30 20:12:25.903 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/case/356b4a76-ce84-445c-a432-0dd29dcd7ba8 - null null
+2026-01-30 20:12:25.908 +03:00 [INF] CORS policy execution successful.
+2026-01-30 20:12:25.918 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetCaseDetails (B2B_V2.WebApi)'
+2026-01-30 20:12:25.925 +03:00 [INF] Route matched with {action = "GetCaseDetails", controller = "Case"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[B2B_V2.Application.DTOs.RequestDto]] GetCaseDetails(System.Guid) on controller B2B_V2.WebApi.Controllers.CaseController (B2B_V2.WebApi).
+2026-01-30 20:12:26.056 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[AssignedProviderId], [s].[CandidateId], [s].[CaseID], [s].[CompanyId], [s].[CreatedAt], [s].[ExpectedVisitDate], [s].[IsActive], [s].[PackageId], [s].[RequestedProviderId], [s].[ScreeningBatchId], [s].[Status], [s].[SupportingDocumentPath], [s].[UpdatedAt], [s].[Id0], [s].[BranchLocation], [s].[CompanyId0], [s].[CreatedAt0], [s].[Department], [s].[FullName], [s].[Gender], [s].[IsActive0], [s].[MobileNumber], [s].[NationalID], [s].[Position], [s].[UpdatedAt0], [s].[Id1], [s].[CreatedAt1], [s].[Description], [s].[IsActive1], [s].[Name], [s].[Price], [s].[UpdatedAt1], [s].[Id2], [s].[BankAccountId], [s].[BranchLocations], [s].[CBAHIAccreditationPath], [s].[CRCertificatePath], [s].[ComplianceAuditJson], [s].[CreatedAt2], [s].[EstimatedDailyOperationalCapacity], [s].[IsActive2], [s].[IsVerified], [s].[LabAccreditationPath], [s].[LabSetup], [s].[LastVerificationDate], [s].[Latitude], [s].[LegalName], [s].[Longitude], [s].[MOHLicensePath], [s].[MedicalWasteManagementContractPath], [s].[OccupationalPhysicianLicensePath], [s].[PrimaryContactPersonId], [s].[ProfessionalLiabilityInsurancePath], [s].[TierId], [s].[UpdatedAt2], [s].[Id3], [s].[BankAccountId0], [s].[BranchLocations0], [s].[CBAHIAccreditationPath0], [s].[CRCertificatePath0], [s].[ComplianceAuditJson0], [s].[CreatedAt3], [s].[EstimatedDailyOperationalCapacity0], [s].[IsActive3], [s].[IsVerified0], [s].[LabAccreditationPath0], [s].[LabSetup0], [s].[LastVerificationDate0], [s].[Latitude0], [s].[LegalName0], [s].[Longitude0], [s].[MOHLicensePath0], [s].[MedicalWasteManagementContractPath0], [s].[OccupationalPhysicianLicensePath0], [s].[PrimaryContactPersonId0], [s].[ProfessionalLiabilityInsurancePath0], [s].[TierId0], [s].[UpdatedAt3], [r0].[Id], [r0].[CreatedAt], [r0].[DocumentType], [r0].[FilePath], [r0].[IsActive], [r0].[RequestId], [r0].[UpdatedAt], [r0].[UploadedAt], [r0].[UploadedByUserId]
+FROM (
+    SELECT TOP(1) [r].[Id], [r].[AssignedProviderId], [r].[CandidateId], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[ExpectedVisitDate], [r].[IsActive], [r].[PackageId], [r].[RequestedProviderId], [r].[ScreeningBatchId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt], [c].[Id] AS [Id0], [c].[BranchLocation], [c].[CompanyId] AS [CompanyId0], [c].[CreatedAt] AS [CreatedAt0], [c].[Department], [c].[FullName], [c].[Gender], [c].[IsActive] AS [IsActive0], [c].[MobileNumber], [c].[NationalID], [c].[Position], [c].[UpdatedAt] AS [UpdatedAt0], [p].[Id] AS [Id1], [p].[CreatedAt] AS [CreatedAt1], [p].[Description], [p].[IsActive] AS [IsActive1], [p].[Name], [p].[Price], [p].[UpdatedAt] AS [UpdatedAt1], [p0].[Id] AS [Id2], [p0].[BankAccountId], [p0].[BranchLocations], [p0].[CBAHIAccreditationPath], [p0].[CRCertificatePath], [p0].[ComplianceAuditJson], [p0].[CreatedAt] AS [CreatedAt2], [p0].[EstimatedDailyOperationalCapacity], [p0].[IsActive] AS [IsActive2], [p0].[IsVerified], [p0].[LabAccreditationPath], [p0].[LabSetup], [p0].[LastVerificationDate], [p0].[Latitude], [p0].[LegalName], [p0].[Longitude], [p0].[MOHLicensePath], [p0].[MedicalWasteManagementContractPath], [p0].[OccupationalPhysicianLicensePath], [p0].[PrimaryContactPersonId], [p0].[ProfessionalLiabilityInsurancePath], [p0].[TierId], [p0].[UpdatedAt] AS [UpdatedAt2], [p1].[Id] AS [Id3], [p1].[BankAccountId] AS [BankAccountId0], [p1].[BranchLocations] AS [BranchLocations0], [p1].[CBAHIAccreditationPath] AS [CBAHIAccreditationPath0], [p1].[CRCertificatePath] AS [CRCertificatePath0], [p1].[ComplianceAuditJson] AS [ComplianceAuditJson0], [p1].[CreatedAt] AS [CreatedAt3], [p1].[EstimatedDailyOperationalCapacity] AS [EstimatedDailyOperationalCapacity0], [p1].[IsActive] AS [IsActive3], [p1].[IsVerified] AS [IsVerified0], [p1].[LabAccreditationPath] AS [LabAccreditationPath0], [p1].[LabSetup] AS [LabSetup0], [p1].[LastVerificationDate] AS [LastVerificationDate0], [p1].[Latitude] AS [Latitude0], [p1].[LegalName] AS [LegalName0], [p1].[Longitude] AS [Longitude0], [p1].[MOHLicensePath] AS [MOHLicensePath0], [p1].[MedicalWasteManagementContractPath] AS [MedicalWasteManagementContractPath0], [p1].[OccupationalPhysicianLicensePath] AS [OccupationalPhysicianLicensePath0], [p1].[PrimaryContactPersonId] AS [PrimaryContactPersonId0], [p1].[ProfessionalLiabilityInsurancePath] AS [ProfessionalLiabilityInsurancePath0], [p1].[TierId] AS [TierId0], [p1].[UpdatedAt] AS [UpdatedAt3]
+    FROM [Requests] AS [r]
+    LEFT JOIN [Candidates] AS [c] ON [r].[CandidateId] = [c].[Id]
+    INNER JOIN [Packages] AS [p] ON [r].[PackageId] = [p].[Id]
+    LEFT JOIN [Providers] AS [p0] ON [r].[RequestedProviderId] = [p0].[Id]
+    LEFT JOIN [Providers] AS [p1] ON [r].[AssignedProviderId] = [p1].[Id]
+    WHERE [r].[Id] = @__id_0
+) AS [s]
+LEFT JOIN [RequestDocuments] AS [r0] ON [s].[Id] = [r0].[RequestId]
+ORDER BY [s].[Id], [s].[Id0], [s].[Id1], [s].[Id2], [s].[Id3]
+2026-01-30 20:12:26.089 +03:00 [INF] Executing OkObjectResult, writing value of type 'B2B_V2.Application.DTOs.RequestDto'.
+2026-01-30 20:12:26.093 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CaseController.GetCaseDetails (B2B_V2.WebApi) in 163.7911ms
+2026-01-30 20:12:26.096 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetCaseDetails (B2B_V2.WebApi)'
+2026-01-30 20:12:26.098 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/case/356b4a76-ce84-445c-a432-0dd29dcd7ba8 - 200 null application/json; charset=utf-8 195.4002ms

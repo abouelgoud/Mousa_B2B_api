@@ -1,0 +1,164 @@
+@keyframes slideUpIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.user-manager-container {
+    background-color: var(--outlook-bg);
+}
+
+.toolbar {
+    background: #ffffff;
+    border-bottom: 1px solid var(--outlook-border);
+    padding: 16px 32px;
+}
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--outlook-border);
+    border-radius: 4px;
+    box-shadow: 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
+    overflow: hidden;
+}
+
+.table {
+    margin-bottom: 0;
+
+    thead th {
+        background: #fbfbfb;
+        padding: 12px 24px;
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--outlook-text-secondary);
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--outlook-border);
+    }
+
+    tbody td {
+        padding: 16px 24px;
+        border-bottom: 1px solid #f3f2f1;
+    }
+
+    tbody tr {
+        transition: background-color 0.1s;
+        animation: slideUpIn 0.3s ease-out backwards;
+
+        &:hover {
+            background-color: #f3f2f1;
+        }
+    }
+}
+
+.user-identity {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .avatar-box {
+        width: 36px;
+        height: 36px;
+        background: #f0f7ff;
+        color: #0078d4;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .name {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--outlook-text-primary);
+    }
+
+    .id {
+        font-size: 10px;
+        color: var(--outlook-text-secondary);
+        background: #f3f2f1;
+        padding: 1px 4px;
+        border-radius: 2px;
+    }
+}
+
+.form-select-sm {
+    font-size: 12px;
+    padding: 2px 8px;
+    height: 28px;
+    border-color: var(--outlook-border);
+}
+
+.link-tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    &.company {
+        background: #f5f0ff;
+        color: #6610f2;
+        border: 1px solid #e6d5ff;
+    }
+
+    &.provider {
+        background: #e6fffa;
+        color: #20c997;
+        border: 1px solid #b2f5ea;
+    }
+
+    &.admin {
+        background: #f3f2f1;
+        color: #323130;
+        border: 1px solid #edebe9;
+    }
+}
+
+.modal-backdrop {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+}
+
+.dialog-premium {
+    border: none;
+    box-shadow: 0 32px 64px rgba(0, 0, 0, 0.18), 0 2px 21px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    overflow: hidden;
+
+    .modal-header {
+        background: #0078d4;
+        color: white;
+        padding: 24px;
+    }
+
+    .modal-body {
+        padding: 32px;
+        background: #ffffff;
+    }
+}
+
+.btn-action {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: var(--outlook-text-secondary);
+
+    &:hover {
+        background: #edebe9;
+        color: var(--outlook-text-primary);
+    }
+}

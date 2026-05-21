@@ -1,0 +1,23 @@
+.glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+}
+
+.avatar-md {
+    width: 48px;
+    height: 48px;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 120, 212, 0.015);
+}
+
+.form-check-input:checked {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.animate__animated {
+    animation-duration: 0.5s;
+}

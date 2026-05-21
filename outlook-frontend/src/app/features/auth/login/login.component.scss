@@ -1,0 +1,220 @@
+.login-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    background-color: #f3f2f1; // Outlook Light Gray
+    background:
+        radial-gradient(circle at 15% 50%, rgba(0, 120, 212, 0.08), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(0, 120, 212, 0.08), transparent 25%);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image:
+            linear-gradient(135deg, #ffffff 0%, #f3f2f1 100%);
+        z-index: -1;
+    }
+}
+
+.auth-card {
+    width: 440px;
+    background: #ffffff;
+    box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108); // Microsoft-style shadow
+    border: none;
+    padding: 44px;
+    position: relative;
+    z-index: 10;
+    transition: all 0.3s ease;
+
+    // Optional: Only apply subtle glass on very modern browsers if preferred, 
+    // but solid white is safer for "Standard" Outlook look. 
+    // Let's stick to clean solid white for "Professional".
+}
+
+.brand-section {
+    margin-bottom: 2rem;
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 1.5rem;
+
+        i {
+            font-size: 24px;
+            color: #0078d4; // Outlook Blue
+        }
+
+        span {
+            font-size: 18px;
+            font-weight: 600;
+            color: #252423;
+            font-family: 'Segoe UI Semibold', 'Segoe UI', sans-serif;
+        }
+    }
+
+    h1 {
+        color: #1b1a19;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        line-height: 1.25;
+    }
+
+    p {
+        color: #1b1a19;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    position: relative;
+
+    label {
+        display: none; // Hiding labels for cleaner Outlook 2024 look (using placeholders usually, or floating)
+    }
+
+    .input-wrapper {
+        position: relative;
+
+        i {
+            display: none; // Removing icons for cleaner enterprise look
+        }
+
+        input {
+            width: 100%;
+            height: 36px;
+            border: 1px solid #8a8886; // Standard border
+            border-bottom-color: #605e5c;
+            border-radius: 0;
+            padding: 6px 36px 6px 10px;
+            color: #1b1a19;
+            font-size: 15px;
+            background: transparent;
+            transition: all 0.2s;
+
+            &::placeholder {
+                color: #605e5c;
+                font-weight: 400;
+            }
+
+            &:hover {
+                border-color: #323130;
+            }
+
+            &:focus {
+                outline: none;
+                border-color: #0078d4;
+                border-bottom-width: 2px;
+                padding-bottom: 5px; // Adjust for border width
+            }
+        }
+
+        .toggle-password-btn {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            padding: 4px;
+            color: #605e5c;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: color 0.15s ease-in-out;
+            z-index: 5;
+
+            &:hover {
+                color: #0078d4;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            i {
+                display: inline-block !important;
+            }
+        }
+    }
+}
+
+.form-footer {
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    .forgot-pass {
+        color: #0067b8;
+        text-decoration: none;
+        font-size: 13px;
+
+        &:hover {
+            color: #0067b8;
+            text-decoration: underline;
+        }
+    }
+}
+
+.submit-btn {
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    min-width: 108px;
+    height: 32px;
+    padding: 4px 12px;
+    font-size: 15px;
+    font-weight: 400; // Segoe UI buttons are often not bold
+    cursor: pointer;
+    float: right; // Align right like Outlook
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+
+    &:hover:not(:disabled) {
+        background-color: #005a9e;
+    }
+
+    &:disabled {
+        background-color: #c8c6c4;
+        color: rgba(0, 0, 0, 0.2); // Faint text
+        cursor: default;
+    }
+
+    // Resetting flex for standard look
+    gap: 0;
+
+    span {
+        margin: 0;
+    }
+
+    i {
+        display: none;
+    }
+}
+
+.bottom-actions {
+    clear: both; // Clear float
+    padding-top: 2rem;
+
+    // Hiding this section for cleaner look, or styling very subtly
+    display: none;
+}
+
+/* Floating Elements - Removing for cleaner enterprise look, replacing with simple background image if needed */
+.floating-elements {
+    display: none;
+}

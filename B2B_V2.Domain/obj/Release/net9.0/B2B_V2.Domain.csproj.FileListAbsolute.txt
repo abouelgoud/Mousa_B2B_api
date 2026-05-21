@@ -1,0 +1,12 @@
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Domain\bin\Release\net9.0\B2B_V2.Domain.deps.json
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Domain\bin\Release\net9.0\B2B_V2.Domain.dll
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Domain\bin\Release\net9.0\B2B_V2.Domain.pdb
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Domain\obj\Release\net9.0\B2B_V2.Domain.csproj.AssemblyReference.cache
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Domain\obj\Release\net9.0\B2B_V2.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Domain\obj\Release\net9.0\B2B_V2.Domain.AssemblyInfoInputs.cache
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Domain\obj\Release\net9.0\B2B_V2.Domain.AssemblyInfo.cs
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Domain\obj\Release\net9.0\B2B_V2.Domain.csproj.CoreCompileInputs.cache
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Domain\obj\Release\net9.0\B2B_V2.Domain.dll
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Domain\obj\Release\net9.0\refint\B2B_V2.Domain.dll
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Domain\obj\Release\net9.0\B2B_V2.Domain.pdb
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Domain\obj\Release\net9.0\ref\B2B_V2.Domain.dll

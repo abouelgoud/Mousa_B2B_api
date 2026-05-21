@@ -1,0 +1,37 @@
+.notification-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 320px;
+    background: white;
+    z-index: 1050;
+    margin-top: 10px;
+}
+
+.notification-item {
+    transition: background 0.2s;
+    cursor: default;
+
+    &.unread {
+        background: rgba(0, 120, 212, 0.03);
+    }
+
+    &:hover {
+        background: #f8f9fa;
+    }
+}
+
+.icon-box {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-icon {
+    width: 40px;
+    height: 40px;
+    color: #444;
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.05);
+    }
+}

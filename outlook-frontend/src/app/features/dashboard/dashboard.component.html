@@ -1,0 +1,138 @@
+<div class="dashboard-container h-100 p-4 overflow-auto">
+    <div class="max-width-1200 mx-auto">
+        <header class="mb-4">
+            <h4 class="fw-bold text-dark mb-1">Operational Overview</h4>
+            <p class="text-muted small">Real-time performance metrics and active screening surveillance.</p>
+        </header>
+
+        <!-- Stats Row -->
+        <div *ngIf="data(); else loadingTpl" class="row g-3 mb-4">
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="label">Active Screenings</div>
+                    <div class="value">{{ data().activeCases || 0 }}</div>
+                    <div class="trend up">
+                        <i class="bi bi-graph-up-arrow"></i>
+                        <span>+12% vs last week</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="label">Pending Review</div>
+                    <div class="value text-warning">{{ data().pendingReview || 0 }}</div>
+                    <div class="trend neutral">
+                        <span>Requires medical sign-off</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="label">Compliance Score</div>
+                    <div class="value">98.4<span style="font-size: 16px;">%</span></div>
+                    <div class="trend up">
+                        <i class="bi bi-shield-check"></i>
+                        <span>High throughput quality</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="label">Monthly Revenue</div>
+                    <div class="value">{{ data().revenue || 0 | currency:'SAR ':'symbol':'0.0-0' }}</div>
+                    <div class="trend up">
+                        <i class="bi bi-arrow-up-right"></i>
+                        <span>On track to target</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Left: Activity Timeline -->
+            <div class="col-lg-8">
+                <div class="info-card">
+                    <div class="card-header">
+                        <h6>Service Velocity & Activity</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="activity-timeline">
+                            <div class="activity-item">
+                                <div class="dot primary"></div>
+                                <div class="content">
+                                    <div class="title">New Corporate Onboarding: Aramco Portfolio</div>
+                                    <div class="meta">Account initialized with 4 diagnostic bundles.</div>
+                                </div>
+                                <div class="time">12 min ago</div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="dot success"></div>
+                                <div class="content">
+                                    <div class="title">Screening Completed: John Doe (ID: 1029)</div>
+                                    <div class="meta">Medical report dispatched to employer portal.</div>
+                                </div>
+                                <div class="time">45 min ago</div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="dot warning"></div>
+                                <div class="content">
+                                    <div class="title">SLA Warning: Kingdom Hospital</div>
+                                    <div class="meta">Awaiting provider response for 3 pending cases.</div>
+                                </div>
+                                <div class="time">2 hours ago</div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="dot primary"></div>
+                                <div class="content">
+                                    <div class="title">Service Portfolio Update</div>
+                                    <div class="meta">New diagnostic service 'EEG Test' added to global catalog.</div>
+                                </div>
+                                <div class="time">Yesterday</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Quick Actions & Context -->
+            <div class="col-lg-4">
+                <div class="info-card mb-4">
+                    <div class="card-header">
+                        <h6>Quick Dispatch</h6>
+                    </div>
+                    <div class="card-body p-2">
+                        <a routerLink="/candidates/add" class="quick-action">
+                            <i class="bi bi-person-plus"></i>
+                            <span>Register Candidate</span>
+                        </a>
+                        <a routerLink="/companies/onboard" class="quick-action">
+                            <i class="bi bi-building-add"></i>
+                            <span>Onboard Corporate Client</span>
+                        </a>
+                        <a routerLink="/packages/add" class="quick-action">
+                            <i class="bi bi-box-seam"></i>
+                            <span>Configure New Bundle</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="info-card"
+                    style="background: linear-gradient(135deg, #0078d4 0%, #005a9e 100%); border: none;">
+                    <div class="card-body text-white">
+                        <h6 class="fw-bold mb-2">Smart Insights</h6>
+                        <p class="small opacity-75 mb-0">Diagnostic volume is projected to increase by 15% next week
+                            based on corporate recruitment trends.</p>
+                        <button class="btn btn-sm btn-light mt-3 fw-bold px-3">View Report</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #loadingTpl>
+    <div class="d-flex flex-column align-items-center justify-content-center py-5">
+        <div class="spinner-border text-primary spinner-border-sm" role="status"></div>
+        <div class="mt-2 text-muted small">Synchronizing analytics...</div>
+    </div>
+</ng-template>

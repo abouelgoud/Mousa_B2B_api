@@ -1,0 +1,119 @@
+<div class="container py-5">
+    <div class="card shadow rounded-4 border-0 glass-panel">
+        <div class="card-header bg-dark text-white p-4 rounded-top-4 d-flex justify-content-between align-items-center">
+            <div>
+                <h3 class="mb-0">Healthcare Provider Onboarding</h3>
+                <p class="mb-0 text-white-50">Join our network of medical excellence.</p>
+            </div>
+            <div class="text-end">
+                <span class="badge bg-primary px-3 py-2">Step {{currentStep}}/{{totalSteps}}</span>
+            </div>
+        </div>
+
+        <div class="progress rounded-0" style="height: 6px;">
+            <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" role="progressbar"
+                [style.width.%]="(currentStep/totalSteps)*100"></div>
+        </div>
+
+        <div class="card-body p-5">
+            <form [formGroup]="onboardingForm" (ngSubmit)="submit()">
+
+                <!-- Step 1: Basic Info & Capacity -->
+                <div *ngIf="currentStep === 1" class="animate__animated animate__fadeIn">
+                    <h5 class="section-title"><i class="bi bi-info-circle me-2"></i>General Medical Facility Details
+                    </h5>
+                    <div class="row g-4 mt-2">
+                        <div class="col-md-12">
+                            <label class="form-label">Medical Center / Hospital Legal Name</label>
+                            <input type="text" class="form-control form-control-lg" formControlName="legalName">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Estimated Daily Capacity (Patients)</label>
+                            <input type="number" class="form-control"
+                                formControlName="estimatedDailyOperationalCapacity">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Laboratory Setup</label>
+                            <select class="form-select" formControlName="labSetup">
+                                <option [value]="0">In-house High Complexity Lab</option>
+                                <option [value]="1">In-house Basic Lab</option>
+                                <option [value]="2">Outsourced Lab Contract</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Latitude</label>
+                            <input type="number" step="any" class="form-control" formControlName="latitude"
+                                placeholder="e.g. 24.7136">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Longitude</label>
+                            <input type="number" step="any" class="form-control" formControlName="longitude"
+                                placeholder="e.g. 46.6753">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Accreditation & Licenses -->
+                <div *ngIf="currentStep === 2" class="animate__animated animate__fadeIn">
+                    <h5 class="section-title"><i class="bi bi-file-earmark-medical me-2"></i>Licenses & Accreditations
+                    </h5>
+                    <div class="row g-4 mt-2">
+                        <div class="col-md-6">
+                            <label class="form-label">MOH License (Upload)</label>
+                            <input type="file" class="form-control" (change)="onFileSelect($event, 'mohLicensePath')"
+                                accept=".pdf,.jpg,.png">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">CR Certificate (Upload)</label>
+                            <input type="file" class="form-control" (change)="onFileSelect($event, 'crCertificatePath')"
+                                accept=".pdf,.jpg,.png">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">CBAHI Accreditation (Optional)</label>
+                            <input type="file" class="form-control"
+                                (change)="onFileSelect($event, 'cbahiAccreditationPath')" accept=".pdf,.jpg,.png">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">ISO/Lab Accreditation (Optional)</label>
+                            <input type="file" class="form-control"
+                                (change)="onFileSelect($event, 'labAccreditationPath')" accept=".pdf,.jpg,.png">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Service Tiers & Review -->
+                <div *ngIf="currentStep === 3" class="animate__animated animate__fadeIn">
+                    <h5 class="section-title text-success"><i class="bi bi-check2-all me-2"></i>Service Quality & Review
+                    </h5>
+                    <div class="row g-4 mt-2">
+                        <div class="col-md-12">
+                            <div class="p-4 bg-light rounded-3 border">
+                                <h6>Proposed Service Tier: <strong>Premium Partner</strong></h6>
+                                <p class="small text-muted mb-0">Based on your capacity and setup, we recommend the
+                                    Premium tier for maximum visibility to corporate clients.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-4 text-center">
+                            <div class="form-check d-inline-block text-start">
+                                <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                                <label class="form-check-label small" for="termsCheck">
+                                    I hereby certify that all provided documents are authentic and up-to-date.
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between mt-5">
+                    <button type="button" class="btn btn-light border px-4" (click)="prevStep()"
+                        [disabled]="currentStep === 1">Back</button>
+                    <button *ngIf="currentStep < totalSteps" type="button" class="btn btn-dark px-5"
+                        (click)="nextStep()">Continue<i class="bi bi-chevron-right ms-2"></i></button>
+                    <button *ngIf="currentStep === totalSteps" type="submit" class="btn btn-success px-5"
+                        [disabled]="onboardingForm.invalid">Submit Registration<i
+                            class="bi bi-send-fill ms-2"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

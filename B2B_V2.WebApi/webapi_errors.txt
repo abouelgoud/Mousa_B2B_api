@@ -1,0 +1,7 @@
+d:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\Controllers\SecurityController.cs(195,69): error CS1503: Argument 2: cannot convert from 'B2B_V2.Application.DTOs.UserManagementDto' to 'B2B_V2.Application.DTOs.UpdateUserDto' [d:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\B2B_V2.WebApi.csproj]
+
+Build FAILED.
+    41 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:04.61

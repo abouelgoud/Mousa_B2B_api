@@ -1,0 +1,12 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  B2B_V2.Domain -> D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Domain\bin\Debug\net9.0\B2B_V2.Domain.dll
+  B2B_V2.Application -> D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\bin\Debug\net9.0\B2B_V2.Application.dll
+  B2B_V2.Infrastructure -> D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Infrastructure\bin\Debug\net9.0\B2B_V2.Infrastructure.dll
+  B2B_V2.WebApi -> D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\bin\Debug\net9.0\B2B_V2.WebApi.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.60

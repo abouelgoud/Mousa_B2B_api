@@ -1,0 +1,82 @@
+<div class="container-fluid py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="text-dark fw-bold mb-0">Global Waiting Queue</h2>
+            <p class="text-muted mb-0">Overview of all active medical cases currently being processed across facilities.
+            </p>
+        </div>
+        <div class="d-flex gap-2">
+            <button class="btn btn-outline-dark px-3 py-2" (click)="loadQueue()">
+                <i class="bi bi-arrow-clockwise me-2"></i>Refresh Queue
+            </button>
+        </div>
+    </div>
+
+    <div class="card border-0 shadow-sm glass-card">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="bg-light text-uppercase small fw-bold">
+                        <tr>
+                            <th class="ps-4 py-3">Case ID</th>
+                            <th>Candidate</th>
+                            <th>Assigned Facility</th>
+                            <th>Screening Package</th>
+                            <th>Current Status</th>
+                            <th class="text-end pe-4">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of waitingQueue" class="animate__animated animate__fadeIn">
+                            <td class="ps-4">
+                                <span class="badge bg-dark-subtle text-dark border px-2 py-1 font-monospace">
+                                    {{ item.caseID }}
+                                </span>
+                            </td>
+                            <td>
+                                <div class="fw-bold">{{ item.candidateFullName }}</div>
+                                <div class="small text-muted">{{ item.nationalID }}</div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-hospital text-primary me-2"></i>
+                                    <span>{{ item.assignedProviderName || 'N/A' }}</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="small fw-semibold">{{ item.packageName }}</div>
+                            </td>
+                            <td>
+                                <span class="badge rounded-pill px-3" [ngClass]="getStatusClass(item.status)">
+                                    {{ getStatusLabel(item.status) }}
+                                </span>
+                            </td>
+                            <td class="text-end pe-4">
+                                <button class="btn btn-light btn-sm rounded-circle"
+                                    [routerLink]="['/cases/details', item.id]">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <!-- Empty State -->
+                        <tr *ngIf="waitingQueue.length === 0 && !loading">
+                            <td colspan="6" class="text-center py-5 text-muted">
+                                <i class="bi bi-inbox fs-1 d-block mb-3"></i>
+                                No active cases in the waiting queue.
+                            </td>
+                        </tr>
+
+                        <!-- Loading State -->
+                        <tr *ngIf="loading">
+                            <td colspan="6" class="text-center py-5 text-muted">
+                                <div class="spinner-border spinner-border-sm me-2" role="status"></div>
+                                Loading queue data...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

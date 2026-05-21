@@ -1,0 +1,616 @@
+2026-01-23 20:42:34.708 +03:00 [INF] User profile is available. Using 'C:\Users\saada\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-23 20:42:35.094 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Package'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-01-23 20:42:35.097 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'ProviderService'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-01-23 20:42:36.218 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-01-23 20:42:36.229 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-01-23 20:42:36.261 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-01-23 20:42:36.308 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-01-23 20:42:36.324 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-01-23 20:42:36.326 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-01-23 20:42:36.334 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-01-23 20:42:36.343 +03:00 [INF] No migrations were applied. The database is already up to date.
+2026-01-23 20:42:36.349 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-01-23 20:42:36.523 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-23 20:42:36.531 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-23 20:42:36.623 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3);
+2026-01-23 20:42:36.635 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-23 20:42:36.638 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-23 20:42:36.642 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3);
+2026-01-23 20:42:36.646 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-23 20:42:36.651 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-23 20:42:36.656 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3);
+2026-01-23 20:42:36.661 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-23 20:42:36.665 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-23 20:42:36.671 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3);
+2026-01-23 20:42:36.688 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-23 20:42:36.763 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-01-23 20:42:36.832 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (DbType = Guid), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (DbType = DateTime2), @p20='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [CompanyId], [ConcurrencyStamp], [CreatedAt], [Email], [EmailConfirmed], [IsActive], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [OTPSecret], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [ProviderId], [SecurityStamp], [TwoFactorEnabled], [UpdatedAt], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20);
+2026-01-23 20:42:36.844 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-01-23 20:42:36.876 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Guid), @__p_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2026-01-23 20:42:36.880 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-01-23 20:42:36.894 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-01-23 20:42:36.914 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p22='?' (DbType = Guid), @p2='?' (DbType = Int32), @p3='?' (DbType = Guid), @p4='?' (Size = 4000), @p23='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 256), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 256), @p12='?' (Size = 256), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (DbType = Guid), @p18='?' (Size = 4000), @p19='?' (DbType = Boolean), @p20='?' (DbType = DateTime2), @p21='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [CompanyId] = @p3, [ConcurrencyStamp] = @p4, [CreatedAt] = @p5, [Email] = @p6, [EmailConfirmed] = @p7, [IsActive] = @p8, [LockoutEnabled] = @p9, [LockoutEnd] = @p10, [NormalizedEmail] = @p11, [NormalizedUserName] = @p12, [OTPSecret] = @p13, [PasswordHash] = @p14, [PhoneNumber] = @p15, [PhoneNumberConfirmed] = @p16, [ProviderId] = @p17, [SecurityStamp] = @p18, [TwoFactorEnabled] = @p19, [UpdatedAt] = @p20, [UserName] = @p21
+OUTPUT 1
+WHERE [Id] = @p22 AND [ConcurrencyStamp] = @p23;
+2026-01-23 20:42:36.937 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Themes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-23 20:42:36.962 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = DateTime2), @p11='?' (DbType = Guid), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (DbType = Boolean), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (Size = 4000), @p21='?' (DbType = DateTime2), @p22='?' (DbType = Guid), @p23='?' (Size = 4000), @p24='?' (Size = 4000), @p25='?' (DbType = DateTime2), @p26='?' (DbType = Boolean), @p27='?' (DbType = Boolean), @p28='?' (Size = 4000), @p29='?' (Size = 4000), @p30='?' (Size = 4000), @p31='?' (Size = 4000), @p32='?' (DbType = DateTime2), @p33='?' (DbType = Guid), @p34='?' (Size = 4000), @p35='?' (Size = 4000), @p36='?' (DbType = DateTime2), @p37='?' (DbType = Boolean), @p38='?' (DbType = Boolean), @p39='?' (Size = 4000), @p40='?' (Size = 4000), @p41='?' (Size = 4000), @p42='?' (Size = 4000), @p43='?' (DbType = DateTime2), @p44='?' (DbType = Guid), @p45='?' (Size = 4000), @p46='?' (Size = 4000), @p47='?' (DbType = DateTime2), @p48='?' (DbType = Boolean), @p49='?' (DbType = Boolean), @p50='?' (Size = 4000), @p51='?' (Size = 4000), @p52='?' (Size = 4000), @p53='?' (Size = 4000), @p54='?' (DbType = DateTime2), @p55='?' (DbType = Guid), @p56='?' (Size = 4000), @p57='?' (Size = 4000), @p58='?' (DbType = DateTime2), @p59='?' (DbType = Boolean), @p60='?' (DbType = Boolean), @p61='?' (Size = 4000), @p62='?' (Size = 4000), @p63='?' (Size = 4000), @p64='?' (Size = 4000), @p65='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Themes] ([Id], [AccentColor], [BackgroundColor], [CreatedAt], [Default], [IsActive], [Name], [PrimaryColor], [SecondaryColor], [TextColor], [UpdatedAt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10),
+(@p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21),
+(@p22, @p23, @p24, @p25, @p26, @p27, @p28, @p29, @p30, @p31, @p32),
+(@p33, @p34, @p35, @p36, @p37, @p38, @p39, @p40, @p41, @p42, @p43),
+(@p44, @p45, @p46, @p47, @p48, @p49, @p50, @p51, @p52, @p53, @p54),
+(@p55, @p56, @p57, @p58, @p59, @p60, @p61, @p62, @p63, @p64, @p65);
+2026-01-23 20:42:37.114 +03:00 [INF] Now listening on: http://localhost:5284
+2026-01-23 20:42:37.118 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-23 20:42:37.119 +03:00 [INF] Hosting environment: Development
+2026-01-23 20:42:37.119 +03:00 [INF] Content root path: D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi
+2026-01-23 20:54:11.378 +03:00 [INF] Application is shutting down...
+2026-01-23 21:07:54.383 +03:00 [INF] User profile is available. Using 'C:\Users\saada\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-23 21:07:54.801 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Package'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-01-23 21:07:54.804 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'ProviderService'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-01-23 21:07:55.896 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-01-23 21:07:55.909 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-01-23 21:07:55.935 +03:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-01-23 21:07:55.984 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-01-23 21:07:55.996 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-01-23 21:07:56.001 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-01-23 21:07:56.008 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-01-23 21:07:56.019 +03:00 [INF] No migrations were applied. The database is already up to date.
+2026-01-23 21:07:56.023 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-01-23 21:07:56.198 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-23 21:07:56.230 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-23 21:07:56.233 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-23 21:07:56.236 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-23 21:07:56.253 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-23 21:07:56.309 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Themes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-23 21:07:56.394 +03:00 [INF] Now listening on: http://localhost:5284
+2026-01-23 21:07:56.397 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-23 21:07:56.398 +03:00 [INF] Hosting environment: Development
+2026-01-23 21:07:56.399 +03:00 [INF] Content root path: D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi
+2026-01-23 21:12:25.758 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/auth/login - null null
+2026-01-23 21:12:25.797 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-01-23 21:12:25.799 +03:00 [INF] CORS policy execution successful.
+2026-01-23 21:12:25.804 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/auth/login - 204 null null 48.3812ms
+2026-01-23 21:12:25.816 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/api/auth/login - application/json 58
+2026-01-23 21:12:25.826 +03:00 [INF] CORS policy execution successful.
+2026-01-23 21:12:25.857 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.AuthController.Login (B2B_V2.WebApi)'
+2026-01-23 21:12:25.879 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(B2B_V2.Application.DTOs.LoginDto) on controller B2B_V2.WebApi.Controllers.AuthController (B2B_V2.WebApi).
+2026-01-23 21:12:25.958 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-23 21:12:26.127 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-23 21:12:26.160 +03:00 [INF] Executing OkObjectResult, writing value of type 'B2B_V2.Application.DTOs.AuthResponseDto'.
+2026-01-23 21:12:26.181 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.AuthController.Login (B2B_V2.WebApi) in 296.6125ms
+2026-01-23 21:12:26.183 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.AuthController.Login (B2B_V2.WebApi)'
+2026-01-23 21:12:26.190 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/api/auth/login - 200 null application/json; charset=utf-8 373.9594ms
+2026-01-23 21:19:29.442 +03:00 [INF] Application is shutting down...
+2026-01-23 21:39:11.832 +03:00 [INF] User profile is available. Using 'C:\Users\saada\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-23 21:39:12.203 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Package'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-01-23 21:39:12.205 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'ProviderService'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-01-23 21:39:13.291 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-01-23 21:39:13.301 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-01-23 21:39:13.326 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-01-23 21:39:13.369 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-01-23 21:39:13.382 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-01-23 21:39:13.385 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-01-23 21:39:13.391 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-01-23 21:39:13.399 +03:00 [INF] No migrations were applied. The database is already up to date.
+2026-01-23 21:39:13.404 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-01-23 21:39:13.578 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-23 21:39:13.615 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-23 21:39:13.619 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-23 21:39:13.622 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-23 21:39:13.641 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-23 21:39:13.703 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Themes] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-23 21:39:13.818 +03:00 [INF] Now listening on: http://localhost:5284
+2026-01-23 21:39:13.822 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-23 21:39:13.823 +03:00 [INF] Hosting environment: Development
+2026-01-23 21:39:13.824 +03:00 [INF] Content root path: D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi
+2026-01-23 21:39:18.453 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null null
+2026-01-23 21:39:18.486 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-01-23 21:39:18.489 +03:00 [INF] CORS policy execution successful.
+2026-01-23 21:39:18.494 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 204 null null 42.8731ms
+2026-01-23 21:39:18.497 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null 0
+2026-01-23 21:39:18.506 +03:00 [INF] CORS policy execution successful.
+2026-01-23 21:39:18.571 +03:00 [INF] Executing endpoint '/notificationHub/negotiate'
+2026-01-23 21:39:18.580 +03:00 [INF] Executed endpoint '/notificationHub/negotiate'
+2026-01-23 21:39:18.582 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 200 316 application/json 84.2985ms
+2026-01-23 21:39:18.584 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/notificationHub?id=XqIg3aRjLDS3Sj9jHhDxuA&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkxOTE5NDYsImV4cCI6MTc2OTE5NTU0NiwiaWF0IjoxNzY5MTkxOTQ2LCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.h22_yrceqRNLhWXKTTwtuD3oONSyF4vJo-DxRl4OyPE - null null
+2026-01-23 21:39:18.591 +03:00 [INF] CORS policy execution successful.
+2026-01-23 21:39:18.593 +03:00 [INF] Executing endpoint '/notificationHub'
+2026-01-23 21:39:30.197 +03:00 [INF] Executed endpoint '/notificationHub'
+2026-01-23 21:39:30.204 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/notificationHub?id=XqIg3aRjLDS3Sj9jHhDxuA&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkxOTE5NDYsImV4cCI6MTc2OTE5NTU0NiwiaWF0IjoxNzY5MTkxOTQ2LCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.h22_yrceqRNLhWXKTTwtuD3oONSyF4vJo-DxRl4OyPE - 101 null null 11620.1584ms
+2026-01-23 21:39:30.244 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null null
+2026-01-23 21:39:30.249 +03:00 [INF] CORS policy execution successful.
+2026-01-23 21:39:30.251 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 204 null null 6.7987ms
+2026-01-23 21:39:30.252 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null 0
+2026-01-23 21:39:30.258 +03:00 [INF] CORS policy execution successful.
+2026-01-23 21:39:30.261 +03:00 [INF] Executing endpoint '/notificationHub/negotiate'
+2026-01-23 21:39:30.262 +03:00 [INF] Executed endpoint '/notificationHub/negotiate'
+2026-01-23 21:39:30.263 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 200 316 application/json 11.577ms
+2026-01-23 21:39:30.265 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/notificationHub?id=JWTqqVDF__jXrny6LI50PQ&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkxOTE5NDYsImV4cCI6MTc2OTE5NTU0NiwiaWF0IjoxNzY5MTkxOTQ2LCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.h22_yrceqRNLhWXKTTwtuD3oONSyF4vJo-DxRl4OyPE - null null
+2026-01-23 21:39:30.268 +03:00 [INF] CORS policy execution successful.
+2026-01-23 21:39:30.270 +03:00 [INF] Executing endpoint '/notificationHub'
+2026-01-23 21:39:52.540 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null null
+2026-01-23 21:39:52.551 +03:00 [INF] CORS policy execution successful.
+2026-01-23 21:39:52.553 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 204 null null 13.8425ms
+2026-01-23 21:39:52.555 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null 0
+2026-01-23 21:39:52.567 +03:00 [INF] CORS policy execution successful.
+2026-01-23 21:39:52.569 +03:00 [INF] Executing endpoint '/notificationHub/negotiate'
+2026-01-23 21:39:52.571 +03:00 [INF] Executed endpoint '/notificationHub/negotiate'
+2026-01-23 21:39:52.572 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 200 316 application/json 17.1981ms
+2026-01-23 21:39:52.581 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/notificationHub?id=codLFwOE1tvDVPXwI5jQsA&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkxOTE5NDYsImV4cCI6MTc2OTE5NTU0NiwiaWF0IjoxNzY5MTkxOTQ2LCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.h22_yrceqRNLhWXKTTwtuD3oONSyF4vJo-DxRl4OyPE - null null
+2026-01-23 21:39:52.585 +03:00 [INF] CORS policy execution successful.
+2026-01-23 21:39:52.587 +03:00 [INF] Executing endpoint '/notificationHub'
+2026-01-23 21:40:19.372 +03:00 [INF] Executed endpoint '/notificationHub'
+2026-01-23 21:40:19.373 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/notificationHub?id=JWTqqVDF__jXrny6LI50PQ&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkxOTE5NDYsImV4cCI6MTc2OTE5NTU0NiwiaWF0IjoxNzY5MTkxOTQ2LCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.h22_yrceqRNLhWXKTTwtuD3oONSyF4vJo-DxRl4OyPE - 101 null null 49108.6419ms
+2026-01-23 21:40:19.428 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null null
+2026-01-23 21:40:19.435 +03:00 [INF] CORS policy execution successful.
+2026-01-23 21:40:19.437 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 204 null null 9.4652ms
+2026-01-23 21:40:19.438 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null 0
+2026-01-23 21:40:19.448 +03:00 [INF] CORS policy execution successful.
+2026-01-23 21:40:19.449 +03:00 [INF] Executing endpoint '/notificationHub/negotiate'
+2026-01-23 21:40:19.451 +03:00 [INF] Executed endpoint '/notificationHub/negotiate'
+2026-01-23 21:40:19.453 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 200 316 application/json 14.9965ms
+2026-01-23 21:40:19.454 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/notificationHub?id=jVdRHPda0w9cWDGs7x3STQ&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkxOTE5NDYsImV4cCI6MTc2OTE5NTU0NiwiaWF0IjoxNzY5MTkxOTQ2LCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.h22_yrceqRNLhWXKTTwtuD3oONSyF4vJo-DxRl4OyPE - null null
+2026-01-23 21:40:19.461 +03:00 [INF] CORS policy execution successful.
+2026-01-23 21:40:19.462 +03:00 [INF] Executing endpoint '/notificationHub'
+2026-01-23 21:40:20.179 +03:00 [INF] Executed endpoint '/notificationHub'
+2026-01-23 21:40:20.183 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/notificationHub?id=jVdRHPda0w9cWDGs7x3STQ&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkxOTE5NDYsImV4cCI6MTc2OTE5NTU0NiwiaWF0IjoxNzY5MTkxOTQ2LCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.h22_yrceqRNLhWXKTTwtuD3oONSyF4vJo-DxRl4OyPE - 101 null null 728.5741ms
+2026-01-23 21:40:27.960 +03:00 [INF] Application is shutting down...
+2026-01-23 21:40:27.961 +03:00 [INF] Connection id "0HNIQLQRPI89L", Request id "0HNIQLQRPI89L:00000001": the application aborted the connection.
+2026-01-23 21:40:27.965 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null null
+2026-01-23 21:40:27.967 +03:00 [INF] CORS policy execution successful.
+2026-01-23 21:40:27.967 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 204 null null 1.7997ms
+2026-01-23 21:40:27.968 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null 0
+2026-01-23 21:40:27.971 +03:00 [INF] CORS policy execution successful.
+2026-01-23 21:40:27.972 +03:00 [INF] Executing endpoint '/notificationHub/negotiate'
+2026-01-23 21:40:27.973 +03:00 [INF] Executed endpoint '/notificationHub/negotiate'
+2026-01-23 21:40:27.974 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 200 316 application/json 6.4001ms
+2026-01-23 21:40:27.975 +03:00 [INF] Executed endpoint '/notificationHub'
+2026-01-23 21:40:27.979 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/notificationHub?id=codLFwOE1tvDVPXwI5jQsA&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkxOTE5NDYsImV4cCI6MTc2OTE5NTU0NiwiaWF0IjoxNzY5MTkxOTQ2LCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.h22_yrceqRNLhWXKTTwtuD3oONSyF4vJo-DxRl4OyPE - 101 null null 35398.6109ms
+2026-01-23 22:01:25.373 +03:00 [INF] User profile is available. Using 'C:\Users\saada\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-23 22:01:25.748 +03:00 [WRN] No store type was specified for the decimal property 'PlatformFee' on entity type 'FinancialRecord'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-01-23 22:01:25.749 +03:00 [WRN] No store type was specified for the decimal property 'ProviderPayout' on entity type 'FinancialRecord'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-01-23 22:01:25.750 +03:00 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'FinancialRecord'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-01-23 22:01:25.751 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Package'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-01-23 22:01:25.752 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'ProviderService'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-01-23 22:01:25.971 +03:00 [WRN] No store type was specified for the decimal property 'PlatformFee' on entity type 'FinancialRecord'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-01-23 22:01:25.972 +03:00 [WRN] No store type was specified for the decimal property 'ProviderPayout' on entity type 'FinancialRecord'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-01-23 22:01:25.973 +03:00 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'FinancialRecord'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-01-23 22:01:25.973 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Package'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-01-23 22:01:25.974 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'ProviderService'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-01-23 22:01:26.020 +03:00 [ERR] An error occurred while seeding the database.
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ApplicationDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at B2B_V2.Infrastructure.Data.DbInitializer.SeedAsync(ApplicationDbContext context, UserManager`1 userManager, RoleManager`1 roleManager) in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Infrastructure\Data\DbInitializer.cs:line 17
+   at Program.<Main>$(String[] args) in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\Program.cs:line 115
+2026-01-23 22:01:26.139 +03:00 [INF] Now listening on: http://localhost:5284
+2026-01-23 22:01:26.140 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-23 22:01:26.141 +03:00 [INF] Hosting environment: Development
+2026-01-23 22:01:26.141 +03:00 [INF] Content root path: D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi
+2026-01-23 22:01:39.756 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null null
+2026-01-23 22:01:39.792 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-01-23 22:01:39.794 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:01:39.799 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 204 null null 44.7214ms
+2026-01-23 22:01:39.803 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null 0
+2026-01-23 22:01:39.814 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:01:39.879 +03:00 [INF] Executing endpoint '/notificationHub/negotiate'
+2026-01-23 22:01:39.889 +03:00 [INF] Executed endpoint '/notificationHub/negotiate'
+2026-01-23 22:01:39.890 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 200 316 application/json 87.7979ms
+2026-01-23 22:01:39.893 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/notificationHub?id=SZZXgalJyCyRQJudwuognw&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkxOTE5NDYsImV4cCI6MTc2OTE5NTU0NiwiaWF0IjoxNzY5MTkxOTQ2LCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.h22_yrceqRNLhWXKTTwtuD3oONSyF4vJo-DxRl4OyPE - null null
+2026-01-23 22:01:39.900 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:01:39.906 +03:00 [INF] Executing endpoint '/notificationHub'
+2026-01-23 22:01:41.898 +03:00 [INF] Executed endpoint '/notificationHub'
+2026-01-23 22:01:41.903 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/notificationHub?id=SZZXgalJyCyRQJudwuognw&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkxOTE5NDYsImV4cCI6MTc2OTE5NTU0NiwiaWF0IjoxNzY5MTkxOTQ2LCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.h22_yrceqRNLhWXKTTwtuD3oONSyF4vJo-DxRl4OyPE - 101 null null 2009.4562ms
+2026-01-23 22:01:41.940 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null null
+2026-01-23 22:01:41.943 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:01:41.946 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 204 null null 5.9191ms
+2026-01-23 22:01:41.947 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null 0
+2026-01-23 22:01:41.954 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:01:41.958 +03:00 [INF] Executing endpoint '/notificationHub/negotiate'
+2026-01-23 22:01:41.959 +03:00 [INF] Executed endpoint '/notificationHub/negotiate'
+2026-01-23 22:01:41.960 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 200 316 application/json 13.1443ms
+2026-01-23 22:01:41.962 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/notificationHub?id=uoVeRHgyLj_n-KU2y1nb6A&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkxOTE5NDYsImV4cCI6MTc2OTE5NTU0NiwiaWF0IjoxNzY5MTkxOTQ2LCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.h22_yrceqRNLhWXKTTwtuD3oONSyF4vJo-DxRl4OyPE - null null
+2026-01-23 22:01:41.967 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:01:41.968 +03:00 [INF] Executing endpoint '/notificationHub'
+2026-01-23 22:01:43.610 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/company - null null
+2026-01-23 22:01:43.614 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:01:43.616 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/company - 204 null null 5.0415ms
+2026-01-23 22:01:43.620 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/company - null null
+2026-01-23 22:01:43.626 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:01:43.632 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CompanyController.GetCompanies (B2B_V2.WebApi)'
+2026-01-23 22:01:43.646 +03:00 [INF] Route matched with {action = "GetCompanies", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.CompanyDto]]] GetCompanies() on controller B2B_V2.WebApi.Controllers.CompanyController (B2B_V2.WebApi).
+2026-01-23 22:01:44.927 +03:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[BranchLocations], [c].[BusinessActivity], [c].[CRCertificatePath], [c].[CRNumber], [c].[CompanySize], [c].[CreatedAt], [c].[DefaultProviderAssignmentMode], [c].[DesignatedContactPersonId], [c].[EstimatedMonthlyScreeningVolume], [c].[HeadOfficeAddress], [c].[IsActive], [c].[LegalName], [c].[TotalEmployees], [c].[UpdatedAt], [c].[VATRegistrationNumber]
+FROM [Companies] AS [c]
+2026-01-23 22:01:44.965 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[B2B_V2.Domain.Entities.Company, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.CompanyDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 22:01:45.009 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CompanyController.GetCompanies (B2B_V2.WebApi) in 1355.7422ms
+2026-01-23 22:01:45.011 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CompanyController.GetCompanies (B2B_V2.WebApi)'
+2026-01-23 22:01:45.016 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/company - 200 null application/json; charset=utf-8 1395.4122ms
+2026-01-23 22:02:28.365 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/company - null null
+2026-01-23 22:02:28.368 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:02:28.370 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/company - 204 null null 4.7903ms
+2026-01-23 22:02:28.375 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/api/company - application/json 228
+2026-01-23 22:02:28.378 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:02:28.381 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CompanyController.CreateCompany (B2B_V2.WebApi)'
+2026-01-23 22:02:28.389 +03:00 [INF] Route matched with {action = "CreateCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[B2B_V2.Application.DTOs.CompanyDto]] CreateCompany(B2B_V2.Application.DTOs.CompanyDto) on controller B2B_V2.WebApi.Controllers.CompanyController (B2B_V2.WebApi).
+2026-01-23 22:02:28.663 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 450), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (DbType = Guid), @p9='?' (DbType = Int32), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Int32), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Companies] ([Id], [BranchLocations], [BusinessActivity], [CRCertificatePath], [CRNumber], [CompanySize], [CreatedAt], [DefaultProviderAssignmentMode], [DesignatedContactPersonId], [EstimatedMonthlyScreeningVolume], [HeadOfficeAddress], [IsActive], [LegalName], [TotalEmployees], [UpdatedAt], [VATRegistrationNumber])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2026-01-23 22:02:28.674 +03:00 [INF] Executing CreatedAtActionResult, writing value of type 'B2B_V2.Application.DTOs.CompanyDto'.
+2026-01-23 22:02:28.690 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CompanyController.CreateCompany (B2B_V2.WebApi) in 298.3772ms
+2026-01-23 22:02:28.691 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CompanyController.CreateCompany (B2B_V2.WebApi)'
+2026-01-23 22:02:28.693 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/api/company - 201 null application/json; charset=utf-8 317.6186ms
+2026-01-23 22:02:28.701 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/company - null null
+2026-01-23 22:02:28.703 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:02:28.705 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CompanyController.GetCompanies (B2B_V2.WebApi)'
+2026-01-23 22:02:28.706 +03:00 [INF] Route matched with {action = "GetCompanies", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.CompanyDto]]] GetCompanies() on controller B2B_V2.WebApi.Controllers.CompanyController (B2B_V2.WebApi).
+2026-01-23 22:02:28.713 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[BranchLocations], [c].[BusinessActivity], [c].[CRCertificatePath], [c].[CRNumber], [c].[CompanySize], [c].[CreatedAt], [c].[DefaultProviderAssignmentMode], [c].[DesignatedContactPersonId], [c].[EstimatedMonthlyScreeningVolume], [c].[HeadOfficeAddress], [c].[IsActive], [c].[LegalName], [c].[TotalEmployees], [c].[UpdatedAt], [c].[VATRegistrationNumber]
+FROM [Companies] AS [c]
+2026-01-23 22:02:28.723 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[B2B_V2.Domain.Entities.Company, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.CompanyDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 22:02:28.726 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CompanyController.GetCompanies (B2B_V2.WebApi) in 18.7078ms
+2026-01-23 22:02:28.728 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CompanyController.GetCompanies (B2B_V2.WebApi)'
+2026-01-23 22:02:28.729 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/company - 200 null application/json; charset=utf-8 27.8785ms
+2026-01-23 22:02:45.431 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/company - null null
+2026-01-23 22:02:45.435 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:02:45.436 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/company - 204 null null 4.9685ms
+2026-01-23 22:02:45.442 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/company - null null
+2026-01-23 22:02:45.444 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:02:45.446 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CompanyController.GetCompanies (B2B_V2.WebApi)'
+2026-01-23 22:02:45.448 +03:00 [INF] Route matched with {action = "GetCompanies", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.CompanyDto]]] GetCompanies() on controller B2B_V2.WebApi.Controllers.CompanyController (B2B_V2.WebApi).
+2026-01-23 22:02:45.453 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[BranchLocations], [c].[BusinessActivity], [c].[CRCertificatePath], [c].[CRNumber], [c].[CompanySize], [c].[CreatedAt], [c].[DefaultProviderAssignmentMode], [c].[DesignatedContactPersonId], [c].[EstimatedMonthlyScreeningVolume], [c].[HeadOfficeAddress], [c].[IsActive], [c].[LegalName], [c].[TotalEmployees], [c].[UpdatedAt], [c].[VATRegistrationNumber]
+FROM [Companies] AS [c]
+2026-01-23 22:02:45.456 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[B2B_V2.Domain.Entities.Company, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.CompanyDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 22:02:45.458 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CompanyController.GetCompanies (B2B_V2.WebApi) in 6.6856ms
+2026-01-23 22:02:45.459 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CompanyController.GetCompanies (B2B_V2.WebApi)'
+2026-01-23 22:02:45.460 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/company - 200 null application/json; charset=utf-8 18.1278ms
+2026-01-23 22:02:58.650 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/case/provider-worklist/00000000-0000-0000-0000-000000000000 - null null
+2026-01-23 22:02:58.656 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:02:58.658 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/case/provider-worklist/00000000-0000-0000-0000-000000000000 - 204 null null 8.7779ms
+2026-01-23 22:02:58.664 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/case/provider-worklist/00000000-0000-0000-0000-000000000000 - null null
+2026-01-23 22:02:58.667 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:02:58.668 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi)'
+2026-01-23 22:02:58.674 +03:00 [INF] Route matched with {action = "GetProviderWorklist", controller = "Case"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.RequestDto]]] GetProviderWorklist(System.Guid) on controller B2B_V2.WebApi.Controllers.CaseController (B2B_V2.WebApi).
+2026-01-23 22:02:58.694 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AssignedProviderId], [r].[BranchLocation], [r].[CandidateFullName], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[Department], [r].[ExpectedVisitDate], [r].[Gender], [r].[IsActive], [r].[MobileNumber], [r].[NationalID], [r].[PackageId], [r].[Position], [r].[RequestedProviderId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt]
+FROM [Requests] AS [r]
+2026-01-23 22:02:58.699 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListWhereSelectIterator`2[[B2B_V2.Domain.Entities.Request, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.RequestDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 22:02:58.713 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi) in 37.9857ms
+2026-01-23 22:02:58.715 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi)'
+2026-01-23 22:02:58.717 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/case/provider-worklist/00000000-0000-0000-0000-000000000000 - 200 null application/json; charset=utf-8 52.2743ms
+2026-01-23 22:03:15.140 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/provider - null null
+2026-01-23 22:03:15.145 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:03:15.146 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/provider - 204 null null 6.0407ms
+2026-01-23 22:03:15.151 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/provider - null null
+2026-01-23 22:03:15.154 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:03:15.156 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi)'
+2026-01-23 22:03:15.160 +03:00 [INF] Route matched with {action = "GetProviders", controller = "Provider"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.ProviderDto]]] GetProviders() on controller B2B_V2.WebApi.Controllers.ProviderController (B2B_V2.WebApi).
+2026-01-23 22:03:15.176 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LegalName], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+2026-01-23 22:03:15.179 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[B2B_V2.Domain.Entities.Provider, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.ProviderDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 22:03:15.189 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi) in 26.8668ms
+2026-01-23 22:03:15.190 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi)'
+2026-01-23 22:03:15.191 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/provider - 200 null application/json; charset=utf-8 40.8008ms
+2026-01-23 22:04:17.879 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/case/provider-worklist/00000000-0000-0000-0000-000000000000 - null null
+2026-01-23 22:04:17.887 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:04:17.889 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/case/provider-worklist/00000000-0000-0000-0000-000000000000 - 204 null null 9.737ms
+2026-01-23 22:04:17.896 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/case/provider-worklist/00000000-0000-0000-0000-000000000000 - null null
+2026-01-23 22:04:17.899 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:04:17.901 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi)'
+2026-01-23 22:04:17.902 +03:00 [INF] Route matched with {action = "GetProviderWorklist", controller = "Case"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.RequestDto]]] GetProviderWorklist(System.Guid) on controller B2B_V2.WebApi.Controllers.CaseController (B2B_V2.WebApi).
+2026-01-23 22:04:17.906 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AssignedProviderId], [r].[BranchLocation], [r].[CandidateFullName], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[Department], [r].[ExpectedVisitDate], [r].[Gender], [r].[IsActive], [r].[MobileNumber], [r].[NationalID], [r].[PackageId], [r].[Position], [r].[RequestedProviderId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt]
+FROM [Requests] AS [r]
+2026-01-23 22:04:17.915 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListWhereSelectIterator`2[[B2B_V2.Domain.Entities.Request, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.RequestDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 22:04:17.917 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi) in 13.2219ms
+2026-01-23 22:04:17.918 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi)'
+2026-01-23 22:04:17.920 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/case/provider-worklist/00000000-0000-0000-0000-000000000000 - 200 null application/json; charset=utf-8 23.2598ms
+2026-01-23 22:04:29.816 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/case/admin-queue - null null
+2026-01-23 22:04:29.821 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:04:29.823 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/case/admin-queue - 204 null null 6.1778ms
+2026-01-23 22:04:29.827 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/case/admin-queue - null null
+2026-01-23 22:04:29.831 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:04:29.832 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetAdminReviewQueue (B2B_V2.WebApi)'
+2026-01-23 22:04:29.836 +03:00 [INF] Route matched with {action = "GetAdminReviewQueue", controller = "Case"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.RequestDto]]] GetAdminReviewQueue() on controller B2B_V2.WebApi.Controllers.CaseController (B2B_V2.WebApi).
+2026-01-23 22:04:29.844 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AssignedProviderId], [r].[BranchLocation], [r].[CandidateFullName], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[Department], [r].[ExpectedVisitDate], [r].[Gender], [r].[IsActive], [r].[MobileNumber], [r].[NationalID], [r].[PackageId], [r].[Position], [r].[RequestedProviderId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt]
+FROM [Requests] AS [r]
+2026-01-23 22:04:29.848 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListWhereSelectIterator`2[[B2B_V2.Domain.Entities.Request, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.RequestDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-23 22:04:29.850 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CaseController.GetAdminReviewQueue (B2B_V2.WebApi) in 11.2418ms
+2026-01-23 22:04:29.852 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetAdminReviewQueue (B2B_V2.WebApi)'
+2026-01-23 22:04:29.853 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/case/admin-queue - 200 null application/json; charset=utf-8 26.253ms
+2026-01-23 22:04:49.272 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/financial/summary - null null
+2026-01-23 22:04:49.274 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/financial/invoices/all - null null
+2026-01-23 22:04:49.276 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:04:49.279 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:04:49.280 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/financial/summary - 204 null null 7.3838ms
+2026-01-23 22:04:49.281 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/financial/invoices/all - 204 null null 7.8398ms
+2026-01-23 22:04:49.288 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/financial/summary - null null
+2026-01-23 22:04:49.290 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/financial/invoices/all - null null
+2026-01-23 22:04:49.293 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:04:49.295 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:04:49.296 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.FinancialController.GetPlatformSummary (B2B_V2.WebApi)'
+2026-01-23 22:04:49.296 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.FinancialController.GetCompanyInvoices (B2B_V2.WebApi)'
+2026-01-23 22:04:49.300 +03:00 [INF] Route matched with {action = "GetPlatformSummary", controller = "Financial"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[B2B_V2.Application.DTOs.FinancialSummaryDto]] GetPlatformSummary() on controller B2B_V2.WebApi.Controllers.FinancialController (B2B_V2.WebApi).
+2026-01-23 22:04:49.301 +03:00 [INF] Route matched with {action = "GetCompanyInvoices", controller = "Financial"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.FinancialRecordDto]]] GetCompanyInvoices(System.Guid) on controller B2B_V2.WebApi.Controllers.FinancialController (B2B_V2.WebApi).
+2026-01-23 22:04:49.310 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-01-23 22:04:49.316 +03:00 [ERR] Failed executing DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CompanyPaymentDate], [f].[CreatedAt], [f].[InvoiceNumber], [f].[IsActive], [f].[IsPaidByCompany], [f].[IsProviderPaid], [f].[PlatformFee], [f].[ProviderPaymentDate], [f].[ProviderPayout], [f].[RequestId], [f].[TotalAmount], [f].[UpdatedAt]
+FROM [FinancialRecords] AS [f]
+2026-01-23 22:04:49.326 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.FinancialController.GetCompanyInvoices (B2B_V2.WebApi) in 21.1549ms
+2026-01-23 22:04:49.327 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.FinancialController.GetCompanyInvoices (B2B_V2.WebApi)'
+2026-01-23 22:04:49.328 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/financial/invoices/all - 400 null application/problem+json; charset=utf-8 37.4407ms
+2026-01-23 22:04:49.336 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'B2B_V2.Infrastructure.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'FinancialRecords'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3e5d8d80-67f0-4b8c-8b21-575031dd95df
+Error Number:208,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'FinancialRecords'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3e5d8d80-67f0-4b8c-8b21-575031dd95df
+Error Number:208,State:1,Class:16
+2026-01-23 22:04:49.342 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.FinancialController.GetPlatformSummary (B2B_V2.WebApi) in 39.3797ms
+2026-01-23 22:04:49.343 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.FinancialController.GetPlatformSummary (B2B_V2.WebApi)'
+2026-01-23 22:04:49.345 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'FinancialRecords'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at B2B_V2.Infrastructure.Repositories.GenericRepository`1.GetAllAsync() in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Infrastructure\Repositories\GenericRepository.cs:line 26
+   at B2B_V2.Application.Services.FinancialService.GetPlatformSummaryAsync() in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\FinancialService.cs:line 62
+   at B2B_V2.WebApi.Controllers.FinancialController.GetPlatformSummary() in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\Controllers\FinancialController.cs:line 40
+   at lambda_method293(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:3e5d8d80-67f0-4b8c-8b21-575031dd95df
+Error Number:208,State:1,Class:16
+2026-01-23 22:04:49.370 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/financial/summary - 500 null text/plain; charset=utf-8 81.9951ms
+2026-01-23 22:05:24.586 +03:00 [INF] Application is shutting down...
+2026-01-23 22:05:24.587 +03:00 [INF] Connection id "0HNIQM7BH7E9H", Request id "0HNIQM7BH7E9H:00000001": the application aborted the connection.
+2026-01-23 22:05:24.593 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null null
+2026-01-23 22:05:24.595 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:05:24.597 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 204 null null 3.4731ms
+2026-01-23 22:05:24.599 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null 0
+2026-01-23 22:05:24.604 +03:00 [INF] CORS policy execution successful.
+2026-01-23 22:05:24.604 +03:00 [INF] Executed endpoint '/notificationHub'
+2026-01-23 22:05:24.605 +03:00 [INF] Executing endpoint '/notificationHub/negotiate'
+2026-01-23 22:05:24.605 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/notificationHub?id=uoVeRHgyLj_n-KU2y1nb6A&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkxOTE5NDYsImV4cCI6MTc2OTE5NTU0NiwiaWF0IjoxNzY5MTkxOTQ2LCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.h22_yrceqRNLhWXKTTwtuD3oONSyF4vJo-DxRl4OyPE - 101 null null 222643.6294ms
+2026-01-23 22:05:24.607 +03:00 [INF] Executed endpoint '/notificationHub/negotiate'
+2026-01-23 22:05:24.611 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 200 316 application/json 11.6193ms

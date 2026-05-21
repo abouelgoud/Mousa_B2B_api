@@ -1,0 +1,21 @@
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(var(--bs-primary-rgb), 0.02);
+}
+
+.badge {
+    font-weight: 500;
+}
+
+.bg-purple-subtle {
+    background-color: #f3e5f5;
+}
+
+.text-purple {
+    color: #7b1fa2;
+}

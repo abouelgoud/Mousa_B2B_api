@@ -1,0 +1,189 @@
+.app-header {
+    background-color: var(--app-header-bg);
+    color: var(--app-header-text);
+    height: 64px;
+    border-bottom: 1px solid var(--border-subtle);
+    transition: background-color var(--transition-base), color var(--transition-base);
+    z-index: 1024;
+}
+
+.brand-section {
+    cursor: pointer;
+}
+
+.brand-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--app-header-text);
+}
+
+.brand-name {
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+    color: var(--app-header-text);
+}
+
+.search-container {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 6px 16px;
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    transition: background var(--transition-base), border var(--transition-base);
+
+    &:focus-within {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .bi-search {
+        color: rgba(255, 255, 255, 0.6) !important;
+    }
+}
+
+.search-input {
+    background: transparent;
+    border: none;
+    color: var(--app-header-text);
+    flex-grow: 1;
+    font-size: 0.9rem;
+    outline: none;
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+.search-shortcut {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.action-btn {
+    background: transparent;
+    border: none;
+    color: var(--app-header-text);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    transition: background var(--transition-base);
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+.notification-badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: #ff3b30;
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 700;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--app-header-bg);
+}
+
+.user-profile-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 4px 12px 4px 4px;
+    transition: background var(--transition-base);
+    color: var(--app-header-text);
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.15);
+    }
+}
+
+.user-name {
+    font-weight: 600;
+    font-size: 0.85rem;
+    line-height: 1.2;
+}
+
+.user-role {
+    font-size: 0.725rem;
+    opacity: 0.7;
+}
+
+.theme-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.theme-option {
+    background: var(--app-surface);
+    border: 2px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+        transform: scale(1.05);
+        border-color: var(--primary);
+    }
+
+    &.active {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 1px var(--primary);
+    }
+
+    .swatch {
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
+    }
+}
+
+.dropdown-menu {
+    background-color: var(--app-surface);
+    color: var(--text-main);
+    border-color: var(--border-subtle);
+}
+
+.dropdown-item {
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+
+    &:hover {
+        background-color: var(--app-bg);
+    }
+
+    i {
+        font-size: 1.1rem;
+        opacity: 0.7;
+    }
+}

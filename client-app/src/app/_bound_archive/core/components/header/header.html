@@ -1,0 +1,77 @@
+<header class="app-header shadow-sm sticky-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between h-100 px-4">
+        <!-- Logo & Brand -->
+        <div class="d-flex align-items-center gap-3 brand-section">
+            <div class="brand-icon">
+                <i class="bi bi-grid-3x3-gap-fill"></i>
+            </div>
+            <span class="brand-name d-none d-lg-inline">B2B Healthcare</span>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="flex-grow-1 mx-4 d-none d-md-block">
+            <div class="search-container shadow-sm">
+                <i class="bi bi-search text-muted pe-2"></i>
+                <input type="text" placeholder="Search cases, candidates, reports..." class="search-input"
+                    aria-label="Search site content">
+                <span class="search-shortcut d-none d-xl-inline">Ctrl + K</span>
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="d-flex align-items-center gap-3">
+            <!-- Theme Switcher -->
+            <div class="dropdown theme-switcher">
+                <button class="action-btn" data-bs-toggle="dropdown" aria-label="Open theme switcher"
+                    aria-haspopup="true" aria-expanded="false" title="Change Theme">
+                    <i class="bi bi-palette"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end p-3 shadow-lg border-subtle">
+                    <div class="dropdown-header px-0 mb-2 text-uppercase small fw-bold text-muted">Select Workspace
+                        Theme</div>
+                    <div class="theme-grid">
+                        <button *ngFor="let theme of themeService.themes" class="theme-option"
+                            [class.active]="themeService.currentTheme().id === theme.id"
+                            (click)="onThemeChange(theme.id)" [title]="theme.name"
+                            [attr.aria-label]="'Switch to ' + theme.name + ' theme'">
+                            <span class="swatch" [style.background-color]="theme.primary"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notifications -->
+            <button class="action-btn position-relative" aria-label="View notifications" title="Notifications">
+                <i class="bi bi-bell"></i>
+                <span class="notification-badge">3</span>
+            </button>
+
+            <!-- User Profile -->
+            <div class="dropdown">
+                <button class="user-profile-btn d-flex align-items-center gap-2 px-2" data-bs-toggle="dropdown"
+                    aria-label="Open user menu" aria-haspopup="true" aria-expanded="false">
+                    <div class="avatar-container">
+                        <img src="https://ui-avatars.com/api/?name={{ authService.currentUser()?.username }}&background=random"
+                            class="rounded-circle" width="32" height="32" alt="User Avatar">
+                    </div>
+                    <div class="user-info d-none d-sm-block text-start">
+                        <div class="user-name">{{ authService.currentUser()?.username }}</div>
+                        <div class="user-role">{{ authService.currentUser()?.roles?.[0] || 'Member' }}</div>
+                    </div>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end shadow-lg border-subtle p-2 mt-2">
+                    <li><a class="dropdown-item rounded-2" href="#" aria-label="View Profile"><i
+                                class="bi bi-person me-2"></i>My Profile</a></li>
+                    <li><a class="dropdown-item rounded-2" href="#" aria-label="View Settings"><i
+                                class="bi bi-gear me-2"></i>Account Settings</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><button class="dropdown-item rounded-2 text-danger" (click)="logout()" aria-label="Sign out">
+                            <i class="bi bi-box-arrow-right me-2"></i>Sign Out
+                        </button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>

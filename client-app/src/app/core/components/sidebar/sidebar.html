@@ -1,0 +1,36 @@
+<aside class="sidebar bg-sidebar border-end d-flex flex-column">
+    <div class="px-3 py-4 flex-grow-1 overflow-auto">
+        <nav class="nav flex-column gap-1">
+            <a *ngFor="let item of filteredNavItems()" [routerLink]="item.route" routerLinkActive="active"
+                class="nav-link d-flex align-items-center gap-3 px-3 py-2 rounded-2 text-muted transition-all">
+                <i class="bi" [ngClass]="item.icon"></i>
+                <span>{{ item.label }}</span>
+            </a>
+        </nav>
+
+        <div class="mt-4 pt-4 border-top">
+            <div class="small text-uppercase text-muted fw-bold px-3 mb-2">Account</div>
+            <nav class="nav flex-column gap-1">
+                <ng-container *ngFor="let item of accountItems">
+                    <ng-container *ngIf="item.route">
+                        <a *ngIf="item.route" [routerLink]="item.route" routerLinkActive="active"
+                            class="nav-link d-flex align-items-center gap-3 px-3 py-2 rounded-2 text-muted transition-all">
+                            <i class="bi" [ngClass]="item.icon"></i>
+                            <span>{{ item.label }}</span>
+                        </a>
+                    </ng-container>
+
+                    <a *ngIf="item.action" (click)="item.action()" style="cursor: pointer;"
+                        class="nav-link d-flex align-items-center gap-3 px-3 py-2 rounded-2 text-muted transition-all">
+                        <i class="bi" [ngClass]="item.icon"></i>
+                        <span>{{ item.label }}</span>
+                    </a>
+                </ng-container>
+            </nav>
+        </div>
+    </div>
+
+    <div class="p-3 border-top bg-light small text-muted text-center">
+        v1.0.0-alpha
+    </div>
+</aside>

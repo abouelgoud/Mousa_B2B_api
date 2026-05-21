@@ -1,0 +1,11 @@
+langchain
+langchain-community
+langchain-core
+langchain-google-genai
+beautifulsoup4
+requests
+python-dotenv
+duckduckgo-search
+pydantic
+fastapi
+uvicorn

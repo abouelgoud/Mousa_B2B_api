@@ -1,0 +1,1000 @@
+2026-01-24 12:38:09.703 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:38:09.704 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 204 null null 2.0769ms
+2026-01-24 12:38:09.705 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null 0
+2026-01-24 12:38:09.711 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:38:09.709 +03:00 [INF] Executed endpoint '/notificationHub'
+2026-01-24 12:38:09.714 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/notificationHub?id=r_0vxHb8WMFefoauy-ei4Q&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkyNDUwMjMsImV4cCI6MTc2OTI0ODYyMywiaWF0IjoxNzY5MjQ1MDIzLCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.F_8MCng_3n8dMlxUFksQHv3IVD1gi7BugYQwQlZvFh4 - 101 null null 108029.964ms
+2026-01-24 12:38:09.712 +03:00 [INF] Executing endpoint '/notificationHub/negotiate'
+2026-01-24 12:38:09.719 +03:00 [INF] Executed endpoint '/notificationHub/negotiate'
+2026-01-24 12:38:09.720 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 200 316 application/json 14.8862ms
+2026-01-24 12:47:08.864 +03:00 [INF] User profile is available. Using 'C:\Users\saada\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-24 12:47:09.242 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Package'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-01-24 12:47:09.243 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'ProviderService'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-01-24 12:47:09.413 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Package'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-01-24 12:47:09.414 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'ProviderService'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-01-24 12:47:09.460 +03:00 [ERR] An error occurred while seeding the database.
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'ApplicationDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at B2B_V2.Infrastructure.Data.DbInitializer.SeedAsync(ApplicationDbContext context, UserManager`1 userManager, RoleManager`1 roleManager) in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Infrastructure\Data\DbInitializer.cs:line 17
+   at Program.<Main>$(String[] args) in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\Program.cs:line 121
+2026-01-24 12:47:09.571 +03:00 [INF] Now listening on: http://localhost:5284
+2026-01-24 12:47:09.573 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-24 12:47:09.574 +03:00 [INF] Hosting environment: Development
+2026-01-24 12:47:09.575 +03:00 [INF] Content root path: D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi
+2026-01-24 12:47:19.030 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/case/provider-worklist/00000000-0000-0000-0000-000000000000 - null null
+2026-01-24 12:47:19.030 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null null
+2026-01-24 12:47:19.076 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-01-24 12:47:19.078 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:47:19.078 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:47:19.082 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/case/provider-worklist/00000000-0000-0000-0000-000000000000 - 204 null null 53.8803ms
+2026-01-24 12:47:19.082 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 204 null null 53.8809ms
+2026-01-24 12:47:19.084 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null 0
+2026-01-24 12:47:19.099 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/case/provider-worklist/00000000-0000-0000-0000-000000000000 - null null
+2026-01-24 12:47:19.102 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:47:19.109 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:47:19.172 +03:00 [INF] Executing endpoint '/notificationHub/negotiate'
+2026-01-24 12:47:19.175 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi)'
+2026-01-24 12:47:19.179 +03:00 [INF] Executed endpoint '/notificationHub/negotiate'
+2026-01-24 12:47:19.180 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 200 316 application/json 95.7639ms
+2026-01-24 12:47:19.182 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/notificationHub?id=PlNiTUBAkw75U1lrw7x0Ng&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkyNDUwMjMsImV4cCI6MTc2OTI0ODYyMywiaWF0IjoxNzY5MjQ1MDIzLCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.F_8MCng_3n8dMlxUFksQHv3IVD1gi7BugYQwQlZvFh4 - null null
+2026-01-24 12:47:19.185 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:47:19.187 +03:00 [INF] Executing endpoint '/notificationHub'
+2026-01-24 12:47:19.194 +03:00 [INF] Route matched with {action = "GetProviderWorklist", controller = "Case"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.RequestDto]]] GetProviderWorklist(System.Guid) on controller B2B_V2.WebApi.Controllers.CaseController (B2B_V2.WebApi).
+2026-01-24 12:47:19.648 +03:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AssignedProviderId], [r].[BranchLocation], [r].[CandidateFullName], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[Department], [r].[ExpectedVisitDate], [r].[Gender], [r].[IsActive], [r].[MobileNumber], [r].[NationalID], [r].[PackageId], [r].[Position], [r].[RequestedProviderId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt]
+FROM [Requests] AS [r]
+2026-01-24 12:47:19.681 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListWhereSelectIterator`2[[B2B_V2.Domain.Entities.Request, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.RequestDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-24 12:47:19.728 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi) in 527.8475ms
+2026-01-24 12:47:19.730 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi)'
+2026-01-24 12:47:19.734 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/case/provider-worklist/00000000-0000-0000-0000-000000000000 - 200 null application/json; charset=utf-8 635.3224ms
+2026-01-24 12:47:21.214 +03:00 [INF] Executed endpoint '/notificationHub'
+2026-01-24 12:47:21.217 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/notificationHub?id=PlNiTUBAkw75U1lrw7x0Ng&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkyNDUwMjMsImV4cCI6MTc2OTI0ODYyMywiaWF0IjoxNzY5MjQ1MDIzLCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.F_8MCng_3n8dMlxUFksQHv3IVD1gi7BugYQwQlZvFh4 - 101 null null 2035.1084ms
+2026-01-24 12:47:21.251 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null null
+2026-01-24 12:47:21.254 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:47:21.257 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 204 null null 5.6365ms
+2026-01-24 12:47:21.258 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null 0
+2026-01-24 12:47:21.264 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:47:21.264 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/case/provider-worklist/00000000-0000-0000-0000-000000000000 - null null
+2026-01-24 12:47:21.266 +03:00 [INF] Executing endpoint '/notificationHub/negotiate'
+2026-01-24 12:47:21.267 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:47:21.268 +03:00 [INF] Executed endpoint '/notificationHub/negotiate'
+2026-01-24 12:47:21.270 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 200 316 application/json 11.8384ms
+2026-01-24 12:47:21.271 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi)'
+2026-01-24 12:47:21.271 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/notificationHub?id=1qaYv6XDazLETxVt5KG5cg&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkyNDUwMjMsImV4cCI6MTc2OTI0ODYyMywiaWF0IjoxNzY5MjQ1MDIzLCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.F_8MCng_3n8dMlxUFksQHv3IVD1gi7BugYQwQlZvFh4 - null null
+2026-01-24 12:47:21.275 +03:00 [INF] Route matched with {action = "GetProviderWorklist", controller = "Case"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.RequestDto]]] GetProviderWorklist(System.Guid) on controller B2B_V2.WebApi.Controllers.CaseController (B2B_V2.WebApi).
+2026-01-24 12:47:21.277 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:47:21.280 +03:00 [INF] Executing endpoint '/notificationHub'
+2026-01-24 12:47:21.349 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AssignedProviderId], [r].[BranchLocation], [r].[CandidateFullName], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[Department], [r].[ExpectedVisitDate], [r].[Gender], [r].[IsActive], [r].[MobileNumber], [r].[NationalID], [r].[PackageId], [r].[Position], [r].[RequestedProviderId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt]
+FROM [Requests] AS [r]
+2026-01-24 12:47:21.354 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListWhereSelectIterator`2[[B2B_V2.Domain.Entities.Request, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.RequestDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-24 12:47:21.358 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi) in 78.9038ms
+2026-01-24 12:47:21.361 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.CaseController.GetProviderWorklist (B2B_V2.WebApi)'
+2026-01-24 12:47:21.362 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/case/provider-worklist/00000000-0000-0000-0000-000000000000 - 200 null application/json; charset=utf-8 97.797ms
+2026-01-24 12:47:23.327 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/package - null null
+2026-01-24 12:47:23.330 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:47:23.331 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/package - 204 null null 3.9356ms
+2026-01-24 12:47:23.334 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/package - null null
+2026-01-24 12:47:23.337 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:47:23.341 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.PackageController.GetPackages (B2B_V2.WebApi)'
+2026-01-24 12:47:23.347 +03:00 [INF] Route matched with {action = "GetPackages", controller = "Package"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.PackageDto]]] GetPackages() on controller B2B_V2.WebApi.Controllers.PackageController (B2B_V2.WebApi).
+2026-01-24 12:47:23.503 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[UpdatedAt], [p0].[PackageId], [p0].[ServiceId]
+FROM [Packages] AS [p]
+LEFT JOIN [PackageServices] AS [p0] ON [p].[Id] = [p0].[PackageId]
+ORDER BY [p].[Id], [p0].[PackageId]
+2026-01-24 12:47:23.506 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[B2B_V2.Domain.Entities.Package, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.PackageDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-24 12:47:23.511 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.PackageController.GetPackages (B2B_V2.WebApi) in 162.8415ms
+2026-01-24 12:47:23.512 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.PackageController.GetPackages (B2B_V2.WebApi)'
+2026-01-24 12:47:23.513 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/package - 200 null application/json; charset=utf-8 178.8519ms
+2026-01-24 12:47:25.229 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/service - null null
+2026-01-24 12:47:25.234 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:47:25.235 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/service - 204 null null 5.7417ms
+2026-01-24 12:47:25.239 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/service - null null
+2026-01-24 12:47:25.242 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:47:25.244 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi)'
+2026-01-24 12:47:25.251 +03:00 [INF] Route matched with {action = "GetServices", controller = "Service"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.ServiceDto]]] GetServices() on controller B2B_V2.WebApi.Controllers.ServiceController (B2B_V2.WebApi).
+2026-01-24 12:47:25.272 +03:00 [ERR] Failed executing DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Code], [s].[CreatedAt], [s].[Description], [s].[IsActive], [s].[Name], [s].[Price], [s].[UpdatedAt]
+FROM [Services] AS [s]
+2026-01-24 12:47:25.294 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'B2B_V2.Infrastructure.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:d7d77e40-d14e-4f0e-b431-2bef97832552
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:d7d77e40-d14e-4f0e-b431-2bef97832552
+Error Number:207,State:1,Class:16
+2026-01-24 12:47:25.303 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi) in 47.2316ms
+2026-01-24 12:47:25.305 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi)'
+2026-01-24 12:47:25.306 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at B2B_V2.Infrastructure.Repositories.GenericRepository`1.GetAllAsync(Expression`1[] includes) in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Infrastructure\Repositories\GenericRepository.cs:line 36
+   at B2B_V2.Application.Services.MedicalServiceService.GetAllServicesAsync() in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\MedicalServiceService.cs:line 22
+   at B2B_V2.WebApi.Controllers.ServiceController.GetServices() in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\Controllers\ServiceController.cs:line 25
+   at lambda_method122(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:d7d77e40-d14e-4f0e-b431-2bef97832552
+Error Number:207,State:1,Class:16
+2026-01-24 12:47:25.338 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/service - 500 null text/plain; charset=utf-8 98.5193ms
+2026-01-24 12:49:01.870 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/provider - null null
+2026-01-24 12:49:01.879 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:49:01.883 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/provider - 204 null null 12.3259ms
+2026-01-24 12:49:01.886 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/provider - null null
+2026-01-24 12:49:01.893 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:49:01.896 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi)'
+2026-01-24 12:49:01.900 +03:00 [INF] Route matched with {action = "GetProviders", controller = "Provider"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.ProviderDto]]] GetProviders() on controller B2B_V2.WebApi.Controllers.ProviderController (B2B_V2.WebApi).
+2026-01-24 12:49:01.916 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LegalName], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+2026-01-24 12:49:02.015 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[B2B_V2.Domain.Entities.Provider, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.ProviderDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-24 12:49:02.030 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi) in 126.6552ms
+2026-01-24 12:49:02.031 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi)'
+2026-01-24 12:49:02.033 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/provider - 200 null application/json; charset=utf-8 147.1572ms
+2026-01-24 12:49:02.988 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/package - null null
+2026-01-24 12:49:02.995 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:49:02.997 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/package - 204 null null 9.2276ms
+2026-01-24 12:49:03.001 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/package - null null
+2026-01-24 12:49:03.005 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:49:03.006 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.PackageController.GetPackages (B2B_V2.WebApi)'
+2026-01-24 12:49:03.007 +03:00 [INF] Route matched with {action = "GetPackages", controller = "Package"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.PackageDto]]] GetPackages() on controller B2B_V2.WebApi.Controllers.PackageController (B2B_V2.WebApi).
+2026-01-24 12:49:03.014 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[UpdatedAt], [p0].[PackageId], [p0].[ServiceId]
+FROM [Packages] AS [p]
+LEFT JOIN [PackageServices] AS [p0] ON [p].[Id] = [p0].[PackageId]
+ORDER BY [p].[Id], [p0].[PackageId]
+2026-01-24 12:49:03.016 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[B2B_V2.Domain.Entities.Package, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.PackageDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-24 12:49:03.018 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.PackageController.GetPackages (B2B_V2.WebApi) in 9.1056ms
+2026-01-24 12:49:03.020 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.PackageController.GetPackages (B2B_V2.WebApi)'
+2026-01-24 12:49:03.021 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/package - 200 null application/json; charset=utf-8 19.9166ms
+2026-01-24 12:49:04.362 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/provider - null null
+2026-01-24 12:49:04.367 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:49:04.368 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi)'
+2026-01-24 12:49:04.369 +03:00 [INF] Route matched with {action = "GetProviders", controller = "Provider"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.ProviderDto]]] GetProviders() on controller B2B_V2.WebApi.Controllers.ProviderController (B2B_V2.WebApi).
+2026-01-24 12:49:04.375 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[BankAccountId], [p].[BranchLocations], [p].[CBAHIAccreditationPath], [p].[CRCertificatePath], [p].[CreatedAt], [p].[EstimatedDailyOperationalCapacity], [p].[IsActive], [p].[LabAccreditationPath], [p].[LabSetup], [p].[LegalName], [p].[MOHLicensePath], [p].[MedicalWasteManagementContractPath], [p].[OccupationalPhysicianLicensePath], [p].[PrimaryContactPersonId], [p].[ProfessionalLiabilityInsurancePath], [p].[TierId], [p].[UpdatedAt]
+FROM [Providers] AS [p]
+2026-01-24 12:49:04.379 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[B2B_V2.Domain.Entities.Provider, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.ProviderDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-24 12:49:04.382 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi) in 9.6853ms
+2026-01-24 12:49:04.383 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ProviderController.GetProviders (B2B_V2.WebApi)'
+2026-01-24 12:49:04.384 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/provider - 200 null application/json; charset=utf-8 21.9628ms
+2026-01-24 12:49:56.325 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/package - null null
+2026-01-24 12:49:56.333 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:49:56.335 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/package - 204 null null 9.6613ms
+2026-01-24 12:49:56.340 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/package - null null
+2026-01-24 12:49:56.343 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:49:56.344 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.PackageController.GetPackages (B2B_V2.WebApi)'
+2026-01-24 12:49:56.345 +03:00 [INF] Route matched with {action = "GetPackages", controller = "Package"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.PackageDto]]] GetPackages() on controller B2B_V2.WebApi.Controllers.PackageController (B2B_V2.WebApi).
+2026-01-24 12:49:56.351 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CreatedAt], [p].[Description], [p].[IsActive], [p].[Name], [p].[Price], [p].[UpdatedAt], [p0].[PackageId], [p0].[ServiceId]
+FROM [Packages] AS [p]
+LEFT JOIN [PackageServices] AS [p0] ON [p].[Id] = [p0].[PackageId]
+ORDER BY [p].[Id], [p0].[PackageId]
+2026-01-24 12:49:56.353 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[B2B_V2.Domain.Entities.Package, B2B_V2.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[B2B_V2.Application.DTOs.PackageDto, B2B_V2.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-24 12:49:56.355 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.PackageController.GetPackages (B2B_V2.WebApi) in 7.6489ms
+2026-01-24 12:49:56.356 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.PackageController.GetPackages (B2B_V2.WebApi)'
+2026-01-24 12:49:56.357 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/package - 200 null application/json; charset=utf-8 16.6681ms
+2026-01-24 12:49:57.373 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/service - null null
+2026-01-24 12:49:57.382 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:49:57.384 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/service - 204 null null 10.8829ms
+2026-01-24 12:49:57.387 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/service - null null
+2026-01-24 12:49:57.389 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:49:57.390 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi)'
+2026-01-24 12:49:57.392 +03:00 [INF] Route matched with {action = "GetServices", controller = "Service"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.ServiceDto]]] GetServices() on controller B2B_V2.WebApi.Controllers.ServiceController (B2B_V2.WebApi).
+2026-01-24 12:49:57.397 +03:00 [ERR] Failed executing DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Code], [s].[CreatedAt], [s].[Description], [s].[IsActive], [s].[Name], [s].[Price], [s].[UpdatedAt]
+FROM [Services] AS [s]
+2026-01-24 12:49:57.400 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'B2B_V2.Infrastructure.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:d7d77e40-d14e-4f0e-b431-2bef97832552
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:d7d77e40-d14e-4f0e-b431-2bef97832552
+Error Number:207,State:1,Class:16
+2026-01-24 12:49:57.406 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi) in 12.8998ms
+2026-01-24 12:49:57.408 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi)'
+2026-01-24 12:49:57.409 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at B2B_V2.Infrastructure.Repositories.GenericRepository`1.GetAllAsync(Expression`1[] includes) in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Infrastructure\Repositories\GenericRepository.cs:line 36
+   at B2B_V2.Application.Services.MedicalServiceService.GetAllServicesAsync() in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\MedicalServiceService.cs:line 22
+   at B2B_V2.WebApi.Controllers.ServiceController.GetServices() in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\Controllers\ServiceController.cs:line 25
+   at lambda_method122(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:d7d77e40-d14e-4f0e-b431-2bef97832552
+Error Number:207,State:1,Class:16
+2026-01-24 12:49:57.421 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/service - 500 null text/plain; charset=utf-8 34.2932ms
+2026-01-24 12:50:33.658 +03:00 [INF] Executed endpoint '/notificationHub'
+2026-01-24 12:50:33.659 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/notificationHub?id=1qaYv6XDazLETxVt5KG5cg&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkyNDUwMjMsImV4cCI6MTc2OTI0ODYyMywiaWF0IjoxNzY5MjQ1MDIzLCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.F_8MCng_3n8dMlxUFksQHv3IVD1gi7BugYQwQlZvFh4 - 101 null null 192388.688ms
+2026-01-24 12:50:33.876 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null null
+2026-01-24 12:50:33.880 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:50:33.880 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 204 null null 3.9543ms
+2026-01-24 12:50:33.883 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null 0
+2026-01-24 12:50:33.884 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:50:33.885 +03:00 [INF] Executing endpoint '/notificationHub/negotiate'
+2026-01-24 12:50:33.886 +03:00 [INF] Executed endpoint '/notificationHub/negotiate'
+2026-01-24 12:50:33.887 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 200 316 application/json 3.8123ms
+2026-01-24 12:50:33.894 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/notificationHub?id=BZdNQH44KZesGYxZClxYeg&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkyNDUwMjMsImV4cCI6MTc2OTI0ODYyMywiaWF0IjoxNzY5MjQ1MDIzLCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.F_8MCng_3n8dMlxUFksQHv3IVD1gi7BugYQwQlZvFh4 - null null
+2026-01-24 12:50:33.896 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:50:33.897 +03:00 [INF] Executing endpoint '/notificationHub'
+2026-01-24 12:50:33.946 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/service - null null
+2026-01-24 12:50:33.948 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:50:33.948 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/service - 204 null null 2.1155ms
+2026-01-24 12:50:33.950 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/service - null null
+2026-01-24 12:50:33.952 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:50:33.953 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi)'
+2026-01-24 12:50:33.953 +03:00 [INF] Route matched with {action = "GetServices", controller = "Service"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.ServiceDto]]] GetServices() on controller B2B_V2.WebApi.Controllers.ServiceController (B2B_V2.WebApi).
+2026-01-24 12:50:33.958 +03:00 [ERR] Failed executing DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Code], [s].[CreatedAt], [s].[Description], [s].[IsActive], [s].[Name], [s].[Price], [s].[UpdatedAt]
+FROM [Services] AS [s]
+2026-01-24 12:50:33.960 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'B2B_V2.Infrastructure.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:d7d77e40-d14e-4f0e-b431-2bef97832552
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:d7d77e40-d14e-4f0e-b431-2bef97832552
+Error Number:207,State:1,Class:16
+2026-01-24 12:50:33.964 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi) in 9.0049ms
+2026-01-24 12:50:33.978 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi)'
+2026-01-24 12:50:33.979 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at B2B_V2.Infrastructure.Repositories.GenericRepository`1.GetAllAsync(Expression`1[] includes) in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Infrastructure\Repositories\GenericRepository.cs:line 36
+   at B2B_V2.Application.Services.MedicalServiceService.GetAllServicesAsync() in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\MedicalServiceService.cs:line 22
+   at B2B_V2.WebApi.Controllers.ServiceController.GetServices() in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\Controllers\ServiceController.cs:line 25
+   at lambda_method122(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:d7d77e40-d14e-4f0e-b431-2bef97832552
+Error Number:207,State:1,Class:16
+2026-01-24 12:50:33.987 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/service - 500 null text/plain; charset=utf-8 36.4246ms
+2026-01-24 12:56:24.666 +03:00 [INF] Executed endpoint '/notificationHub'
+2026-01-24 12:56:24.667 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/notificationHub?id=BZdNQH44KZesGYxZClxYeg&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkyNDUwMjMsImV4cCI6MTc2OTI0ODYyMywiaWF0IjoxNzY5MjQ1MDIzLCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.F_8MCng_3n8dMlxUFksQHv3IVD1gi7BugYQwQlZvFh4 - 101 null null 350773.298ms
+2026-01-24 12:56:24.841 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null null
+2026-01-24 12:56:24.843 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:56:24.844 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 204 null null 3.5672ms
+2026-01-24 12:56:24.847 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null 0
+2026-01-24 12:56:24.851 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:56:24.852 +03:00 [INF] Executing endpoint '/notificationHub/negotiate'
+2026-01-24 12:56:24.853 +03:00 [INF] Executed endpoint '/notificationHub/negotiate'
+2026-01-24 12:56:24.854 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 200 316 application/json 7.444ms
+2026-01-24 12:56:24.857 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/notificationHub?id=qrj-ixdQI_u2ZCA3eR8DRQ&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkyNDUwMjMsImV4cCI6MTc2OTI0ODYyMywiaWF0IjoxNzY5MjQ1MDIzLCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.F_8MCng_3n8dMlxUFksQHv3IVD1gi7BugYQwQlZvFh4 - null null
+2026-01-24 12:56:24.859 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:56:24.859 +03:00 [INF] Executing endpoint '/notificationHub'
+2026-01-24 12:56:24.885 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/service - null null
+2026-01-24 12:56:24.886 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:56:24.886 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/service - 204 null null 1.9123ms
+2026-01-24 12:56:24.888 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/service - null null
+2026-01-24 12:56:24.890 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:56:24.890 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi)'
+2026-01-24 12:56:24.891 +03:00 [INF] Route matched with {action = "GetServices", controller = "Service"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.ServiceDto]]] GetServices() on controller B2B_V2.WebApi.Controllers.ServiceController (B2B_V2.WebApi).
+2026-01-24 12:56:24.895 +03:00 [ERR] Failed executing DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Code], [s].[CreatedAt], [s].[Description], [s].[IsActive], [s].[Name], [s].[Price], [s].[UpdatedAt]
+FROM [Services] AS [s]
+2026-01-24 12:56:24.900 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'B2B_V2.Infrastructure.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:d7d77e40-d14e-4f0e-b431-2bef97832552
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:d7d77e40-d14e-4f0e-b431-2bef97832552
+Error Number:207,State:1,Class:16
+2026-01-24 12:56:24.911 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi) in 17.895ms
+2026-01-24 12:56:24.912 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi)'
+2026-01-24 12:56:24.914 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at B2B_V2.Infrastructure.Repositories.GenericRepository`1.GetAllAsync(Expression`1[] includes) in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Infrastructure\Repositories\GenericRepository.cs:line 36
+   at B2B_V2.Application.Services.MedicalServiceService.GetAllServicesAsync() in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\MedicalServiceService.cs:line 22
+   at B2B_V2.WebApi.Controllers.ServiceController.GetServices() in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\Controllers\ServiceController.cs:line 25
+   at lambda_method122(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:d7d77e40-d14e-4f0e-b431-2bef97832552
+Error Number:207,State:1,Class:16
+2026-01-24 12:56:24.925 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/service - 500 null text/plain; charset=utf-8 36.7383ms
+2026-01-24 12:56:51.657 +03:00 [INF] Executed endpoint '/notificationHub'
+2026-01-24 12:56:51.658 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/notificationHub?id=qrj-ixdQI_u2ZCA3eR8DRQ&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkyNDUwMjMsImV4cCI6MTc2OTI0ODYyMywiaWF0IjoxNzY5MjQ1MDIzLCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.F_8MCng_3n8dMlxUFksQHv3IVD1gi7BugYQwQlZvFh4 - 101 null null 26801.1606ms
+2026-01-24 12:56:51.742 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null null
+2026-01-24 12:56:51.745 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:56:51.745 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 204 null null 3.335ms
+2026-01-24 12:56:51.747 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null 0
+2026-01-24 12:56:51.749 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:56:51.750 +03:00 [INF] Executing endpoint '/notificationHub/negotiate'
+2026-01-24 12:56:51.751 +03:00 [INF] Executed endpoint '/notificationHub/negotiate'
+2026-01-24 12:56:51.752 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 200 316 application/json 5.1386ms
+2026-01-24 12:56:51.759 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/notificationHub?id=pTCEFMLVp06ozxGcYfg8oA&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkyNDUwMjMsImV4cCI6MTc2OTI0ODYyMywiaWF0IjoxNzY5MjQ1MDIzLCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.F_8MCng_3n8dMlxUFksQHv3IVD1gi7BugYQwQlZvFh4 - null null
+2026-01-24 12:56:51.761 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:56:51.762 +03:00 [INF] Executing endpoint '/notificationHub'
+2026-01-24 12:56:51.773 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/service - null null
+2026-01-24 12:56:51.774 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:56:51.775 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/service - 204 null null 2.1856ms
+2026-01-24 12:56:51.777 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/service - null null
+2026-01-24 12:56:51.779 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:56:51.780 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi)'
+2026-01-24 12:56:51.781 +03:00 [INF] Route matched with {action = "GetServices", controller = "Service"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.ServiceDto]]] GetServices() on controller B2B_V2.WebApi.Controllers.ServiceController (B2B_V2.WebApi).
+2026-01-24 12:56:51.784 +03:00 [ERR] Failed executing DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Code], [s].[CreatedAt], [s].[Description], [s].[IsActive], [s].[Name], [s].[Price], [s].[UpdatedAt]
+FROM [Services] AS [s]
+2026-01-24 12:56:51.786 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'B2B_V2.Infrastructure.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:d7d77e40-d14e-4f0e-b431-2bef97832552
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:d7d77e40-d14e-4f0e-b431-2bef97832552
+Error Number:207,State:1,Class:16
+2026-01-24 12:56:51.790 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi) in 7.4291ms
+2026-01-24 12:56:51.791 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi)'
+2026-01-24 12:56:51.792 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at B2B_V2.Infrastructure.Repositories.GenericRepository`1.GetAllAsync(Expression`1[] includes) in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Infrastructure\Repositories\GenericRepository.cs:line 36
+   at B2B_V2.Application.Services.MedicalServiceService.GetAllServicesAsync() in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\MedicalServiceService.cs:line 22
+   at B2B_V2.WebApi.Controllers.ServiceController.GetServices() in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\Controllers\ServiceController.cs:line 25
+   at lambda_method122(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:d7d77e40-d14e-4f0e-b431-2bef97832552
+Error Number:207,State:1,Class:16
+2026-01-24 12:56:51.800 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/service - 500 null text/plain; charset=utf-8 23.4471ms
+2026-01-24 12:56:53.653 +03:00 [INF] Executed endpoint '/notificationHub'
+2026-01-24 12:56:53.655 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/notificationHub?id=pTCEFMLVp06ozxGcYfg8oA&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkyNDUwMjMsImV4cCI6MTc2OTI0ODYyMywiaWF0IjoxNzY5MjQ1MDIzLCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.F_8MCng_3n8dMlxUFksQHv3IVD1gi7BugYQwQlZvFh4 - 101 null null 1895.3405ms
+2026-01-24 12:56:53.741 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null null
+2026-01-24 12:56:53.744 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:56:53.745 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 204 null null 3.7531ms
+2026-01-24 12:56:53.746 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null 0
+2026-01-24 12:56:53.750 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:56:53.750 +03:00 [INF] Executing endpoint '/notificationHub/negotiate'
+2026-01-24 12:56:53.751 +03:00 [INF] Executed endpoint '/notificationHub/negotiate'
+2026-01-24 12:56:53.752 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 200 316 application/json 5.2678ms
+2026-01-24 12:56:53.757 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/notificationHub?id=oSoZ58EupNaHDajeplDVqw&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkyNDUwMjMsImV4cCI6MTc2OTI0ODYyMywiaWF0IjoxNzY5MjQ1MDIzLCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.F_8MCng_3n8dMlxUFksQHv3IVD1gi7BugYQwQlZvFh4 - null null
+2026-01-24 12:56:53.760 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:56:53.760 +03:00 [INF] Executing endpoint '/notificationHub'
+2026-01-24 12:56:53.772 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/service - null null
+2026-01-24 12:56:53.774 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:56:53.775 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi)'
+2026-01-24 12:56:53.775 +03:00 [INF] Route matched with {action = "GetServices", controller = "Service"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.ServiceDto]]] GetServices() on controller B2B_V2.WebApi.Controllers.ServiceController (B2B_V2.WebApi).
+2026-01-24 12:56:53.778 +03:00 [ERR] Failed executing DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Code], [s].[CreatedAt], [s].[Description], [s].[IsActive], [s].[Name], [s].[Price], [s].[UpdatedAt]
+FROM [Services] AS [s]
+2026-01-24 12:56:53.781 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'B2B_V2.Infrastructure.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:d7d77e40-d14e-4f0e-b431-2bef97832552
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:d7d77e40-d14e-4f0e-b431-2bef97832552
+Error Number:207,State:1,Class:16
+2026-01-24 12:56:53.785 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi) in 8.4725ms
+2026-01-24 12:56:53.786 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi)'
+2026-01-24 12:56:53.787 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at B2B_V2.Infrastructure.Repositories.GenericRepository`1.GetAllAsync(Expression`1[] includes) in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Infrastructure\Repositories\GenericRepository.cs:line 36
+   at B2B_V2.Application.Services.MedicalServiceService.GetAllServicesAsync() in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\MedicalServiceService.cs:line 22
+   at B2B_V2.WebApi.Controllers.ServiceController.GetServices() in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\Controllers\ServiceController.cs:line 25
+   at lambda_method122(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:d7d77e40-d14e-4f0e-b431-2bef97832552
+Error Number:207,State:1,Class:16
+2026-01-24 12:56:53.795 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/service - 500 null text/plain; charset=utf-8 22.3356ms
+2026-01-24 12:57:11.666 +03:00 [INF] Executed endpoint '/notificationHub'
+2026-01-24 12:57:11.669 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/notificationHub?id=oSoZ58EupNaHDajeplDVqw&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkyNDUwMjMsImV4cCI6MTc2OTI0ODYyMywiaWF0IjoxNzY5MjQ1MDIzLCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.F_8MCng_3n8dMlxUFksQHv3IVD1gi7BugYQwQlZvFh4 - 101 null null 17911.6428ms
+2026-01-24 12:57:11.766 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null null
+2026-01-24 12:57:11.768 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:57:11.769 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 204 null null 2.2975ms
+2026-01-24 12:57:11.770 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null 0
+2026-01-24 12:57:11.777 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:57:11.778 +03:00 [INF] Executing endpoint '/notificationHub/negotiate'
+2026-01-24 12:57:11.779 +03:00 [INF] Executed endpoint '/notificationHub/negotiate'
+2026-01-24 12:57:11.781 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 200 316 application/json 10.3793ms
+2026-01-24 12:57:11.787 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/notificationHub?id=n7yZjVJZE1aR1VO7pyUlMw&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkyNDUwMjMsImV4cCI6MTc2OTI0ODYyMywiaWF0IjoxNzY5MjQ1MDIzLCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.F_8MCng_3n8dMlxUFksQHv3IVD1gi7BugYQwQlZvFh4 - null null
+2026-01-24 12:57:11.791 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:57:11.793 +03:00 [INF] Executing endpoint '/notificationHub'
+2026-01-24 12:57:11.807 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/service - null null
+2026-01-24 12:57:11.808 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:57:11.810 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/service - 204 null null 3.2153ms
+2026-01-24 12:57:11.813 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/service - null null
+2026-01-24 12:57:11.815 +03:00 [INF] CORS policy execution successful.
+2026-01-24 12:57:11.816 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi)'
+2026-01-24 12:57:11.817 +03:00 [INF] Route matched with {action = "GetServices", controller = "Service"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.ServiceDto]]] GetServices() on controller B2B_V2.WebApi.Controllers.ServiceController (B2B_V2.WebApi).
+2026-01-24 12:57:11.821 +03:00 [ERR] Failed executing DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Code], [s].[CreatedAt], [s].[Description], [s].[IsActive], [s].[Name], [s].[Price], [s].[UpdatedAt]
+FROM [Services] AS [s]
+2026-01-24 12:57:11.822 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'B2B_V2.Infrastructure.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:d7d77e40-d14e-4f0e-b431-2bef97832552
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:d7d77e40-d14e-4f0e-b431-2bef97832552
+Error Number:207,State:1,Class:16
+2026-01-24 12:57:11.827 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi) in 8.6185ms
+2026-01-24 12:57:11.828 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi)'
+2026-01-24 12:57:11.829 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at B2B_V2.Infrastructure.Repositories.GenericRepository`1.GetAllAsync(Expression`1[] includes) in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Infrastructure\Repositories\GenericRepository.cs:line 36
+   at B2B_V2.Application.Services.MedicalServiceService.GetAllServicesAsync() in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\MedicalServiceService.cs:line 22
+   at B2B_V2.WebApi.Controllers.ServiceController.GetServices() in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\Controllers\ServiceController.cs:line 25
+   at lambda_method122(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:d7d77e40-d14e-4f0e-b431-2bef97832552
+Error Number:207,State:1,Class:16
+2026-01-24 12:57:11.837 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/service - 500 null text/plain; charset=utf-8 23.3337ms
+2026-01-24 13:23:32.624 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/service - null null
+2026-01-24 13:23:32.629 +03:00 [INF] CORS policy execution successful.
+2026-01-24 13:23:32.631 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/service - 204 null null 7.4007ms
+2026-01-24 13:23:32.637 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/service - null null
+2026-01-24 13:23:32.638 +03:00 [INF] CORS policy execution successful.
+2026-01-24 13:23:32.650 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '24/01/2026 9:57:03 AM', Current time (UTC): '24/01/2026 10:23:32 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-01-24 13:23:32.660 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '24/01/2026 9:57:03 AM', Current time (UTC): '24/01/2026 10:23:32 AM'.
+2026-01-24 13:23:32.662 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-24 13:23:32.668 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-24 13:23:32.669 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/service - 401 0 null 32.5674ms
+2026-01-24 13:23:53.079 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/service - null null
+2026-01-24 13:23:53.080 +03:00 [INF] CORS policy execution successful.
+2026-01-24 13:23:53.082 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/service - 204 null null 2.8253ms
+2026-01-24 13:23:53.084 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/api/service - application/json 60
+2026-01-24 13:23:53.085 +03:00 [INF] CORS policy execution successful.
+2026-01-24 13:23:53.085 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '24/01/2026 9:57:03 AM', Current time (UTC): '24/01/2026 10:23:53 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-01-24 13:23:53.089 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '24/01/2026 9:57:03 AM', Current time (UTC): '24/01/2026 10:23:53 AM'.
+2026-01-24 13:23:53.089 +03:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2026-01-24 13:23:53.090 +03:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2026-01-24 13:23:53.090 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/api/service - 405 0 null 6.409ms
+2026-01-24 13:24:02.566 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/service - null null
+2026-01-24 13:24:02.571 +03:00 [INF] CORS policy execution successful.
+2026-01-24 13:24:02.572 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/service - 204 null null 6.1115ms
+2026-01-24 13:24:02.576 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/api/service - application/json 60
+2026-01-24 13:24:02.579 +03:00 [INF] CORS policy execution successful.
+2026-01-24 13:24:02.580 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '24/01/2026 9:57:03 AM', Current time (UTC): '24/01/2026 10:24:02 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-01-24 13:24:02.584 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '24/01/2026 9:57:03 AM', Current time (UTC): '24/01/2026 10:24:02 AM'.
+2026-01-24 13:24:02.585 +03:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2026-01-24 13:24:02.587 +03:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2026-01-24 13:24:02.588 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/api/service - 405 0 null 12.3701ms
+2026-01-24 13:24:16.360 +03:00 [INF] Executed endpoint '/notificationHub'
+2026-01-24 13:24:16.361 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/notificationHub?id=n7yZjVJZE1aR1VO7pyUlMw&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkyNDUwMjMsImV4cCI6MTc2OTI0ODYyMywiaWF0IjoxNzY5MjQ1MDIzLCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.F_8MCng_3n8dMlxUFksQHv3IVD1gi7BugYQwQlZvFh4 - 101 null null 1624573.9605ms
+2026-01-24 13:24:18.455 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/auth/login - null null
+2026-01-24 13:24:18.458 +03:00 [INF] CORS policy execution successful.
+2026-01-24 13:24:18.458 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/auth/login - 204 null null 2.6436ms
+2026-01-24 13:24:18.461 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/api/auth/login - application/json 58
+2026-01-24 13:24:18.463 +03:00 [INF] CORS policy execution successful.
+2026-01-24 13:24:18.465 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.AuthController.Login (B2B_V2.WebApi)'
+2026-01-24 13:24:18.469 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(B2B_V2.Application.DTOs.LoginDto) on controller B2B_V2.WebApi.Controllers.AuthController (B2B_V2.WebApi).
+2026-01-24 13:24:18.572 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[CompanyId], [a].[ConcurrencyStamp], [a].[CreatedAt], [a].[Email], [a].[EmailConfirmed], [a].[IsActive], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OTPSecret], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProviderId], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UpdatedAt], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-24 13:24:18.743 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-24 13:24:18.761 +03:00 [INF] Executing OkObjectResult, writing value of type 'B2B_V2.Application.DTOs.AuthResponseDto'.
+2026-01-24 13:24:18.765 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.AuthController.Login (B2B_V2.WebApi) in 295.0455ms
+2026-01-24 13:24:18.767 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.AuthController.Login (B2B_V2.WebApi)'
+2026-01-24 13:24:18.771 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/api/auth/login - 200 null application/json; charset=utf-8 310.3837ms
+2026-01-24 13:24:18.805 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null null
+2026-01-24 13:24:18.810 +03:00 [INF] CORS policy execution successful.
+2026-01-24 13:24:18.811 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 204 null null 5.733ms
+2026-01-24 13:24:18.812 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - null 0
+2026-01-24 13:24:18.818 +03:00 [INF] CORS policy execution successful.
+2026-01-24 13:24:18.820 +03:00 [INF] Executing endpoint '/notificationHub/negotiate'
+2026-01-24 13:24:18.822 +03:00 [INF] Executed endpoint '/notificationHub/negotiate'
+2026-01-24 13:24:18.823 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/notificationHub/negotiate?negotiateVersion=1 - 200 316 application/json 10.9999ms
+2026-01-24 13:24:18.831 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/Dashboard - null null
+2026-01-24 13:24:18.835 +03:00 [INF] CORS policy execution successful.
+2026-01-24 13:24:18.836 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/Dashboard - 204 null null 4.9438ms
+2026-01-24 13:24:18.840 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/Dashboard - null null
+2026-01-24 13:24:18.844 +03:00 [INF] CORS policy execution successful.
+2026-01-24 13:24:18.845 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.DashboardController.GetDashboardData (B2B_V2.WebApi)'
+2026-01-24 13:24:18.846 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/notificationHub?id=AARMDKAJvO9jPfPQVDdIAA&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkyNTAyNTgsImV4cCI6MTc2OTI1Mzg1OCwiaWF0IjoxNzY5MjUwMjU4LCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.T61QfDKup01V2BwYw2iAce9SZEtYRjHFZq10PrhkNeI - null null
+2026-01-24 13:24:18.852 +03:00 [INF] CORS policy execution successful.
+2026-01-24 13:24:18.852 +03:00 [INF] Route matched with {action = "GetDashboardData", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[B2B_V2.Application.DTOs.DashboardDataDto]] GetDashboardData() on controller B2B_V2.WebApi.Controllers.DashboardController (B2B_V2.WebApi).
+2026-01-24 13:24:18.853 +03:00 [INF] Executing endpoint '/notificationHub'
+2026-01-24 13:24:18.863 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AssignedProviderId], [r].[BranchLocation], [r].[CandidateFullName], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[Department], [r].[ExpectedVisitDate], [r].[Gender], [r].[IsActive], [r].[MobileNumber], [r].[NationalID], [r].[PackageId], [r].[Position], [r].[RequestedProviderId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt]
+FROM [Requests] AS [r]
+2026-01-24 13:24:18.882 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AssignedProviderId], [r].[BranchLocation], [r].[CandidateFullName], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[Department], [r].[ExpectedVisitDate], [r].[Gender], [r].[IsActive], [r].[MobileNumber], [r].[NationalID], [r].[PackageId], [r].[Position], [r].[RequestedProviderId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt]
+FROM [Requests] AS [r]
+WHERE [r].[Status] = 0
+2026-01-24 13:24:18.893 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AssignedProviderId], [r].[BranchLocation], [r].[CandidateFullName], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[Department], [r].[ExpectedVisitDate], [r].[Gender], [r].[IsActive], [r].[MobileNumber], [r].[NationalID], [r].[PackageId], [r].[Position], [r].[RequestedProviderId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt]
+FROM [Requests] AS [r]
+WHERE [r].[Status] = 3
+2026-01-24 13:24:18.905 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AssignedProviderId], [r].[BranchLocation], [r].[CandidateFullName], [r].[CaseID], [r].[CompanyId], [r].[CreatedAt], [r].[Department], [r].[ExpectedVisitDate], [r].[Gender], [r].[IsActive], [r].[MobileNumber], [r].[NationalID], [r].[PackageId], [r].[Position], [r].[RequestedProviderId], [r].[Status], [r].[SupportingDocumentPath], [r].[UpdatedAt]
+FROM [Requests] AS [r]
+WHERE [r].[Status] = 8
+2026-01-24 13:24:18.910 +03:00 [INF] Executing OkObjectResult, writing value of type 'B2B_V2.Application.DTOs.DashboardDataDto'.
+2026-01-24 13:24:18.919 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.DashboardController.GetDashboardData (B2B_V2.WebApi) in 62.6641ms
+2026-01-24 13:24:18.921 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.DashboardController.GetDashboardData (B2B_V2.WebApi)'
+2026-01-24 13:24:18.922 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/Dashboard - 200 null application/json; charset=utf-8 82.3808ms
+2026-01-24 13:24:26.745 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/service - null null
+2026-01-24 13:24:26.751 +03:00 [INF] CORS policy execution successful.
+2026-01-24 13:24:26.752 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/service - 204 null null 6.8942ms
+2026-01-24 13:24:26.756 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/service - null null
+2026-01-24 13:24:26.758 +03:00 [INF] CORS policy execution successful.
+2026-01-24 13:24:26.761 +03:00 [INF] Executing endpoint 'B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi)'
+2026-01-24 13:24:26.763 +03:00 [INF] Route matched with {action = "GetServices", controller = "Service"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[B2B_V2.Application.DTOs.ServiceDto]]] GetServices() on controller B2B_V2.WebApi.Controllers.ServiceController (B2B_V2.WebApi).
+2026-01-24 13:24:26.767 +03:00 [ERR] Failed executing DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Code], [s].[CreatedAt], [s].[Description], [s].[IsActive], [s].[Name], [s].[Price], [s].[UpdatedAt]
+FROM [Services] AS [s]
+2026-01-24 13:24:26.769 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'B2B_V2.Infrastructure.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:56948280-24ab-4c7e-ad83-368717ef5bd7
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:56948280-24ab-4c7e-ad83-368717ef5bd7
+Error Number:207,State:1,Class:16
+2026-01-24 13:24:26.776 +03:00 [INF] Executed action B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi) in 12.1398ms
+2026-01-24 13:24:26.777 +03:00 [INF] Executed endpoint 'B2B_V2.WebApi.Controllers.ServiceController.GetServices (B2B_V2.WebApi)'
+2026-01-24 13:24:26.778 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Code'.
+Invalid column name 'Price'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at B2B_V2.Infrastructure.Repositories.GenericRepository`1.GetAllAsync(Expression`1[] includes) in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Infrastructure\Repositories\GenericRepository.cs:line 36
+   at B2B_V2.Application.Services.MedicalServiceService.GetAllServicesAsync() in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\MedicalServiceService.cs:line 22
+   at B2B_V2.WebApi.Controllers.ServiceController.GetServices() in D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\Controllers\ServiceController.cs:line 25
+   at lambda_method122(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:56948280-24ab-4c7e-ad83-368717ef5bd7
+Error Number:207,State:1,Class:16
+2026-01-24 13:24:26.785 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/service - 500 null text/plain; charset=utf-8 28.6928ms
+2026-01-24 13:24:50.003 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5284/api/service - null null
+2026-01-24 13:24:50.005 +03:00 [INF] CORS policy execution successful.
+2026-01-24 13:24:50.005 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5284/api/service - 204 null null 2.4911ms
+2026-01-24 13:24:50.007 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/api/service - application/json 75
+2026-01-24 13:24:50.008 +03:00 [INF] CORS policy execution successful.
+2026-01-24 13:24:50.009 +03:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2026-01-24 13:24:50.010 +03:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2026-01-24 13:24:50.011 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/api/service - 405 0 null 3.9616ms
+2026-01-24 13:26:04.183 +03:00 [INF] Application is shutting down...
+2026-01-24 13:26:04.185 +03:00 [INF] Connection id "0HNIR5M88PK6H", Request id "0HNIR5M88PK6H:00000001": the application aborted the connection.
+2026-01-24 13:26:04.193 +03:00 [INF] Executed endpoint '/notificationHub'
+2026-01-24 13:26:04.194 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/notificationHub?id=AARMDKAJvO9jPfPQVDdIAA&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlNzMzYThlYS02YTZmLTRkMWYtNjljNS0wOGRlNWFhNmNjMGUiLCJlbWFpbCI6ImFkbWluQGIyYmhlYWx0aGNhcmUuY29tIiwidW5pcXVlX25hbWUiOiJhZG1pbkBiMmJoZWFsdGhjYXJlLmNvbSIsInJvbGUiOiJTdXBlckFkbWluaXN0cmF0b3IiLCJuYmYiOjE3NjkyNTAyNTgsImV4cCI6MTc2OTI1Mzg1OCwiaWF0IjoxNzY5MjUwMjU4LCJpc3MiOiJCMkJfVjJfQVBJIiwiYXVkIjoiQjJCX1YyX0NsaWVudCJ9.T61QfDKup01V2BwYw2iAce9SZEtYRjHFZq10PrhkNeI - 101 null null 105348.1882ms

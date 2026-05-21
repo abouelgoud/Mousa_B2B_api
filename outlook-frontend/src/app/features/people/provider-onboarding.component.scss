@@ -1,0 +1,193 @@
+@keyframes slideUpIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.onboarding-container {
+    background-color: var(--outlook-bg);
+}
+
+.max-width-1000 {
+    max-width: 1000px;
+}
+
+.onboarding-card {
+    background: #ffffff;
+    border: 1px solid var(--outlook-border);
+    border-radius: 4px;
+    box-shadow: 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
+    overflow: hidden;
+}
+
+.step-indicator {
+    padding: 24px;
+    background: #fbfbfb;
+    border-bottom: 1px solid var(--outlook-border);
+    display: flex;
+    justify-content: space-between;
+
+    .step-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex: 1;
+        justify-content: center;
+        position: relative;
+
+        &:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: -15%;
+            top: 50%;
+            width: 30%;
+            height: 1px;
+            background: var(--outlook-border);
+        }
+
+        .step-number {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 1px solid var(--outlook-border);
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--outlook-text-secondary);
+            z-index: 1;
+        }
+
+        .step-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--outlook-text-secondary);
+        }
+
+        &.active {
+            .step-number {
+                background: var(--bs-primary);
+                border-color: var(--bs-primary);
+                color: white;
+            }
+
+            .step-label {
+                color: var(--bs-primary);
+            }
+        }
+
+        &.completed {
+            .step-number {
+                background: #107c10;
+                border-color: #107c10;
+                color: white;
+            }
+
+            .step-label {
+                color: #107c10;
+            }
+
+            &:not(:last-child)::after {
+                background: #107c10;
+            }
+        }
+    }
+}
+
+.form-body {
+    padding: 40px;
+    animation: slideUpIn 0.4s cubic-bezier(0.1, 0.9, 0.2, 1);
+}
+
+.upload-zone {
+    border: 1px dashed var(--outlook-border);
+    border-radius: 4px;
+    padding: 32px;
+    text-align: center;
+    background: #fafaf9;
+    cursor: pointer;
+    transition: all 0.1s;
+
+    &:hover {
+        border-color: var(--bs-primary);
+        background: #f3f2f1;
+    }
+
+    i {
+        font-size: 32px;
+        color: #0078d4;
+        margin-bottom: 12px;
+    }
+
+    .title {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--outlook-text-primary);
+    }
+
+    .hint {
+        font-size: 11px;
+        color: var(--outlook-text-secondary);
+    }
+
+    &.has-file {
+        border-style: solid;
+        border-color: #107c10;
+        background: #f0f8f0;
+
+        i {
+            color: #107c10;
+        }
+    }
+}
+
+.lab-radio-group {
+    display: flex;
+    gap: 16px;
+
+    .lab-option {
+        flex: 1;
+
+        input {
+            display: none;
+        }
+
+        label {
+            display: block;
+            padding: 20px;
+            border: 1px solid var(--outlook-border);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.1s;
+
+            &:hover {
+                background: #f3f2f1;
+            }
+
+            .name {
+                font-size: 13px;
+                font-weight: 600;
+                color: var(--outlook-text-primary);
+            }
+
+            .desc {
+                font-size: 11px;
+                color: var(--outlook-text-secondary);
+            }
+        }
+
+        input:checked+label {
+            border-color: var(--bs-primary);
+            background: #f0f7ff;
+            box-shadow: 0 0 0 1px var(--bs-primary);
+        }
+    }
+}

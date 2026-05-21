@@ -1,0 +1,15 @@
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\obj\Debug\net9.0\B2B_V2.Application.csproj.AssemblyReference.cache
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\obj\Debug\net9.0\B2B_V2.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\obj\Debug\net9.0\B2B_V2.Application.AssemblyInfoInputs.cache
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\obj\Debug\net9.0\B2B_V2.Application.AssemblyInfo.cs
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\obj\Debug\net9.0\B2B_V2.Application.csproj.CoreCompileInputs.cache
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\bin\Debug\net9.0\B2B_V2.Application.deps.json
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\bin\Debug\net9.0\B2B_V2.Application.dll
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\bin\Debug\net9.0\B2B_V2.Application.pdb
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\bin\Debug\net9.0\B2B_V2.Domain.dll
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\bin\Debug\net9.0\B2B_V2.Domain.pdb
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\obj\Debug\net9.0\B2B_V2.A.E441119A.Up2Date
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\obj\Debug\net9.0\B2B_V2.Application.dll
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\obj\Debug\net9.0\refint\B2B_V2.Application.dll
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\obj\Debug\net9.0\B2B_V2.Application.pdb
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\obj\Debug\net9.0\ref\B2B_V2.Application.dll

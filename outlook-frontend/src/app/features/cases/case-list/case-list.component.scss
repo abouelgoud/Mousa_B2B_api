@@ -1,0 +1,96 @@
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.case-item {
+    border-left: 3px solid transparent;
+    transition: all 0.2s cubic-bezier(0.1, 0.9, 0.2, 1);
+    animation: slideInLeft 0.3s ease-out;
+    padding: 16px 24px !important;
+
+    &:hover {
+        background-color: #f3f2f1 !important;
+        border-left-color: #c8c6c4;
+    }
+
+    &.active {
+        background-color: #f0f7ff !important;
+        border-left-color: #0078d4;
+
+        .candidate-name {
+            color: #0078d4;
+        }
+    }
+}
+
+.candidate-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--outlook-text-primary);
+    margin-bottom: 2px;
+}
+
+.package-name {
+    font-size: 12px;
+    color: var(--outlook-text-secondary);
+    margin-bottom: 8px;
+}
+
+.case-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.case-id {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--outlook-text-secondary);
+    background: #f3f2f1;
+    padding: 2px 6px;
+    border-radius: 2px;
+    letter-spacing: 0.02em;
+}
+
+.date-text {
+    font-size: 11px;
+    color: var(--outlook-text-secondary);
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+
+    &.status-primary {
+        background-color: #0078d4;
+    }
+
+    &.status-info {
+        background-color: #038387;
+    }
+
+    &.status-warning {
+        background-color: #ffb900;
+    }
+
+    &.status-purple {
+        background-color: #8764b8;
+    }
+
+    &.status-success {
+        background-color: #107c10;
+    }
+
+    &.status-secondary {
+        background-color: #616161;
+    }
+}

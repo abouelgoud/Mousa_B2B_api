@@ -1,0 +1,18 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  B2B_V2.Domain -> D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Domain\bin\Debug\net9.0\B2B_V2.Domain.dll
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\MedicalPackageService.cs(4,14): error CS0234: The type or namespace name 'Infrastructure' does not exist in the namespace 'B2B_V2' (are you missing an assembly reference?) [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\B2B_V2.Application.csproj]
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\MedicalPackageService.cs(5,17): error CS0234: The type or namespace name 'EntityFrameworkCore' does not exist in the namespace 'Microsoft' (are you missing an assembly reference?) [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\B2B_V2.Application.csproj]
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\MedicalPackageService.cs(15,26): error CS0246: The type or namespace name 'ApplicationDbContext' could not be found (are you missing a using directive or an assembly reference?) [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\B2B_V2.Application.csproj]
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\MedicalPackageService.cs(17,38): error CS0246: The type or namespace name 'ApplicationDbContext' could not be found (are you missing a using directive or an assembly reference?) [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\B2B_V2.Application.csproj]
+
+Build FAILED.
+
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\MedicalPackageService.cs(4,14): error CS0234: The type or namespace name 'Infrastructure' does not exist in the namespace 'B2B_V2' (are you missing an assembly reference?) [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\B2B_V2.Application.csproj]
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\MedicalPackageService.cs(5,17): error CS0234: The type or namespace name 'EntityFrameworkCore' does not exist in the namespace 'Microsoft' (are you missing an assembly reference?) [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\B2B_V2.Application.csproj]
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\MedicalPackageService.cs(15,26): error CS0246: The type or namespace name 'ApplicationDbContext' could not be found (are you missing a using directive or an assembly reference?) [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\B2B_V2.Application.csproj]
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\MedicalPackageService.cs(17,38): error CS0246: The type or namespace name 'ApplicationDbContext' could not be found (are you missing a using directive or an assembly reference?) [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\B2B_V2.Application.csproj]
+    0 Warning(s)
+    4 Error(s)
+
+Time Elapsed 00:00:01.20

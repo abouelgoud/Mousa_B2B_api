@@ -1,0 +1,38 @@
+<div class="d-flex h-100 w-100 bg-white">
+    <!-- Middle Pane: Case List -->
+    <div class="d-flex flex-column border-end" style="width: 360px; min-width: 360px; background: #ffffff;">
+        <!-- Search Header -->
+        <div class="p-4 pb-1">
+            <h5 class="fw-bold mb-3 px-1 text-dark">Queued Records</h5>
+            <div class="input-group mb-3">
+                <span class="input-group-text bg-light border-0 text-muted"><i class="bi bi-search"></i></span>
+                <input type="text" class="form-control bg-light border-0 small" placeholder="Search by name or ID...">
+            </div>
+
+            <!-- Folder Indicator -->
+            <div class="d-flex align-items-center gap-2 px-1 mb-2">
+                <span class="badge rounded-pill bg-primary px-2" style="font-size: 10px;">{{ currentFilter() | uppercase
+                    }}</span>
+                <span class="small text-muted" style="font-size: 11px;">Surveillance View</span>
+            </div>
+
+            <!-- Tabs -->
+            <div class="d-flex gap-4 px-1 small fw-bold text-muted border-bottom mt-2">
+                <div class="pb-2 border-bottom border-blue border-3 text-primary cursor-pointer">Focused</div>
+                <div class="pb-2 cursor-pointer opacity-50">Archive</div>
+            </div>
+        </div>
+
+        <!-- Scrollable List -->
+        <div class="flex-grow-1 overflow-auto custom-scrollbar">
+            <app-case-list [filter]="currentFilter()" (caseSelected)="onCaseSelected($event)"></app-case-list>
+        </div>
+    </div>
+
+    <!-- Right Pane: Reading Pane / Detail View -->
+    <div class="flex-grow-1 h-100 bg-white position-relative overflow-hidden border-start">
+        <div class="h-100 overflow-auto custom-scrollbar">
+            <app-case-detail [caseId]="selectedCaseId"></app-case-detail>
+        </div>
+    </div>
+</div>

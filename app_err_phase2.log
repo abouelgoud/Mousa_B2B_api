@@ -1,0 +1,12 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  B2B_V2.Domain -> D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Domain\bin\Debug\net9.0\B2B_V2.Domain.dll
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\CompanyService.cs(84,47): error CS1061: 'IGenericRepository<Company>' does not contain a definition for 'Delete' and no accessible extension method 'Delete' accepting a first argument of type 'IGenericRepository<Company>' could be found (are you missing a using directive or an assembly reference?) [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\B2B_V2.Application.csproj]
+
+Build FAILED.
+
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\CompanyService.cs(84,47): error CS1061: 'IGenericRepository<Company>' does not contain a definition for 'Delete' and no accessible extension method 'Delete' accepting a first argument of type 'IGenericRepository<Company>' could be found (are you missing a using directive or an assembly reference?) [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\B2B_V2.Application.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:01.50

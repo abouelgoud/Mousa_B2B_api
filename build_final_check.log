@@ -1,0 +1,16 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  B2B_V2.Domain -> D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Domain\bin\Debug\net9.0\B2B_V2.Domain.dll
+  B2B_V2.Application -> D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\bin\Debug\net9.0\B2B_V2.Application.dll
+  B2B_V2.Infrastructure -> D:\SourceCode\Anti-g\B2B_V2\B2B_V2.Infrastructure\bin\Debug\net9.0\B2B_V2.Infrastructure.dll
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\Controllers\AuthController.cs(13,26): error CS0246: The type or namespace name 'IOTPService' could not be found (are you missing a using directive or an assembly reference?) [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\B2B_V2.WebApi.csproj]
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\Controllers\AuthController.cs(15,57): error CS0246: The type or namespace name 'IOTPService' could not be found (are you missing a using directive or an assembly reference?) [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\B2B_V2.WebApi.csproj]
+
+Build FAILED.
+
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\Controllers\AuthController.cs(13,26): error CS0246: The type or namespace name 'IOTPService' could not be found (are you missing a using directive or an assembly reference?) [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\B2B_V2.WebApi.csproj]
+D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\Controllers\AuthController.cs(15,57): error CS0246: The type or namespace name 'IOTPService' could not be found (are you missing a using directive or an assembly reference?) [D:\SourceCode\Anti-g\B2B_V2\B2B_V2.WebApi\B2B_V2.WebApi.csproj]
+    0 Warning(s)
+    2 Error(s)
+
+Time Elapsed 00:00:07.51

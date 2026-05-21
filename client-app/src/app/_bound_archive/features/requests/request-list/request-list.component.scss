@@ -1,0 +1,12 @@
+.glass-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 120, 212, 0.02);
+}
+
+.badge {
+    font-weight: 500;
+}

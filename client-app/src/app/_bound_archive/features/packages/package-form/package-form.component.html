@@ -1,0 +1,93 @@
+<div class="container py-4">
+    <div class="mb-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/packages">Packages</a></li>
+                <li class="breadcrumb-item active">{{ isEditMode ? 'Edit' : 'Create' }} Package</li>
+            </ol>
+        </nav>
+        <h2 class="text-primary fw-bold">{{ isEditMode ? 'Edit' : 'Create New' }} Package</h2>
+        <p class="text-muted">Define the package name, price, and included services.</p>
+    </div>
+
+    <div class="card border-0 shadow-sm glass-card">
+        <div class="card-body p-4">
+            <form [formGroup]="packageForm" (ngSubmit)="onSubmit()">
+                <div class="row g-4">
+                    <!-- General Info -->
+                    <div class="col-md-7">
+                        <div class="mb-3">
+                            <label class="form-label fw-medium">Package Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" formControlName="name"
+                                placeholder="e.g., Executive Health Checkup">
+                            <div class="text-danger small mt-1"
+                                *ngIf="packageForm.get('name')?.touched && packageForm.get('name')?.errors?.['required']">
+                                Name is required</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-medium">Description</label>
+                            <textarea class="form-control" formControlName="description" rows="3"
+                                placeholder="Describe what this package includes..."></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-medium">Price (SAR) <span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <span class="input-group-text">SAR</span>
+                                <input type="number" class="form-control" formControlName="price" placeholder="0.00">
+                            </div>
+                            <div class="text-danger small mt-1"
+                                *ngIf="packageForm.get('price')?.touched && packageForm.get('price')?.errors?.['required']">
+                                Price is required</div>
+                        </div>
+                    </div>
+
+                    <!-- Services Selection -->
+                    <div class="col-md-5">
+                        <label class="form-label fw-medium d-block mb-3">Include Services <span
+                                class="text-danger">*</span></label>
+                        <div class="services-list-container border rounded bg-light p-3"
+                            style="max-height: 400px; overflow-y: auto;">
+                            <div *ngFor="let svc of availableServices"
+                                class="service-item d-flex align-items-center p-2 mb-2 rounded border bg-white"
+                                [class.border-primary]="isServiceSelected(svc.id)"
+                                [class.bg-primary-subtle]="isServiceSelected(svc.id)" (click)="toggleService(svc.id)"
+                                style="cursor: pointer;">
+                                <div class="form-check mb-0 pointer-none">
+                                    <input class="form-check-input" type="checkbox"
+                                        [checked]="isServiceSelected(svc.id)">
+                                </div>
+                                <div class="ms-3">
+                                    <div class="fw-bold small">{{ svc.name }}</div>
+                                    <div class="text-muted x-small">{{ svc.code }} - {{ svc.price | currency:'SAR ' }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div *ngIf="availableServices.length === 0" class="text-center py-4 text-muted">
+                                <i class="bi bi-info-circle d-block mb-2"></i>
+                                No services available.
+                            </div>
+                        </div>
+                        <div class="text-danger small mt-1"
+                            *ngIf="packageForm.get('serviceIds')?.touched && packageForm.get('serviceIds')?.errors?.['minLength']">
+                            Select at least one service</div>
+                        <div class="text-muted small mt-2">Selected: {{ packageForm.get('serviceIds')?.value.length }}
+                            services</div>
+                    </div>
+
+                    <div class="col-12 mt-4 pt-3 border-top d-flex justify-content-end gap-2">
+                        <button type="button" class="btn btn-outline-secondary px-4 rounded-pill"
+                            routerLink="/packages">Cancel</button>
+                        <button type="submit" class="btn btn-primary px-5 rounded-pill"
+                            [disabled]="submitting || loading">
+                            <span *ngIf="submitting" class="spinner-border spinner-border-sm me-2"></span>
+                            {{ isEditMode ? 'Update' : 'Create' }} Package
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

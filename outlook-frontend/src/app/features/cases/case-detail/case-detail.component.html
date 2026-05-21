@@ -1,0 +1,164 @@
+<div *ngIf="loading()" class="d-flex flex-column align-items-center justify-content-center h-100 py-5">
+    <div class="spinner-border text-primary spinner-border-sm" role="status"></div>
+    <div class="mt-2 text-muted small">Loading case dossier...</div>
+</div>
+
+<div *ngIf="!loading() && caseDetails() as item" class="case-view-container h-100 d-flex flex-column">
+    <!-- Header Area -->
+    <div class="case-header p-4 pb-0">
+        <div class="d-flex justify-content-between align-items-start mb-4">
+            <h2 class="subject-line mb-0">{{ item.packageName }}</h2>
+            <div class="d-flex gap-2">
+                <button class="btn btn-light btn-sm border" title="Reply"><i class="bi bi-reply"></i></button>
+                <button class="btn btn-light btn-sm border" title="Forward"><i class="bi bi-forward"></i></button>
+                <button class="btn btn-light btn-sm border text-danger" title="Discard"><i
+                        class="bi bi-trash"></i></button>
+            </div>
+        </div>
+
+        <div class="profile-strip mb-4">
+            <div class="initials">{{ item.candidateFullName.charAt(0) }}</div>
+            <div class="info">
+                <div class="sender">{{ item.candidateFullName }}</div>
+                <div class="recipient">To: <span class="text-primary">{{ item.assignedProviderName }}</span></div>
+            </div>
+            <div class="timestamp">
+                {{ item.expectedVisitDate | date:'EEEE, MMMM d, y, h:mm a' }}
+            </div>
+        </div>
+    </div>
+
+    <!-- Body Area -->
+    <div class="case-body flex-grow-1 overflow-auto bg-white custom-scrollbar">
+        <div class="container-fluid px-0">
+
+            <!-- View Mode -->
+            <ng-container *ngIf="!isEditing()">
+                <div class="row g-4 mb-4">
+                    <div class="col-md-7">
+                        <div class="info-card">
+                            <div class="card-header">
+                                <h6>Clinical Context</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-4">
+                                    <div class="col-6">
+                                        <div class="data-group">
+                                            <div class="label">Reference Number</div>
+                                            <div class="value font-monospace">#{{ item.caseID }}</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="data-group">
+                                            <div class="label">Processing Status</div>
+                                            <div class="value">
+                                                <span class="badge-status"
+                                                    [ngClass]="'status-' + getStatusColor(item.status)">
+                                                    Active Workflow
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12" *ngIf="item.physicianNotes">
+                                        <div class="data-group">
+                                            <div class="label">Previous Physician Remarks</div>
+                                            <div class="value p-3 bg-light rounded shadow-none small italic border">
+                                                "{{ item.physicianNotes }}"
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-3">
+                            <button class="btn btn-primary px-4 d-flex align-items-center gap-2" (click)="toggleEdit()">
+                                <i class="bi bi-pencil-square"></i>
+                                <span>Process Medical Results</span>
+                            </button>
+                            <button class="btn btn-outline-secondary px-3">
+                                <i class="bi bi-printer"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5">
+                        <div class="info-card">
+                            <div class="card-header">
+                                <h6>Candidate Profile</h6>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="list-group list-group-flush border-0">
+                                    <div class="list-group-item px-4 border-0 py-3">
+                                        <div class="label" style="font-size: 10px;">Full Legal Name</div>
+                                        <div class="fw-semibold">{{ item.candidateFullName }}</div>
+                                    </div>
+                                    <div class="list-group-item px-4 border-0 py-3 bg-light bg-opacity-50">
+                                        <div class="label" style="font-size: 10px;">ID / Residance No</div>
+                                        <div class="fw-semibold text-primary">{{ item.nationalID }}</div>
+                                    </div>
+                                    <div class="list-group-item px-4 border-0 py-3">
+                                        <div class="label" style="font-size: 10px;">Mobile Contact</div>
+                                        <div class="fw-semibold">{{ item.mobileNumber }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+
+            <!-- Edit Mode (Form) -->
+            <div *ngIf="isEditing()" class="medical-form-card mx-auto" style="max-width: 800px;">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h6 class="mb-0"><i class="bi bi-clipboard2-pulse me-2"></i>Medical Examination record</h6>
+                    <button class="btn-close btn-close-white" (click)="toggleEdit()"></button>
+                </div>
+                <div class="card-body p-4 bg-white">
+                    <form [formGroup]="medicalForm" (ngSubmit)="submit()">
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <label class="form-label fw-bold small text-secondary">Vital Signs Transcription</label>
+                                <textarea class="form-control" rows="2" formControlName="vitalSigns"
+                                    placeholder="e.g., BP: 120/80, HR: 72 bpm, Temp: 36.8°C"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-bold small text-secondary">Diagnostic Lab Findings</label>
+                                <textarea class="form-control" rows="3" formControlName="labFindings"
+                                    placeholder="Summarize key findings from laboratory investigations..."></textarea>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-bold small text-secondary">Physician Assessment
+                                    Notes</label>
+                                <textarea class="form-control" rows="3" formControlName="physicianNotes"
+                                    placeholder="Provide clinical observations and final assessment..."></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold small text-primary">Final Clinical Decision</label>
+                                <select class="form-select border-primary" formControlName="isFitForWork">
+                                    <option [ngValue]="true">Medically Fit For Employment</option>
+                                    <option [ngValue]="false">Medically Unfit / Review Required</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-2 mt-5">
+                            <button type="submit" class="btn btn-primary px-5 shadow-sm"
+                                [disabled]="medicalForm.invalid">Authorize & Submit</button>
+                            <button type="button" class="btn btn-light px-4 border"
+                                (click)="toggleEdit()">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div *ngIf="!loading() && !caseId"
+    class="h-100 d-flex flex-column align-items-center justify-content-center text-muted">
+    <i class="bi bi-envelope-open display-1 opacity-10 mb-3"></i>
+    <h5 class="fw-light">Select a case to view details</h5>
+    <p class="small">Choose an item from the list on the left to review medical records.</p>
+</div>

@@ -1,0 +1,160 @@
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.candidate-form-container {
+    animation: slideUp 0.4s cubic-bezier(0.1, 0.9, 0.2, 1);
+    background-color: var(--outlook-bg);
+}
+
+.form-card {
+    background: #ffffff;
+    border: 1px solid var(--outlook-border);
+    box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
+    border-radius: 4px;
+}
+
+.card-header {
+    background: transparent;
+    padding: 24px 32px;
+    border-bottom: 1px solid var(--outlook-border);
+
+    h2 {
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--outlook-text-primary);
+        margin: 0;
+    }
+}
+
+.form-body {
+    padding: 32px;
+}
+
+.section-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--bs-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #f3f2f1;
+}
+
+.fluent-group {
+    margin-bottom: 20px;
+
+    .label-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 6px;
+
+        label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--outlook-text-primary);
+        }
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        border: 1px solid #8a8886;
+        border-bottom: 2px solid #8a8886;
+        border-radius: 4px;
+        padding: 7px 12px;
+        font-size: 14px;
+        transition: all 0.2s cubic-bezier(0.1, 0.9, 0.2, 1);
+        background: #ffffff;
+
+        &:hover {
+            border-color: #323130;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: var(--bs-primary);
+            border-bottom-color: var(--bs-primary);
+            box-shadow: none;
+        }
+    }
+
+    .file-input-wrapper {
+        border: 2px dashed #edebe9;
+        padding: 20px;
+        text-align: center;
+        border-radius: 4px;
+        background: #fafaf9;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover {
+            border-color: var(--bs-primary);
+            background: #f0f7ff;
+        }
+    }
+}
+
+.attachment-item {
+    background: #ffffff;
+    border: 1px solid #edebe9;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-bottom: 8px;
+    transition: all 0.2s;
+
+    &:hover {
+        border-color: var(--bs-primary);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+}
+
+.actions-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--outlook-border);
+}
+
+.btn-fluent {
+    padding: 6px 24px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.1s;
+
+    &.btn-primary {
+        background-color: var(--bs-primary);
+        border: none;
+        color: white;
+
+        &:hover:not(:disabled) {
+            background-color: #005a9e;
+        }
+    }
+
+    &.btn-secondary {
+        background-color: #ffffff;
+        border: 1px solid #8a8886;
+        color: #323130;
+        text-decoration: none;
+
+        &:hover {
+            background-color: #f3f2f1;
+            border-color: #323130;
+        }
+    }
+}

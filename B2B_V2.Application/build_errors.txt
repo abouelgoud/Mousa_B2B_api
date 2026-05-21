@@ -1,0 +1,9 @@
+d:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\AuthService.cs(6,17): error CS0234: The type or namespace name 'EntityFrameworkCore' does not exist in the namespace 'Microsoft' (are you missing an assembly reference?) [d:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\B2B_V2.Application.csproj]
+d:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Interfaces\IAuthService.cs(10,49): error CS0246: The type or namespace name 'UpdateUserDto' could not be found (are you missing a using directive or an assembly reference?) [d:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\B2B_V2.Application.csproj]
+d:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\Services\AuthService.cs(19,32): error CS0535: 'AuthService' does not implement interface member 'IAuthService.UpdateUserAsync(Guid, UpdateUserDto)' [d:\SourceCode\Anti-g\B2B_V2\B2B_V2.Application\B2B_V2.Application.csproj]
+
+Build FAILED.
+    3 Warning(s)
+    3 Error(s)
+
+Time Elapsed 00:00:01.49

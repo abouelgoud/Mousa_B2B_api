@@ -1,0 +1,19 @@
+<div class="card border-0 shadow-sm h-100 bg-surface rounded-lg overflow-hidden">
+    <div *ngIf="title" class="card-header bg-transparent border-bottom-0 pt-4 px-4 pb-0">
+        <h5 class="card-title fw-bold mb-1 text-dark">{{ title }}</h5>
+        <h6 *ngIf="subtitle" class="card-subtitle text-muted fs-sm">{{ subtitle }}</h6>
+    </div>
+
+    <!-- Custom Header Slot -->
+    <div class="card-header-slot" *ngIf="!title">
+        <ng-content select="[card-header]"></ng-content>
+    </div>
+
+    <div class="card-body text-body" [ngClass]="padding">
+        <ng-content></ng-content>
+    </div>
+
+    <div class="card-footer bg-transparent border-top-0">
+        <ng-content select="[card-footer]"></ng-content>
+    </div>
+</div>

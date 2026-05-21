@@ -1,0 +1,115 @@
+@keyframes slideUpIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.role-matrix-container {
+    background-color: var(--outlook-bg);
+}
+
+.toolbar {
+    background: #ffffff;
+    border-bottom: 1px solid var(--outlook-border);
+    padding: 16px 32px;
+}
+
+.role-sidebar {
+    background: #ffffff;
+    border-right: 1px solid var(--outlook-border);
+    width: 280px;
+    min-width: 280px;
+}
+
+.role-item {
+    border-left: 3px solid transparent;
+    transition: all 0.2s cubic-bezier(0.1, 0.9, 0.2, 1);
+    padding: 12px 24px !important;
+
+    &:hover {
+        background-color: #f3f2f1 !important;
+        border-left-color: #c8c6c4;
+    }
+
+    &.active {
+        background-color: #f0f7ff !important;
+        border-left-color: #0078d4;
+
+        .role-name {
+            color: #0078d4;
+        }
+    }
+}
+
+.role-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--outlook-text-primary);
+}
+
+.permission-grid {
+    background: #ffffff;
+    border: 1px solid var(--outlook-border);
+    border-radius: 4px;
+    box-shadow: 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
+    overflow: hidden;
+}
+
+.permission-table {
+    margin-bottom: 0;
+
+    thead th {
+        background: #fbfbfb;
+        padding: 12px 24px;
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--outlook-text-secondary);
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--outlook-border);
+    }
+
+    tbody td {
+        padding: 14px 24px;
+        border-bottom: 1px solid #f3f2f1;
+    }
+}
+
+.feature-tag {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: #f3f2f1;
+    color: var(--outlook-text-secondary);
+}
+
+.permission-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--outlook-text-primary);
+}
+
+.permission-desc {
+    font-size: 11px;
+    color: var(--outlook-text-secondary);
+}
+
+.search-bar {
+    .input-group-text {
+        background: #f3f2f1;
+        border: 1px solid #edebe9;
+        color: var(--outlook-text-secondary);
+    }
+
+    .form-control {
+        border-left: none;
+        background: #fdfdfd;
+        font-size: 13px;
+    }
+}

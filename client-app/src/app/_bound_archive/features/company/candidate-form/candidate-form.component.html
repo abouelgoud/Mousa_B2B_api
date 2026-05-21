@@ -1,0 +1,140 @@
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h2 class="text-primary fw-bold mb-0">{{ candidateId ? 'Edit' : 'Add' }} Candidate</h2>
+                    <p class="text-muted mb-0">{{ candidateId ? 'Update candidate information' : 'Register a new
+                        candidate' }}</p>
+                </div>
+                <button class="btn btn-outline-secondary" [routerLink]="['/company', companyId, 'candidates']">
+                    Cancel
+                </button>
+            </div>
+
+            <div class="card border-0 shadow-sm glass-card">
+                <div class="card-body p-4">
+                    <div *ngIf="loading" class="text-center py-5">
+                        <div class="spinner-border text-primary" role="status"></div>
+                    </div>
+
+                    <div *ngIf="!loading && error" class="alert alert-danger mb-4">
+                        {{ error }}
+                    </div>
+
+                    <form *ngIf="!loading" [formGroup]="candidateForm" (ngSubmit)="onSubmit()">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <h5 class="fw-bold border-bottom pb-2 mb-3">Personal Information</h5>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Full Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" formControlName="fullName"
+                                    [class.is-invalid]="submitted && candidateForm.get('fullName')?.errors">
+                                <div class="invalid-feedback">Full Name is required</div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">National ID / Iqama <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" formControlName="nationalID"
+                                    [class.is-invalid]="submitted && candidateForm.get('nationalID')?.errors">
+                                <div class="invalid-feedback">National ID is required</div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Mobile Number <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" formControlName="mobileNumber"
+                                    [class.is-invalid]="submitted && candidateForm.get('mobileNumber')?.errors">
+                                <div class="invalid-feedback">Mobile Number is required</div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Gender <span class="text-danger">*</span></label>
+                                <select class="form-select" formControlName="gender"
+                                    [class.is-invalid]="submitted && candidateForm.get('gender')?.errors">
+                                    <option value="">Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                                <div class="invalid-feedback">Gender is required</div>
+                            </div>
+
+                            <div class="col-12 mt-4">
+                                <h5 class="fw-bold border-bottom pb-2 mb-3">Employment Details</h5>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Position / Job Title <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" formControlName="position"
+                                    [class.is-invalid]="submitted && candidateForm.get('position')?.errors">
+                                <div class="invalid-feedback">Position is required</div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Branch / Location <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" formControlName="branchLocation"
+                                    [class.is-invalid]="submitted && candidateForm.get('branchLocation')?.errors">
+                                <div class="invalid-feedback">Branch Location is required</div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Department</label>
+                                <input type="text" class="form-control" formControlName="department">
+                            </div>
+
+                            <div class="col-md-12">
+                                <label class="form-label">Attachments</label>
+                                <input type="file" class="form-control" multiple (change)="onFileSelect($event)"
+                                    accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+                                <div class="form-text">Allowed formats: PDF, DOC, JPG, PNG</div>
+
+                                <!-- Existing Attachments -->
+                                <div *ngIf="existingAttachments.length > 0" class="mt-3">
+                                    <h6 class="text-muted small fw-bold">Current Attachments:</h6>
+                                    <ul class="list-group">
+                                        <li *ngFor="let file of existingAttachments"
+                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                            <a [href]="'http://localhost:5284' + file.filePath" target="_blank"
+                                                class="text-decoration-none">
+                                                <i class="bi bi-file-earmark-text me-2"></i>
+                                                {{ file.fileName }}
+                                                <small class="text-muted ms-2">({{ (file.fileSize / 1024).toFixed(1) }}
+                                                    KB)</small>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- New Selected Files -->
+                                <div *ngIf="selectedFiles.length > 0" class="mt-3">
+                                    <h6 class="text-muted small fw-bold">New Files to Upload:</h6>
+                                    <ul class="list-group">
+                                        <li *ngFor="let file of selectedFiles"
+                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                            <span>
+                                                <i class="bi bi-file-earmark-plus me-2 text-primary"></i>
+                                                {{ file.name }}
+                                                <small class="text-muted ms-2">({{ (file.size / 1024).toFixed(1) }}
+                                                    KB)</small>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mt-4 text-end">
+                                <button type="submit" class="btn btn-primary px-4" [disabled]="saving">
+                                    <span *ngIf="saving" class="spinner-border spinner-border-sm me-2"
+                                        role="status"></span>
+                                    {{ candidateId ? 'Update Candidate' : 'Create Candidate' }}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

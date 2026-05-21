@@ -1,0 +1,187 @@
+@keyframes slideUpIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.details-container {
+    background-color: var(--outlook-bg);
+}
+
+.toolbar {
+    background: #ffffff;
+    border-bottom: 1px solid var(--outlook-border);
+    padding: 16px 32px;
+    z-index: 10;
+
+    h4 {
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--outlook-text-primary);
+    }
+}
+
+.content-row {
+    animation: slideUpIn 0.4s cubic-bezier(0.1, 0.9, 0.2, 1);
+}
+
+.info-card {
+    background: #ffffff;
+    border: 1px solid var(--outlook-border);
+    border-radius: 4px;
+    box-shadow: 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
+    margin-bottom: 24px;
+
+    .card-header {
+        padding: 16px 24px;
+        border-bottom: 1px solid var(--outlook-border);
+        background: transparent;
+
+        h6 {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--outlook-text-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+    }
+
+    .card-body {
+        padding: 24px;
+    }
+}
+
+.profile-header-card {
+    background: linear-gradient(135deg, #0078d4 0%, #005a9e 100%);
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 32px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -10%;
+        width: 300px;
+        height: 300px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+    }
+
+    .stat-label {
+        font-size: 12px;
+        opacity: 0.8;
+    }
+
+    .stat-value {
+        font-size: 32px;
+        font-weight: 700;
+    }
+}
+
+.data-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f3f2f1;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    .label {
+        font-size: 13px;
+        color: var(--outlook-text-secondary);
+    }
+
+    .value {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--outlook-text-primary);
+        text-align: right;
+    }
+}
+
+.doc-pill {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border: 1px solid #edebe9;
+    border-radius: 4px;
+    background: #ffffff;
+    transition: all 0.2s;
+
+    &:hover {
+        border-color: var(--bs-primary);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .doc-icon {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fde7e9;
+        color: #d13438;
+        border-radius: 4px;
+    }
+}
+
+.nav-fluent {
+    border-bottom: 1px solid var(--outlook-border);
+    margin-bottom: 24px;
+
+    .nav-link {
+        border: none;
+        border-bottom: 2px solid transparent;
+        color: var(--outlook-text-secondary);
+        font-weight: 600;
+        font-size: 14px;
+        padding: 12px 24px;
+        border-radius: 0;
+
+        &.active {
+            color: var(--bs-primary);
+            border-bottom-color: var(--bs-primary);
+            background: transparent;
+        }
+
+        &:hover:not(.active) {
+            color: var(--outlook-text-primary);
+            background: #f3f2f1;
+        }
+    }
+}
+
+.empty-placeholder {
+    padding: 48px;
+    text-align: center;
+    border: 2px dashed #edebe9;
+    border-radius: 4px;
+    background: #fafaf9;
+
+    i {
+        font-size: 40px;
+        color: #c8c6c4;
+        display: block;
+        margin-bottom: 16px;
+    }
+
+    p {
+        margin: 0;
+        color: var(--outlook-text-secondary);
+        font-size: 14px;
+    }
+}

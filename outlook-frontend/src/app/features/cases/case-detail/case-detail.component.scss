@@ -1,0 +1,172 @@
+@keyframes slideUpIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.case-view-container {
+    animation: slideUpIn 0.3s cubic-bezier(0.1, 0.9, 0.2, 1);
+}
+
+.case-header {
+    border-bottom: 1px solid var(--outlook-border);
+    background: #ffffff;
+
+    .subject-line {
+        font-size: 24px;
+        font-weight: 300;
+        color: var(--outlook-text-primary);
+        margin-bottom: 24px;
+    }
+}
+
+.profile-strip {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .initials {
+        width: 48px;
+        height: 48px;
+        background: #0078d4;
+        color: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 600;
+        flex-shrink: 0;
+    }
+
+    .info {
+        flex-grow: 1;
+
+        .sender {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--outlook-text-primary);
+        }
+
+        .recipient {
+            font-size: 13px;
+            color: var(--outlook-text-secondary);
+        }
+    }
+
+    .timestamp {
+        font-size: 12px;
+        color: var(--outlook-text-secondary);
+    }
+}
+
+.case-body {
+    padding: 32px;
+}
+
+.info-card {
+    background: #ffffff;
+    border: 1px solid var(--outlook-border);
+    border-radius: 4px;
+    box-shadow: 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
+    margin-bottom: 24px;
+
+    .card-header {
+        padding: 12px 20px;
+        border-bottom: 1px solid var(--outlook-border);
+        background: #fbfbfb;
+
+        h6 {
+            margin: 0;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--outlook-text-secondary);
+            text-transform: uppercase;
+        }
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+}
+
+.data-group {
+    margin-bottom: 16px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .label {
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--outlook-text-secondary);
+        text-transform: uppercase;
+        margin-bottom: 4px;
+    }
+
+    .value {
+        font-size: 14px;
+        color: var(--outlook-text-primary);
+    }
+}
+
+.medical-form-card {
+    border: 1px solid var(--bs-primary);
+    border-radius: 4px;
+    box-shadow: 0 4px 16px rgba(0, 120, 212, 0.1);
+
+    .card-header {
+        background-color: var(--bs-primary);
+        color: white;
+        padding: 16px 20px;
+
+        h6 {
+            margin: 0;
+            font-weight: 600;
+        }
+    }
+}
+
+.badge-status {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+
+    &.status-primary {
+        background: #deecf9;
+        color: #0078d4;
+    }
+
+    &.status-info {
+        background: #dff6f5;
+        color: #038387;
+    }
+
+    &.status-warning {
+        background: #fff4ce;
+        color: #995c00;
+    }
+
+    &.status-purple {
+        background: #efeaf7;
+        color: #5c30a3;
+    }
+
+    &.status-success {
+        background: #dff6dd;
+        color: #107c10;
+    }
+
+    &.status-secondary {
+        background: #f3f3f3;
+        color: #616161;
+    }
+}

@@ -1,0 +1,17 @@
+.glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+}
+
+.bg-primary {
+    background-color: #0078d4 !important;
+}
+
+.bg-success {
+    background-color: #107c10 !important;
+}
+
+.animate__animated {
+    animation-duration: 0.5s;
+}

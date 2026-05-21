@@ -1,0 +1,114 @@
+<div class="container-fluid py-4" *ngIf="provider; else loadingOrError">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="text-primary fw-bold mb-0">Provider Details</h2>
+            <p class="text-muted mb-0">View comprehensive information about {{ provider.legalName }}</p>
+        </div>
+        <div>
+            <button class="btn btn-outline-secondary me-2" routerLink="/provider/list">
+                <i class="bi bi-arrow-left me-1"></i> Back
+            </button>
+            <button class="btn btn-primary" [routerLink]="['/provider/edit', provider.id]">
+                <i class="bi bi-pencil me-1"></i> Edit
+            </button>
+        </div>
+    </div>
+
+    <div class="card border-0 shadow-sm glass-card">
+        <div class="card-body p-4">
+            <div class="row g-4">
+                <!-- Basic Info -->
+                <div class="col-md-6">
+                    <h5 class="fw-bold mb-3 border-bottom pb-2">Basic Information</h5>
+                    <div class="mb-3">
+                        <label class="small text-muted text-uppercase fw-semibold">Legal Name</label>
+                        <div class="fs-5 fw-medium">{{ provider.legalName }}</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="small text-muted text-uppercase fw-semibold">Tier</label>
+                        <div>
+                            <span class="badge bg-primary-subtle text-primary border border-primary-subtle">
+                                {{ provider.tierId === 1 ? 'Premium' : provider.tierId === 2 ? 'Enterprise' : 'Standard'
+                                }}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="small text-muted text-uppercase fw-semibold">Operational Capacity</label>
+                        <div>{{ provider.estimatedDailyOperationalCapacity }} Patients / Day</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="small text-muted text-uppercase fw-semibold">Lab Setup</label>
+                        <div>{{ getLabSetupLabel(provider.labSetup) }}</div>
+                    </div>
+                    <div class="mb-3" *ngIf="provider.latitude && provider.longitude">
+                        <label class="small text-muted text-uppercase fw-semibold">Coordinates</label>
+                        <div class="small">
+                            <span class="text-primary me-2"><i class="bi bi-geo-alt-fill me-1"></i>{{ provider.latitude
+                                }}</span>
+                            <span class="text-primary"><i class="bi bi-geo-alt-fill me-1"></i>{{ provider.longitude
+                                }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Documents & Operations -->
+                <div class="col-md-6">
+                    <h5 class="fw-bold mb-3 border-bottom pb-2">Documents & Licenses</h5>
+
+                    <div class="mb-3">
+                        <label class="small text-muted text-uppercase fw-semibold d-block">CR Certificate</label>
+                        <a *ngIf="provider.crCertificatePath; else noDoc"
+                            [href]="getFileUrl(provider.crCertificatePath)" target="_blank"
+                            class="btn btn-sm btn-light border">
+                            <i class="bi bi-file-earmark-pdf me-2 text-danger"></i>View Document
+                        </a>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="small text-muted text-uppercase fw-semibold d-block">MOH License</label>
+                        <a *ngIf="provider.mohLicensePath; else noDoc" [href]="getFileUrl(provider.mohLicensePath)"
+                            target="_blank" class="btn btn-sm btn-light border">
+                            <i class="bi bi-file-earmark-medical me-2 text-primary"></i>View License
+                        </a>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="small text-muted text-uppercase fw-semibold d-block">CBAHI Accreditation</label>
+                        <a *ngIf="provider.cbahiAccreditationPath; else noDoc"
+                            [href]="getFileUrl(provider.cbahiAccreditationPath)" target="_blank"
+                            class="btn btn-sm btn-light border">
+                            <i class="bi bi-award me-2 text-warning"></i>View Certificate
+                        </a>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="small text-muted text-uppercase fw-semibold d-block">Lab Accreditation</label>
+                        <a *ngIf="provider.labAccreditationPath; else noDoc"
+                            [href]="getFileUrl(provider.labAccreditationPath)" target="_blank"
+                            class="btn btn-sm btn-light border">
+                            <i class="bi bi-flask me-2 text-success"></i>View Certificate
+                        </a>
+                    </div>
+
+                    <ng-template #noDoc>
+                        <span class="text-muted small"><em>No document uploaded</em></span>
+                    </ng-template>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #loadingOrError>
+    <div class="text-center py-5" *ngIf="loading">
+        <div class="spinner-border text-primary mb-3" role="status"></div>
+        <p class="text-muted">Loading provider details...</p>
+    </div>
+    <div class="text-center py-5" *ngIf="!loading && error">
+        <i class="bi bi-exclamation-circle text-danger fs-1 mb-3"></i>
+        <p class="text-danger mb-3">{{ error }}</p>
+        <button class="btn btn-primary btn-sm" routerLink="/provider/list">Return to List</button>
+    </div>
+</ng-template>

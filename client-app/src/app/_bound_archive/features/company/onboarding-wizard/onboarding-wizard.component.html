@@ -1,0 +1,105 @@
+<div class="container py-5">
+    <div class="card shadow-sm border-0 glass-card">
+        <div class="card-header bg-primary text-white p-4 rounded-top">
+            <h3 class="mb-0">Corporate Onboarding Wizard</h3>
+            <p class="mb-0 opacity-75">Step {{ currentStep }} of {{ totalSteps }}</p>
+        </div>
+
+        <div class="progress rounded-0" style="height: 4px;">
+            <div class="progress-bar bg-success" role="progressbar" [style.width.%]="(currentStep / totalSteps) * 100">
+            </div>
+        </div>
+
+        <div class="card-body p-5">
+            <form [formGroup]="onboardingForm" (ngSubmit)="submit()">
+
+                <!-- Step 1: Company Profile -->
+                <div *ngIf="currentStep === 1" class="animate__animated animate__fadeIn">
+                    <h4 class="mb-4 text-primary"><i class="bi bi-building me-2"></i>Company Profile</h4>
+                    <div class="row g-3">
+                        <div class="col-md-12">
+                            <label class="form-label">Legal Name</label>
+                            <input type="text" class="form-control form-control-lg" formControlName="legalName"
+                                placeholder="Enter company legal name">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">CR Number</label>
+                            <input type="text" class="form-control" formControlName="crNumber"
+                                placeholder="e.g. 1010XXXXXX">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Business Activity</label>
+                            <input type="text" class="form-control" formControlName="businessActivity"
+                                placeholder="e.g. Technology, Manufacturing">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Operational Details -->
+                <div *ngIf="currentStep === 2" class="animate__animated animate__fadeIn">
+                    <h4 class="mb-4 text-primary"><i class="bi bi-gear-wide-connected me-2"></i>Operational Details</h4>
+                    <div class="row g-3">
+                        <div class="col-md-12">
+                            <label class="form-label">Head Office Address</label>
+                            <textarea class="form-control" formControlName="headOfficeAddress" rows="3"></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Company Size (Tier)</label>
+                            <select class="form-select" formControlName="companySize">
+                                <option [value]="0">Small (1-50)</option>
+                                <option [value]="1">Medium (51-250)</option>
+                                <option [value]="2">Large (251+)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Total Employees</label>
+                            <input type="number" class="form-control" formControlName="totalEmployees">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Screening & Billing -->
+                <div *ngIf="currentStep === 3" class="animate__animated animate__fadeIn">
+                    <h4 class="mb-4 text-primary"><i class="bi bi-wallet2 me-2"></i>Screening & Billing</h4>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">VAT Registration Number</label>
+                            <input type="text" class="form-control" formControlName="vatRegistrationNumber">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Estimated Monthly Volume</label>
+                            <input type="number" class="form-control" formControlName="estimatedMonthlyScreeningVolume">
+                        </div>
+                        <div class="col-md-12">
+                            <div class="alert alert-info border-0 shadow-sm mt-3">
+                                <h6 class="alert-heading"><i class="bi bi-info-circle me-2"></i>Document Upload Notice
+                                </h6>
+                                <p class="mb-0 small">Please note that you will be required to upload your CR
+                                    Certificate and and other documentation after the initial registration is approved
+                                    by the Super Admin.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Actions -->
+                <div class="d-flex justify-content-between mt-5">
+                    <button type="button" class="btn btn-outline-secondary px-4" (click)="prevStep()"
+                        [disabled]="currentStep === 1">
+                        <i class="bi bi-arrow-left me-2"></i>Back
+                    </button>
+
+                    <button *ngIf="currentStep < totalSteps" type="button" class="btn btn-primary px-5"
+                        (click)="nextStep()">
+                        Next Step<i class="bi bi-arrow-right ms-2"></i>
+                    </button>
+
+                    <button *ngIf="currentStep === totalSteps" type="submit" class="btn btn-success px-5"
+                        [disabled]="onboardingForm.invalid">
+                        Complete Onboarding<i class="bi bi-check-circle ms-2"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,97 @@
+<div class="container py-4">
+    <div class="d-flex align-items-center gap-3 mb-4">
+        <button class="btn btn-light rounded-circle shadow-sm" routerLink="/cases/queue"><i
+                class="bi bi-arrow-left"></i></button>
+        <div>
+            <h2 class="text-dark fw-bold mb-0">Diagnostic Entry: {{ caseData?.caseID || 'B2B-1002' }}</h2>
+            <p class="text-muted mb-0">Candidate: <strong class="text-dark">{{ caseData?.candidateFullName || 'Ahmed
+                    Al-Sulaiman' }}</strong></p>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <!-- Sidebar: Candidate Info Card -->
+        <div class="col-lg-4">
+            <div class="card border-0 shadow-sm rounded-4 glass-card h-100">
+                <div class="card-body p-4">
+                    <h6 class="text-uppercase fw-bold text-muted mb-4" style="font-size: 11px;">Candidate Identity</h6>
+                    <div class="d-flex align-items-center mb-4">
+                        <div
+                            class="avatar-lg bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center me-3">
+                            <i class="bi bi-person fs-2"></i>
+                        </div>
+                        <div>
+                            <div class="h5 mb-0 fw-bold">Ahmed Al-Sulaiman</div>
+                            <small class="text-muted">ID: 1092837465</small>
+                        </div>
+                    </div>
+
+                    <hr class="my-4 opacity-10">
+
+                    <div class="mb-3">
+                        <label class="small text-muted d-block">Screening Package</label>
+                        <span class="fw-semibold">Pre-Employment Standard</span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="small text-muted d-block">Applying For</label>
+                        <span class="fw-semibold">Operations Supervisor</span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="small text-muted d-block">Company</label>
+                        <span class="fw-semibold">Logistics Solutions Co.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content: Diagnostic Form -->
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-sm rounded-4 glass-card">
+                <div class="card-header bg-dark text-white p-4 rounded-top-4">
+                    <h5 class="mb-0 fw-bold"><i class="bi bi-journal-medical me-2"></i>Medical Findings Entry</h5>
+                </div>
+                <div class="card-body p-5">
+                    <form [formGroup]="medicalForm" (ngSubmit)="submit()">
+                        <div class="row g-4">
+                            <div class="col-md-12">
+                                <label class="form-label fw-bold">1. Vital Signs</label>
+                                <textarea class="form-control" rows="3" formControlName="vitalSigns"
+                                    placeholder="BP: 120/80, Temp: 37.1C, HR: 72 bpm..."></textarea>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label class="form-label fw-bold">2. Lab Discovery & Findings</label>
+                                <textarea class="form-control" rows="4" formControlName="labFindings"
+                                    placeholder="CBC within normal range, FBS: 95 mg/dL..."></textarea>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label class="form-label fw-bold">3. Physician Clinical Notes</label>
+                                <textarea class="form-control" rows="4" formControlName="physicianNotes"
+                                    placeholder="General appearance normal, no acute distress..."></textarea>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold text-success">4. Preliminary Decision</label>
+                                <select class="form-select border-success-subtle shadow-sm"
+                                    formControlName="isFitForWork">
+                                    <option [ngValue]="true">Fit For Work</option>
+                                    <option [ngValue]="false">Unfit For Work</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-12 mt-5">
+                                <button type="submit" class="btn btn-dark w-100 py-3 rounded-pill fw-bold shadow-sm"
+                                    [disabled]="medicalForm.invalid">
+                                    <i class="bi bi-send-fill me-2"></i>Submit Results for HR Review
+                                </button>
+                                <p class="text-center small text-muted mt-3 mb-0">Once submitted, results will be locked
+                                    for administrative verification.</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,74 @@
+<div class="container-fluid py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-6">
+            <div class="d-flex align-items-center mb-4">
+                <button class="btn btn-link link-secondary p-0 me-3" [routerLink]="['/services']">
+                    <i class="bi bi-arrow-left fs-4"></i>
+                </button>
+                <div>
+                    <h2 class="text-primary fw-bold mb-0">{{ isEditMode ? 'Edit Service' : 'Add New Service' }}</h2>
+                    <p class="text-muted mb-0">Define a medical service and its base pricing</p>
+                </div>
+            </div>
+
+            <div class="card border-0 shadow-sm glass-card p-4">
+                <form [formGroup]="serviceForm" (ngSubmit)="onSubmit()">
+                    <div class="row g-4">
+                        <div class="col-md-8">
+                            <label class="form-label fw-semibold">Service Name</label>
+                            <input type="text" class="form-control form-control-lg bg-light border-0"
+                                formControlName="name" placeholder="e.g. Complete Blood Count (CBC)"
+                                [class.is-invalid]="serviceForm.get('name')?.touched && serviceForm.get('name')?.invalid">
+                            <div class="invalid-feedback">Service name is required (min 2 chars).</div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label fw-semibold">Service Code</label>
+                            <input type="text" class="form-control form-control-lg bg-light border-0"
+                                formControlName="code" placeholder="e.g. CBC-001"
+                                [class.is-invalid]="serviceForm.get('code')?.touched && serviceForm.get('code')?.invalid">
+                            <div class="invalid-feedback">Service code is required.</div>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label fw-semibold">Description</label>
+                            <textarea class="form-control bg-light border-0" rows="3" formControlName="description"
+                                placeholder="Provide details about what this service includes..."></textarea>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Base Price (SAR)</label>
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-text bg-light border-0 text-muted">SAR</span>
+                                <input type="number" class="form-control bg-light border-0" formControlName="price"
+                                    [class.is-invalid]="serviceForm.get('price')?.touched && serviceForm.get('price')?.invalid">
+                            </div>
+                            <div class="text-danger small mt-1"
+                                *ngIf="serviceForm.get('price')?.touched && serviceForm.get('price')?.invalid">
+                                Price must be 0 or greater.
+                            </div>
+                        </div>
+
+                        <div class="col-12 pt-4 border-top">
+                            <div class="d-flex justify-content-end gap-2">
+                                <button type="button" class="btn btn-light px-4"
+                                    [routerLink]="['/services']">Cancel</button>
+                                <button type="submit" class="btn btn-primary px-5"
+                                    [disabled]="serviceForm.invalid || submitting">
+                                    <span class="spinner-border spinner-border-sm me-2" *ngIf="submitting"></span>
+                                    {{ isEditMode ? 'Update Service' : 'Create Service' }}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="loading" class="position-absolute top-50 start-50 translate-middle">
+    <div class="spinner-grow text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
